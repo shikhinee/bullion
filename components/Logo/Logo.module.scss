@@ -2,29 +2,9 @@
 
 .container {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  width: max-content;
-  height: 2em;
-  word-spacing: 0;
-  transform: translateX(1em);
-  padding-right: 1em;
-  span {
-    line-height: 1em;
-    @include themify() {
-      color: has(clr-h4);
-    }
-  }
 
-  &::before {
-    content: "";
-    display: block;
-    width: 0.5em;
-    height: 100%;
-    background-color: #237ccb;
-    position: absolute;
-    top: 47.5%;
-    left: -1em;
-    transform: translateY(-50%);
+  img {
+    object-fit: contain;
+    // image-rendering: crisp-edges;
   }
 }

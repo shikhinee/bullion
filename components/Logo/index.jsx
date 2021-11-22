@@ -6,8 +6,7 @@ import styles from "./Logo.module.scss";
 const Logo = (props) => {
   return (
     <div className={styles.container}>
-      <span>SOLID</span>
-      <span>FRAMEWORKS</span>
+      <img src="/bulliondark.png" alt="Bullion Logo" />
     </div>
   );
 };
