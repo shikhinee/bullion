@@ -1,0 +1,61 @@
+@import "global";
+
+.container {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  width: 3.5rem;
+  height: 3rem;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+
+  span {
+    position: absolute;
+    height: 0.3rem;
+    width: 100%;
+    border-radius: 2rem;
+    opacity: 1;
+    right: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    @include themify() {
+      background-color: has(clr-bg-inverse);
+    }
+  }
+}
+.container span:nth-child(1) {
+  top: 0px;
+}
+
+.container span:nth-child(2),.container span:nth-child(3) {
+  top: 12px;
+  width: 50%;
+}
+
+.container span:nth-child(4) {
+  top: 24px;
+}
+
+.container.isOpen span:nth-child(1) {
+  top: 12px;
+  width: 0%;
+  left: 50%;
+}
+
+.container.isOpen span:nth-child(2) {
+  transform: rotate(45deg);
+  width: 100%;
+}
+
+.container.isOpen span:nth-child(3) {
+  transform: rotate(-45deg);
+  width: 100%;
+}
+
+.container.isOpen span:nth-child(4) {
+  top: 12px;
+  width: 0%;
+  left: 50%;
+}
