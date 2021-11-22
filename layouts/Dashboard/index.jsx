@@ -10,7 +10,7 @@ import styles from "./Dashboard.module.scss";
 import SideNavigation from "@/components/SideNavigation";
 import Navbar from "@/composites/Navbar";
 import Footer from "@/composites/Footer";
-import Panel from "@/components/Panel";
+import Panel from "@/composites/Panel";
 
 const DashboardLayout = ({ children }) => {
   return (
