@@ -47,7 +47,7 @@ const Menu = ({ routes, variants, ...props }) => {
                   return (
                     <motion.li
                       initial={{ backgroundColor: "rgba(0, 0, 0, 0)" }}
-                      whileHover={{ backgroundColor: item == activeObject ? "#d2d3d3" : "rgba(0, 0, 0, 0)" }}
+                      whileHover={{ backgroundColor: item == activeObject ? "#e6e4e0" : "rgba(0, 0, 0, 0)" }}
                       animate={{
                         backgroundColor:
                           item == activeObject ? "#03c4a1" : "rgba(0, 0, 0, 0)",
@@ -72,7 +72,7 @@ const Menu = ({ routes, variants, ...props }) => {
               <motion.li
                 key={index}
                 initial={{ backgroundColor: "rgba(0, 0, 0, 0)" }}
-                whileHover={{ backgroundColor: list[1] == activeObject ? "#d2d3d3" : "rgba(0, 0, 0, 0)" }}
+                whileHover={{ backgroundColor: list[1] == activeObject ? "#e6e4e0" : "rgba(0, 0, 0, 0)" }}
                 animate={{
                   backgroundColor:
                     list[1] == activeObject ? "#03c4a1" : "rgba(0, 0, 0, 0)",

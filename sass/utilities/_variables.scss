@@ -1,7 +1,7 @@
 $navbarHeight: 7rem;
 
 // TYPOGRAPHY VALUES
-$font-sans: "Fira Sans", sans-serif;
+$font-sans: "Open Sans", sans-serif;
 $font-mono: "Fira Code", monospace;
 
 // BREAKPOINTS
@@ -17,19 +17,19 @@ $breakpoints: (
 );
 
 // COLORS
-$clr-primary: #03c4a1;
-$clr-secondary: #f69765;
+$clr-primary: #d4a600;
+$clr-secondary: #FFD467;
 
 // GREYSCALE (Darkest to Lightest)
-$clr-neutral-0: #1f242c;
-$clr-neutral-1: #222831;
-$clr-neutral-2: #383e46;
-$clr-neutral-3: #4e535a;
+$clr-neutral-0: #121212;
+$clr-neutral-1: #2a2a2a;
+$clr-neutral-2: #414141;
+$clr-neutral-3: #595959;
 $clr-neutral-4: #64696f;
-$clr-neutral-5: #7a7e83;
-$clr-neutral-6: #919498;
-$clr-neutral-7: #d2d3d3;
-$clr-neutral-8: #efefef;
+$clr-neutral-5: #b3b1ae;
+$clr-neutral-6: #cccac7;
+$clr-neutral-7: #e6e4e0;
+$clr-neutral-8: #fffdf9;
 
 // THEMES
 $themes: (

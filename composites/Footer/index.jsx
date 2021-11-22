@@ -11,7 +11,7 @@ import styles from "./Footer.module.scss";
 
 const StyledFacebook = styled(FacebookSquare)`
   width: 24px;
-  color: #138EEA;
+  color: #d4a600;
   margin-right: 2rem;
   cursor: pointer;
   &:hover{
@@ -20,7 +20,7 @@ const StyledFacebook = styled(FacebookSquare)`
 `;
 const StyledDribbble = styled(Dribbble)`
   width: 24px;
-  color: #138EEA;
+  color: #d4a600;
   margin-right: 2rem;
   cursor: pointer;
   &:hover{
@@ -30,7 +30,7 @@ const StyledDribbble = styled(Dribbble)`
 `;
 const StyledTwitter = styled(Twitter)`
   width: 24px;
-  color: #138EEA;
+  color: #d4a600;
   margin-right: 2rem;
   cursor: pointer;
   &:hover{

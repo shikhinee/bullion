@@ -1,11 +1,8 @@
 //Next, React (core node_modules) imports must be placed here
 import Image from 'next/Image'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import {
-	useViewportScroll,
 	motion,
-	useTransform,
-	useMotionValue
 } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 //import STORE from '@/store'
@@ -14,8 +11,8 @@ import { useInView } from 'react-intersection-observer';
 
 //import COMPONENT from '@/components'
 import styles from './About.module.scss'
+import next from 'next';
 const About = (props) => {
-	const { scrollY } = useViewportScroll();
 
 	const [ref, inView, entry] = useInView({
 		/* Optional options */
@@ -23,26 +20,54 @@ const About = (props) => {
 		triggerOnce: false
 	});
 	const variants = {
+		visible: { opacity: 1, scale: 1, y: 0, rotate: 0 },
+		hidden: {
+			opacity: 0,
+			scale: 0.8,
+			y: 50,
+			rotate: 15
+			}
+	};
+	const variants1 = {
 		visible: { opacity: 1, scale: 1, y: 0 },
 		hidden: {
 			opacity: 0,
-			scale: 1.25,
-			y: 50
-		}
+			scale: 0.8,
+			y: -50,
+			}
+	};
+	const variants2 = {
+		visible: { opacity: 1, scale: 1, y: 0 },
+		hidden: {
+			opacity: 0,
+			scale: 0.8,
+			y: 50,
+			}
 	};
 	return (
 		<div className={styles.container} id="about">
 			<div className={styles.content}>
 				<motion.div className={styles.left}>
-					<motion.h1 animate={inView ? 'visible' : 'hidden'}
+					<motion.h1 transition={{delayChildren: 1}}><motion.span animate={inView ? 'visible' : 'hidden'}
+						variants={variants1}
+						transition={{ duration: 1, ease: 'easeOut' }}
+						ref={ref}>This is </motion.span>
+						<motion.span animate={inView ? 'visible' : 'hidden'}
+						variants={variants2}
+						transition={{ duration: 1, ease: 'easeOut' }}
+						ref={ref}>About Page</motion.span></motion.h1>
+					<motion.p animate={inView ? 'visible' : 'hidden'}
 						variants={variants}
-						transition={{ duration: 0.5, ease: 'easeOut' }}
-						ref={ref}>This is About Page</motion.h1>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium doloremque nostrum non vitae repellat ipsum voluptas explicabo laborum modi mollitia molestias tempore debitis veritatis, perspiciatis, blanditiis cupiditate saepe quasi quod?</p>
+						transition={{ delayChildren: 2, duration: 2, ease: 'easeOut' }}
+						ref={ref}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium doloremque nostrum non vitae repellat ipsum voluptas explicabo laborum modi mollitia molestias tempore debitis veritatis, perspiciatis, blanditiis cupiditate saepe quasi quod?</motion.p>
 				</motion.div>
 				<motion.div className={styles.right} >
-					<motion.div  className={styles.background}>
-						<Image className={styles.image} width='500' height='600' src='/mine.jpeg'></Image>
+					<motion.div animate={inView ? 'visible' : 'hidden'}
+						variants={variants1}
+						transition={{ duration: 1, ease: 'easeOut' }}
+						ref={ref} 
+						className={styles.background}>
+						<Image className={styles.image} width='700' height='800' src='/mine.jpeg'></Image>
 					</motion.div>
 				</motion.div>
 			</div>
