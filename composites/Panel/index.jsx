@@ -4,7 +4,7 @@
 import { useState } from "react";
 import SideNavigation from "@/components/SideNavigation";
 import styles from "./Panel.module.scss";
-const rootPath = "/dashboard"
+const rootPath = "/"
 
 const Routes = {
   profile: {
