@@ -23,25 +23,6 @@
       margin-bottom: 1em;
     }
 
-    @include themify() {
-      border: 0.1rem solid has(clr-text);
-    }
-
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      width: 1em;
-      height: 100%;
-
-      @include themify() {
-        background-color: has(clr-text);
-      }
-    }
-
     &:hover {
       border: 0.1rem solid $clr-primary;
       color: $clr-primary;
