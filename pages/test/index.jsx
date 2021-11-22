@@ -12,17 +12,13 @@
 
 //import COMPONENT from '@/components'
 
-import LandingLayout from '@/layouts/Landing';
-import styles from './lmao.module.scss'
+import LandingLayout from "@/layouts/Landing";
+import styles from "./Test.module.scss";
 
-const LmaoPage = (props) => {
-	 return (
-		 <main className={styles.container}>
-			lmao
-		</main>
-	)
+const TestPage = (props) => {
+  return <main className={styles.container}>Test</main>;
 };
 
-LmaoPage.Layout = LandingLayout
+TestPage.Layout = LandingLayout;
 
-export default LmaoPage;
+export default TestPage;
