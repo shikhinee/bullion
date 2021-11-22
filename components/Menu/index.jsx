@@ -8,6 +8,9 @@ import styles from "./Menu.module.scss";
 
 const Menu = (props) => {
   const [menuItems, setMenuItems] = useState({
+    test: {
+      isActive: false,
+    },
     home: {
       isActive: false,
     },
@@ -21,6 +24,9 @@ const Menu = (props) => {
       isActive: false,
     },
     contact: {
+      isActive: false,
+    },
+    whitepaper: {
       isActive: false,
     },
   });
@@ -51,56 +57,108 @@ const Menu = (props) => {
     router.events.on("hashChangeStart", handleHashChangeStart);
     router.events.on("hashChangeComplete", handleHashChangeComplete);
 
-    const targetElements = [
-      document.getElementById("home"),
-      document.getElementById("about"),
-      document.getElementById("features"),
-      document.getElementById("team"),
-      document.getElementById("contact"),
-    ];
+    if (router.pathname == "/") {
+      const targetElements = [
+        document.getElementById("home"),
+        document.getElementById("about"),
+        document.getElementById("features"),
+        document.getElementById("team"),
+        document.getElementById("contact"),
+      ];
 
-    const options = {
-      threshold: 0.8,
-    };
+      const options = {
+        threshold: 0.8,
+      };
 
-    const callback = (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setMenuItems({
-            ...menuItems,
-            [entry.target.id]: {
-              isActive: true,
-            },
-          });
-        } else {
-          // setMenuItems({
-          //   ...menuItems,
-          //   [entry.target.id]: {
-          //     isActive: false,
-          //   },
-          // });
-        }
+      const callback = (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setMenuItems({
+              test: {
+                isActive: false,
+              },
+              home: {
+                isActive: false,
+              },
+              about: {
+                isActive: false,
+              },
+              features: {
+                isActive: false,
+              },
+              team: {
+                isActive: false,
+              },
+              contact: {
+                isActive: false,
+              },
+              whitepaper: {
+                isActive: false,
+              },
+              [entry.target.id]: {
+                isActive: true,
+              },
+            });
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(callback, options);
+
+      targetElements.forEach((element) => {
+        observer.observe(element);
       });
-    };
-
-    const observer = new IntersectionObserver(callback, options);
-
-    targetElements.forEach((element) => {
-      observer.observe(element);
-    });
+    } else {
+      if (menuItems[router.pathname.split("/")[1]]) {
+        setMenuItems({
+          test: {
+            isActive: false,
+          },
+          home: {
+            isActive: false,
+          },
+          about: {
+            isActive: false,
+          },
+          features: {
+            isActive: false,
+          },
+          team: {
+            isActive: false,
+          },
+          contact: {
+            isActive: false,
+          },
+          whitepaper: {
+            isActive: false,
+          },
+          [router.pathname.split("/")[1]]: {
+            isActive: true,
+          },
+        });
+      }
+    }
 
     return () => {
       router.events.off("routeChangeComplete", handleRouteChangeComplete);
       router.events.off("hashChangeStart", handleHashChangeStart);
       router.events.off("hashChangeComplete", handleHashChangeComplete);
     };
-  }, [router.events]);
+  }, [router]);
 
   return (
     <ul className={styles.container}>
       <li>
         <Link href="/test">
-          <a>Test</a>
+          <a
+            className={
+              menuItems.test.isActive
+                ? `${styles.isActive} ${styles.navLink}`
+                : styles.navLink
+            }
+          >
+            Test
+          </a>
         </Link>
       </li>
       <li>
@@ -157,7 +215,15 @@ const Menu = (props) => {
       </li>
       <li>
         <Link href="/whitepaper">
-          <a>Whitepaper</a>
+          <a
+            className={
+              menuItems.whitepaper.isActive
+                ? `${styles.isActive} ${styles.navLink}`
+                : styles.navLink
+            }
+          >
+            Whitepaper
+          </a>
         </Link>
       </li>
     </ul>
