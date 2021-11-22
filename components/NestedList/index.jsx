@@ -14,7 +14,7 @@ const StyledArrow = styled(DownArrow)`
   color: inherit;
   height: 15px;
   position: absolute;
-  right: 1em;
+  left: 1em;
   top: 50%;
   transform: translateY(-50%) rotate(-90deg);
 
@@ -50,6 +50,7 @@ const NestedList = ({ children, head, icon, variants, ...props }) => {
         animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
         transition={{ duration: 0.2 }}
       >
+        <StyledArrow isOpen={isOpen} />
         {children}
       </motion.ul>
     </div>
