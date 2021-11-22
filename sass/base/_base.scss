@@ -7,8 +7,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  
-  transition: background-color .1s;
+
+  transition: background-color 0.1s;
 }
 
 ::selection {
@@ -49,5 +49,11 @@ body {
   text-transform: capitalize;
   @include baseThemify() {
     color: has(clr-text-lc);
+  }
+}
+
+:where(a) {
+  @include baseThemify() {
+    color: has(clr-text);
   }
 }

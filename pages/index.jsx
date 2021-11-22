@@ -1,4 +1,3 @@
-import ThemeToggler from "@/components/ThemeToggler";
 import LandingLayout from "@/layouts/Landing";
 import Home from "@/views/Landing/Home";
 import About from "@/views/Landing/About";

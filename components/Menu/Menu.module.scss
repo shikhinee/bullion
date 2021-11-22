@@ -7,6 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   @include themify() {
     background-color: rgba($color: has(clr-bg), $alpha: 1);
   }
@@ -17,22 +18,16 @@
     padding: 0;
     display: inline-block;
 
-    a {
-      text-decoration: none;
-      color: has(clr-text);
-      font-size: 1.5rem;
-      font-weight: 500;
-      @include themify() {
-        color: has(clr-text);
-      }
-    }
-
     &:not(:last-of-type) {
       margin-right: 1em;
     }
-
-    @include themify() {
-      color: has(clr-h4);
-    }
   }
+}
+
+.navLink {
+  text-decoration: none;
+}
+
+.isActive {
+  color: orange;
 }
