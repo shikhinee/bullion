@@ -41,27 +41,27 @@ const Menu = (props) => {
         </Link>
       </li>
       <li>
-        <Link href="/#section1">
+        <Link href="/#about">
           <a onClick={handleClick}>About</a>
         </Link>
       </li>
       <li>
-        <Link href="/#section2">
+        <Link href="/#features">
           <a onClick={handleClick}>Features</a>
         </Link>
       </li>
       <li>
-        <Link href="/#section3">
+        <Link href="/#team">
           <a onClick={handleClick}>Team</a>
         </Link>
       </li>
       <li>
-        <Link href="/#section4">
+        <Link href="/#contact">
           <a onClick={handleClick}>Contact</a>
         </Link>
       </li>
       <li>
-        <Link href="/#section5">
+        <Link href="/whitepaper">
           <a onClick={handleClick}>Whitepaper</a>
         </Link>
       </li>

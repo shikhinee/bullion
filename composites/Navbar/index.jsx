@@ -12,12 +12,44 @@ import styles from "./Navbar.module.scss";
 import MenuIcon from "@/components/MenuIcon";
 
 const Navbar = (props) => {
+  const router = useRouter();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    router.replace(e.target.href);
+  };
+
+  useEffect(() => {
+    const handleRouteChangeComplete = () => {
+      if (window.location.hash) {
+        window.history.replaceState({}, document.title, "/");
+      }
+    };
+
+    const handleHashChangeComplete = () => {
+      window.history.replaceState({}, document.title, "/");
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChangeComplete);
+    router.events.on("hashChangeComplete", handleHashChangeComplete);
+
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChangeComplete);
+      router.events.off("hashChangeComplete", handleHashChangeComplete);
+    };
+  }, [router.events]);
+  
   return (
     <header className={styles.container}>
       <nav className={styles.nav}>
         <Logo />
         <Menu />
-        <MenuIcon />
+
+        <Link href="#home">
+          <a>
+            <MenuIcon />
+          </a>
+        </Link>
       </nav>
     </header>
   );
