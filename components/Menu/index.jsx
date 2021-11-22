@@ -2,16 +2,12 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
 //import STORE from '@/store'
+import { elementScrollIntoView } from "seamless-scroll-polyfill";
 import { useEffect, useState } from "react";
 import styles from "./Menu.module.scss";
 
 const Menu = (props) => {
   const router = useRouter();
-
-  const handleClick = (e) => {
-    e.preventDefault();
-    router.replace(e.target.href);
-  };
 
   useEffect(() => {
     const handleRouteChangeComplete = () => {
@@ -20,15 +16,26 @@ const Menu = (props) => {
       }
     };
 
+    const handleHashChangeStart = (url) => {
+      const hash = url.split("#")[1];
+      elementScrollIntoView(document.querySelector(`#${hash}`), {
+        behavior: "smooth",
+        block: "center",
+        inline: "center",
+      });
+    };
+
     const handleHashChangeComplete = () => {
       window.history.replaceState({}, document.title, "/");
     };
 
     router.events.on("routeChangeComplete", handleRouteChangeComplete);
+    router.events.on("hashChangeStart", handleHashChangeStart);
     router.events.on("hashChangeComplete", handleHashChangeComplete);
 
     return () => {
       router.events.off("routeChangeComplete", handleRouteChangeComplete);
+      router.events.off("hashChangeStart", handleHashChangeStart);
       router.events.off("hashChangeComplete", handleHashChangeComplete);
     };
   }, [router.events]);
@@ -36,33 +43,33 @@ const Menu = (props) => {
   return (
     <ul className={styles.container}>
       <li>
-        <Link href="/lmao">
-          <a onClick={handleClick}>Lmao</a>
+        <Link href="/test">
+          <a>Test</a>
         </Link>
       </li>
       <li>
         <Link href="/#about">
-          <a onClick={handleClick}>About</a>
+          <a>About</a>
         </Link>
       </li>
       <li>
         <Link href="/#features">
-          <a onClick={handleClick}>Features</a>
+          <a>Features</a>
         </Link>
       </li>
       <li>
         <Link href="/#team">
-          <a onClick={handleClick}>Team</a>
+          <a>Team</a>
         </Link>
       </li>
       <li>
         <Link href="/#contact">
-          <a onClick={handleClick}>Contact</a>
+          <a>Contact</a>
         </Link>
       </li>
       <li>
         <Link href="/whitepaper">
-          <a onClick={handleClick}>Whitepaper</a>
+          <a>Whitepaper</a>
         </Link>
       </li>
     </ul>

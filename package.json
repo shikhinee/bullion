@@ -25,6 +25,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "sass": "^1.42.1",
+    "seamless-scroll-polyfill": "^2.1.5",
     "styled-components": "^5.3.1",
     "styled-icons": "^10.44.0",
     "swr": "^1.0.1"
