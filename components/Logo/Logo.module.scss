@@ -4,10 +4,11 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: min-content;
+  width: max-content;
   height: 2em;
   word-spacing: 0;
   transform: translateX(1em);
+  padding-right: 1em;
   span {
     line-height: 1em;
     @include themify() {

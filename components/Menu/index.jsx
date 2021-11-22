@@ -1,22 +1,71 @@
 //Next, React (core node_modules) imports must be placed here
-import Link from "next/link"
+import { useRouter } from "next/router";
+import Link from "next/link";
 //import STORE from '@/store'
-import { useState } from 'react';
+import { useEffect, useState } from "react";
 import styles from "./Menu.module.scss";
-import ThemeToggler from '@/components/ThemeToggler';
 
 const Menu = (props) => {
-  const [themeChanged, setThemeChanged] = useState(false);
-  const handleTheme = () => {
-    setThemeChanged(!themeChanged)
-  }
+  const router = useRouter();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    router.replace(e.target.href);
+  };
+
+  useEffect(() => {
+    const handleRouteChangeComplete = () => {
+      if (window.location.hash) {
+        window.history.replaceState({}, document.title, "/");
+      }
+    };
+
+    const handleHashChangeComplete = () => {
+      window.history.replaceState({}, document.title, "/");
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChangeComplete);
+    router.events.on("hashChangeComplete", handleHashChangeComplete);
+
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChangeComplete);
+      router.events.off("hashChangeComplete", handleHashChangeComplete);
+    };
+  }, [router.events]);
+
   return (
-    <div className={styles.container}>
-      <div className={styles.menuContainer}>
-        <h2>БИДНИЙ ТУХАЙ</h2>
-      <ThemeToggler handler={handleTheme} isChanged={themeChanged}/>
-      </div>
-    </div>
+    <ul className={styles.container}>
+      <li>
+        <Link href="/lmao">
+          <a onClick={handleClick}>Lmao</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/#section1">
+          <a onClick={handleClick}>About</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/#section2">
+          <a onClick={handleClick}>Features</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/#section3">
+          <a onClick={handleClick}>Team</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/#section4">
+          <a onClick={handleClick}>Contact</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/#section5">
+          <a onClick={handleClick}>Whitepaper</a>
+        </Link>
+      </li>
+    </ul>
   );
 };
 
