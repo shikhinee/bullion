@@ -21,7 +21,7 @@
 }
 .content {
   width: 90%;
-  max-width: map-get($map: $breakpoints, $key: md);
+  max-width: has(lg);
   display: flex;
   flex-direction: column;
   h2 {
