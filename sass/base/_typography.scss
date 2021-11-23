@@ -21,7 +21,7 @@ p {
 :where(h1) {
   font-size: 2.25em;
   font-weight: 400;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 
   @include baseThemify() {

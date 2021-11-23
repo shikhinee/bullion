@@ -2,17 +2,60 @@
 
 .container { 
     display: flex;
-    height: 100vh;
     width: 100%;
+    height: auto;
     @include themify() {
-        background-color: has(clr-bg-inverse);
+        background-color: has(clr-text);
       }
     justify-content: center;
+    align-items: center;
 }
 .content {
+    margin: 20% 0;
     max-width: map-get($map: $breakpoints, $key: lg);
     width: 90%;
     display: flex;
+    justify-content: center;
+    p {
+        @include themify(){
+            color: has(clr-bg);
+        }
+        font-weight: 300;
+    }
+    h1 {
+        @include themify(){
+            color: has(clr-text-inverse)
+        }
+    }
+    h3 {
+        @include themify(){
+            color: has(clr-h3-inverse);
+        }
+    }
+    @include respondMax(md){
+        flex-direction: column;
+    }
+}
+.panel {
+    width: 100%;
+}
+.cards {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card {
+    display: flex;
     flex-direction: column;
+    width: 20rem;
+    height: 20rem;
+    @include themify(){
+        background: has(clr-bg-inverse);
+    }
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    text-align: center;
     justify-content: center;
 }
