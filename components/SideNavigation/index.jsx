@@ -1,7 +1,10 @@
 //Next, React (core node_modules) imports must be placed here
 import { useRouter } from "next/router";
 import { useState, useContext, useEffect } from "react";
-import { elementScrollIntoView } from "seamless-scroll-polyfill";
+import {
+  elementScrollIntoView,
+  windowScrollBy,
+} from "seamless-scroll-polyfill";
 
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -17,20 +20,28 @@ const SideNavigation = ({ isCollapsed, show, routes, ...props }) => {
     useContext(ActiveAnchorContext);
 
   useEffect(() => {
+    function scrollToTargetAdjusted(element, offSet) {
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition - offSet;
+
+      windowScrollBy(window, {
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+
     if (router.pathname == "/whitepaper") {
       if (whitePaperActiveAnchor) {
-        elementScrollIntoView(document.querySelector(whitePaperActiveAnchor), {
-          behavior: "smooth",
-          block: "start",
-          inline: "nearest",
-        });
+        scrollToTargetAdjusted(
+          document.querySelector(whitePaperActiveAnchor),
+          156
+        );
       }
     }
   }, [whitePaperActiveAnchor]);
 
   const handleClick = (e) => {
     e.preventDefault();
-    console.log(e.target.hash);
     setWhitePaperActiveAnchor(e.target.hash);
   };
 
@@ -40,14 +51,33 @@ const SideNavigation = ({ isCollapsed, show, routes, ...props }) => {
         <ul className={styles.list} key={key}>
           <li>
             <Link href={value.route}>
-              <a onClick={handleClick}>{value.title}</a>
+              <a
+                className={
+                  `#${value.route.split("#")[1]}` === whitePaperActiveAnchor
+                    ? styles.active
+                    : ""
+                }
+                onClick={handleClick}
+              >
+                {value.title}
+              </a>
             </Link>
           </li>
           {value.subRoutes.map((subRoute) => {
             return (
               <li key={subRoute.route}>
                 <Link href={subRoute.route}>
-                  <a onClick={handleClick}>{subRoute.title}</a>
+                  <a
+                    className={
+                      `#${subRoute.route.split("#")[1]}` ===
+                      whitePaperActiveAnchor
+                        ? styles.active
+                        : ""
+                    }
+                    onClick={handleClick}
+                  >
+                    {subRoute.title}
+                  </a>
                 </Link>
               </li>
             );
@@ -58,7 +88,16 @@ const SideNavigation = ({ isCollapsed, show, routes, ...props }) => {
       return (
         <li key={key}>
           <Link href={value.route}>
-            <a onClick={handleClick}>{value.title}</a>
+            <a
+              className={
+                `#${value.route.split("#")[1]}` === whitePaperActiveAnchor
+                  ? styles.active
+                  : ""
+              }
+              onClick={handleClick}
+            >
+              {value.title}
+            </a>
           </Link>
         </li>
       );

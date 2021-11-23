@@ -15,8 +15,10 @@
   display: flex;
   justify-content: flex-start;
   padding: 1.6rem;
-  background-color: $clr-neutral-0;
+  background-color: $clr-neutral-2;
   border-radius: 0.8rem;
+
+  z-index: 100;
 }
 
 .tabs {
