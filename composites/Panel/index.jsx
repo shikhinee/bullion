@@ -4,129 +4,145 @@
 import { useState } from "react";
 import SideNavigation from "@/components/SideNavigation";
 import styles from "./Panel.module.scss";
-const rootPath = "/"
+const rootPath = "/whitepaper";
 
-const Routes = {
-  profile: {
+const WhitePaperRoutes = {
+  bullion: {
     title: "Bullion",
-    route: `${rootPath}/user`,
+    route: `${rootPath}/#bullion`,
+  },
+
+  introduction: {
+    title: "Introduction",
+    route: `${rootPath}/#introduction`,
+  },
+
+  problem: {
+    title: "Problem: Financial Exclusion",
+    route: `${rootPath}/#problem`,
+  },
+
+  solution: {
+    title: "Solution: Bullion Dao",
+    route: `${rootPath}/#solution`,
     subRoutes: [
       {
-        title: "Intro",
-        route: `${rootPath}/user/change-pass`,
+        title: "Loan Takers (Debtors)",
+        route: `${rootPath}/#solution-debtors`,
       },
       {
-        title: "Intro 2",
-        route: `${rootPath}/user/bank-info`,
+        title: "Loan Suppliers (Creditors)",
+        route: `${rootPath}/#solution-creditors`,
+      },
+      {
+        title: "Loan Interest",
+        route: `${rootPath}/#solution-interest`,
       },
     ],
   },
 
-  request: {
-    title: "Introduction",
-    route: `${rootPath}/requests`,
-  },
-
-  project: {
-    title: "Problem: Financial Exclusion",
-    route: `${rootPath}/project`,
+  token: {
+    title: "Bullion Token Economy",
+    route: `${rootPath}/#token`,
     subRoutes: [
       {
         title: "Token Ecosystem",
-        route: `${rootPath}/project/list`,
+        route: `${rootPath}/#token-ecosystem`,
       },
       {
         title: "Token Allocation",
-        route: `${rootPath}/project/add`,
+        route: `${rootPath}/#token-allocation`,
       },
     ],
   },
+
+  partnerships: {
+    title: "Partnerships",
+    route: `${rootPath}/#partnerships`,
+  },
+
+  roadmap: {
+    title: "Roadmap",
+    route: `${rootPath}/#roadmap`,
+  },
+
+  overview: {
+    title: "Overview",
+    route: `${rootPath}/#overview`,
+  },
+
+  references: {
+    title: "References",
+    route: `${rootPath}/#references`,
+  },
 };
-const Panel = (props) => {
+
+const Panel = ({ children, ...props }) => {
   const [toggleState, setToggleState] = useState(1);
-  const toggleTab = (index) => {
-    setToggleState(index);
-  };
   return (
     <div className={styles.container}>
-      <div className={styles.panelContainer}>
-        <div className={styles.tabsContainer}>
-          <div
-            className={
-              toggleState === 1
-                ? `${styles.tabs} ${styles.activeTabs}`
-                : `${styles.tabs}`
-            }
-            onClick={() => toggleTab(1)}
-          >
-            WHITEPAPER 1.0
-          </div>
-          <div
-            className={
-              toggleState === 2
-                ? `${styles.tabs} ${styles.activeTabs}`
-                : `${styles.tabs}`
-            }
-            onClick={() => toggleTab(2)}
-          >
-            EXECUTIVE SUMMARY
-          </div>
-          <div
-            className={
-              toggleState === 3
-                ? `${styles.tabs} ${styles.activeTabs}`
-                : `${styles.tabs}`
-            }
-            onClick={() => toggleTab(3)}
-          >
-            TEAM PROFILES
-          </div>
+      <div className={styles.tabsContainer}>
+        <div
+          className={
+            toggleState === 1
+              ? `${styles.tabs} ${styles.activeTabs}`
+              : `${styles.tabs}`
+          }
+          onClick={() => setToggleState(1)}
+        >
+          <h2>WHITEPAPER 1.0</h2>
         </div>
-        <div className={styles.contentTabs}>
-          <div
-            className={
-              toggleState === 1
-                ? `${styles.content}  ${styles.activeContent}`
-                : `${styles.content}`
-            }
-          >
-            <SideNavigation
-              routes={Routes}
-            />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptas ratione velit animi error in, explicabo adipisci corporis eligendi et illo pariatur vero tempora ex laudantium corrupti molestiae provident sapiente.
-            Ducimus architecto aliquam mollitia beatae velit provident officia itaque iure, distinctio, quia impedit obcaecati tenetur a? Dolore sed voluptates enim exercitationem nulla. Sapiente accusamus similique nihil libero consequuntur est voluptas!
-            Sapiente ipsum iure aliquid similique sequi esse, totam quasi nam nobis cupiditate! Veritatis, sint accusantium ex doloribus nam consectetur et dolorum repellat fugit amet recusandae mollitia alias, maiores rem tempora.
-            Maxime magnam ipsa veniam laudantium officia, dolores sapiente ad voluptas facilis saepe nisi ex assumenda nihil numquam cum dignissimos exercitationem odio corporis necessitatibus aspernatur, repellat, facere quibusdam. Modi, reiciendis ab.
-            Quis, consequatur dolores. Iste ut repudiandae, eius odit non veritatis cupiditate consequatur assumenda sunt nisi minus nemo architecto beatae minima aut at tenetur eligendi. Facilis dolores culpa ex ratione dicta.
-            Placeat hic fugit suscipit eligendi. Nemo iste dolore in, obcaecati, neque iusto error mollitia magnam aliquam quam, natus necessitatibus enim culpa laudantium ipsam facilis. Beatae ullam esse minus ut debitis!
-            Quasi, explicabo tempora eos laborum sint harum est assumenda magnam, possimus natus aliquam. Magni adipisci eveniet possimus! Consequatur, nisi vel? Provident cum corporis magnam delectus minima eligendi, natus numquam quae.
-            Ut error, culpa quo odit possimus libero consequuntur, dolorum voluptatum quos temporibus animi modi ab molestias, eaque commodi porro excepturi qui exercitationem repellendus itaque. Minima nulla delectus placeat aut corporis?</p>
-          </div>
 
-          <div
-            className={
-              toggleState === 2
-                ? `${styles.content}  ${styles.activeContent}`
-                : `${styles.content}`
-            }
-          >
-            <SideNavigation
-              routes={Routes}
-            />
-          </div>
-
-          <div
-            className={
-              toggleState === 3
-                ? `${styles.content}  ${styles.activeContent}`
-                : `${styles.content}`
-            }
-          >
-            <SideNavigation
-              routes={Routes}
-            />
-          </div>
+        {/* <div
+          className={
+            toggleState === 2
+              ? `${styles.tabs} ${styles.activeTabs}`
+              : `${styles.tabs}`
+          }
+          onClick={() => setToggleState(2)}
+        >
+          <h2>EXECUTIVE SUMMARY</h2>
         </div>
+
+        <div
+          className={
+            toggleState === 3
+              ? `${styles.tabs} ${styles.activeTabs}`
+              : `${styles.tabs}`
+          }
+          onClick={() => setToggleState(3)}
+        >
+          <h2>TEAM PROFILES</h2>
+        </div> */}
+      </div>
+
+      <div className={styles.contentTabs}>
+        <SideNavigation
+          show={toggleState === 1 ? true : false}
+          routes={WhitePaperRoutes}
+        />
+
+        {children}
+
+        {/* <div
+          className={
+            toggleState === 2
+              ? `${styles.content}  ${styles.activeContent}`
+              : `${styles.content}`
+          }
+        >
+          <SideNavigation routes={Routes} />
+        </div> */}
+
+        {/* <div
+          className={
+            toggleState === 3
+              ? `${styles.content}  ${styles.activeContent}`
+              : `${styles.content}`
+          }
+        >
+          <SideNavigation routes={Routes} />
+        </div> */}
       </div>
     </div>
   );

@@ -1,6 +1,11 @@
 //Next, React (core node_modules) imports must be placed here
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
+import { useRouter } from "next/router";
+import { elementScrollIntoView } from "seamless-scroll-polyfill";
+import { AnimatePresence, motion, AnimateSharedLayout } from "framer-motion";
+
 //import STORE from '@/store'
+import ActiveAnchorContext from "@/store/ActiveAnchor";
 
 //import VIEWS from '@/views'
 
@@ -14,10 +19,39 @@ import Footer from "@/composites/Footer";
 import styles from "./Landing.module.scss";
 
 const LandingLayout = ({ children, ...props }) => {
+  const router = useRouter();
+  const { activeAnchor, setActiveAnchor } = useContext(ActiveAnchorContext);
+
+  useEffect(() => {
+    if (router.pathname == "/") {
+      if (activeAnchor) {
+        elementScrollIntoView(document.querySelector(activeAnchor), {
+          behavior: "smooth",
+          block: "start",
+          inline: "nearest",
+        });
+      }
+    }
+  }, [activeAnchor]);
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    if (e.target.hash) {
+      if (window.location.pathname !== "/") {
+        setActiveAnchor(e.target.hash);
+        router.push("/");
+      } else {
+        setActiveAnchor(e.target.hash);
+      }
+    } else {
+      router.push(e.target.href);
+    }
+  };
+
   return (
     <div className={styles.container}>
-      <Navbar />
-      {children}
+      <Navbar onClick={handleClick} />
+      <AnimatePresence exitBeforeEnter>{children}</AnimatePresence>
       <Footer />
     </div>
   );

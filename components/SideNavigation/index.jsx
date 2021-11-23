@@ -1,88 +1,76 @@
 //Next, React (core node_modules) imports must be placed here
+import { useRouter } from "next/router";
+import { useState, useContext, useEffect } from "react";
+import { elementScrollIntoView } from "seamless-scroll-polyfill";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
+
+import ActiveAnchorContext from "@/store/ActiveAnchor";
 
 //Styles must be imported here
 import styles from "./SideNavigation.module.scss";
 
-import Menu from "@/composites/Menu";
+const SideNavigation = ({ isCollapsed, show, routes, ...props }) => {
+  const router = useRouter();
+  const { whitePaperActiveAnchor, setWhitePaperActiveAnchor } =
+    useContext(ActiveAnchorContext);
 
-const SideNavigationMotion = {
-  rest: {
-    maxWidth: "40rem",
-  },
+  useEffect(() => {
+    if (router.pathname == "/whitepaper") {
+      if (whitePaperActiveAnchor) {
+        elementScrollIntoView(document.querySelector(whitePaperActiveAnchor), {
+          behavior: "smooth",
+          block: "start",
+          inline: "nearest",
+        });
+      }
+    }
+  }, [whitePaperActiveAnchor]);
 
-  hover: {
-    maxWidth: "40rem",
-  },
+  const handleClick = (e) => {
+    e.preventDefault();
+    console.log(e.target.hash);
+    setWhitePaperActiveAnchor(e.target.hash);
+  };
 
-  collapsed: {
-    maxWidth: "15rem",
-  },
-};
+  const sideMenu = Object.entries(routes).map(([key, value]) => {
+    if (value.subRoutes) {
+      return (
+        <ul className={styles.list} key={key}>
+          <li>
+            <Link href={value.route}>
+              <a onClick={handleClick}>{value.title}</a>
+            </Link>
+          </li>
+          {value.subRoutes.map((subRoute) => {
+            return (
+              <li key={subRoute.route}>
+                <Link href={subRoute.route}>
+                  <a onClick={handleClick}>{subRoute.title}</a>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      );
+    } else {
+      return (
+        <li key={key}>
+          <Link href={value.route}>
+            <a onClick={handleClick}>{value.title}</a>
+          </Link>
+        </li>
+      );
+    }
+  });
 
-const TextMotion = {
-  rest: {
-    opacity: 1,
-    transition: {
-      duration: 0.2,
-      delay: 0.2,
-    },
-  },
-
-  hover: {
-    opacity: 1,
-  },
-
-  collapsed: {
-    opacity: 0,
-    transition: {
-      duration: 0,
-    },
-  },
-};
-
-const HeaderMotion = {
-  rest: {
-    scale: 1,
-    originX: "0px",
-  },
-
-  hover: {
-    scale: 1,
-  },
-
-  collapsed: {
-    scale: 0.4,
-  },
-};
-
-const SideNavigation = ({ isCollapsed, routes, ...props }) => {
   return (
     <motion.aside
-      initial="rest"
-      whileHover="hover"
-      animate={isCollapsed ? "collapsed" : "rest"}
-      variants={SideNavigationMotion}
       className={styles.container}
+      style={{ display: show ? "block" : "none" }}
     >
-      <div className={styles.wrapper}>
-        <div className={styles.content}>
-          <motion.div className={styles.header} variants={HeaderMotion}>
-            <h1 >
-              <span>Whitepaper 1.0</span>
-              <span>WhitePaper 1.0</span>
-            </h1>
-            <h2>{props.role}</h2>
-          </motion.div>
-
-          <Menu
-            variants={TextMotion}
-            isCollapsed={isCollapsed}
-            routes={routes}
-          />
-        </div>
-      </div>
+      <ul className={styles.list}>{sideMenu}</ul>
     </motion.aside>
   );
 };

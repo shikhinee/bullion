@@ -1,5 +1,26 @@
-@import 'global';
+@import "global";
 
 .container {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
 
+  section {
+    width: 100%;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: aliceblue;
+  }
+}
+
+.content {
+  width: 100%;
+  max-width: has(lg);
+  padding: 1.6rem 0;
 }

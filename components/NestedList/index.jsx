@@ -3,29 +3,8 @@ import { useState } from "react";
 
 import { motion } from "framer-motion";
 
-import styled, { css } from "styled-components";
-
-import { DownArrow } from "@styled-icons/boxicons-solid/DownArrow";
-
 //Styles must be imported here
 import styles from "./NestedList.module.scss";
-
-const StyledArrow = styled(DownArrow)`
-  color: inherit;
-  height: 15px;
-  position: absolute;
-  left: 1em;
-  top: 50%;
-  transform: translateY(-50%) rotate(-90deg);
-
-  transition: transform 0.2s, opacity 0.5s 0.2s;
-
-  ${(props) =>
-    props.isOpen &&
-    css`
-      transform: translateY(-50%) rotate(0deg);
-    `}
-`;
 
 const NestedList = ({ children, head, icon, variants, ...props }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,10 +17,7 @@ const NestedList = ({ children, head, icon, variants, ...props }) => {
     <div className={`${styles.container} noselect`}>
       <li onClick={handleOpen} className={styles.head}>
         {icon}
-        <motion.span variants={variants}>
-          <StyledArrow isOpen={isOpen} />
-          {head}
-        </motion.span>
+        <motion.span variants={variants}>{head}</motion.span>
       </li>
       <motion.ul
         initial={{
@@ -50,7 +26,6 @@ const NestedList = ({ children, head, icon, variants, ...props }) => {
         animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
         transition={{ duration: 0.2 }}
       >
-        <StyledArrow isOpen={isOpen} />
         {children}
       </motion.ul>
     </div>

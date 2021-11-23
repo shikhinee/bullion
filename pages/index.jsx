@@ -6,17 +6,26 @@ import Team from "@/views/Landing/Team";
 import Contact from "@/views/Landing/Contact";
 import styles from "./Root.module.scss";
 
+import { motion } from "framer-motion";
+
 const RootPage = (props) => {
   return (
-    <main className={styles.container}>
-      <Home/>
-      <About/>
-      <Features/>
-      <Team/>
-      <Contact/>
-    </main>
+    <motion.main
+      exit={{ opacity: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className={styles.container}
+    >
+      <Home />
+      <About />
+      <Features />
+      <Team />
+      <Contact />
+    </motion.main>
   );
 };
-RootPage.Layout=LandingLayout
+
+RootPage.Layout = LandingLayout;
 
 export default RootPage;
