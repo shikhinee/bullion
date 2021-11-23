@@ -1,10 +1,7 @@
 //Next, React (core node_modules) imports must be placed here
 import { useRouter } from "next/router";
-import { useState, useContext, useEffect } from "react";
-import {
-  elementScrollIntoView,
-  windowScrollBy,
-} from "seamless-scroll-polyfill";
+import { useContext, useEffect } from "react";
+import smoothscroll from "smoothscroll-polyfill";
 
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -24,7 +21,9 @@ const SideNavigation = ({ isCollapsed, show, routes, ...props }) => {
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition - offSet;
 
-      windowScrollBy(window, {
+      smoothscroll.polyfill();
+
+      window.scrollBy({
         top: offsetPosition,
         behavior: "smooth",
       });
@@ -38,7 +37,7 @@ const SideNavigation = ({ isCollapsed, show, routes, ...props }) => {
         );
       }
     }
-  }, [whitePaperActiveAnchor]);
+  }, [whitePaperActiveAnchor, router]);
 
   const handleClick = (e) => {
     e.preventDefault();

@@ -22,6 +22,8 @@ const App = ({ Component, pageProps: { session, ...pageProps } }) => {
     return <Component {...props} {...pageProps} key={router.route} />;
   });
 
+  ForwardedComponent.displayName = "ForwardedComponent";
+
   const LayoutWithRef = () => {
     const componentRef = useRef();
     return (

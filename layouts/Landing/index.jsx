@@ -1,8 +1,8 @@
 //Next, React (core node_modules) imports must be placed here
 import { useEffect, useContext } from "react";
 import { useRouter } from "next/router";
-import { elementScrollIntoView } from "seamless-scroll-polyfill";
 import { AnimatePresence, motion, AnimateSharedLayout } from "framer-motion";
+import smoothscroll from "smoothscroll-polyfill";
 
 //import STORE from '@/store'
 import ActiveAnchorContext from "@/store/ActiveAnchor";
@@ -25,14 +25,20 @@ const LandingLayout = ({ children, ...props }) => {
   useEffect(() => {
     if (router.pathname == "/") {
       if (activeAnchor) {
-        elementScrollIntoView(document.querySelector(activeAnchor), {
+        // elementScrollIntoView(document.querySelector(activeAnchor), {
+        //   behavior: "smooth",
+        //   block: "start",
+        //   inline: "nearest",
+        // });
+        smoothscroll.polyfill();
+
+        document.querySelector(activeAnchor).scrollIntoView({
           behavior: "smooth",
           block: "start",
-          inline: "nearest",
         });
       }
     }
-  }, [activeAnchor]);
+  }, [activeAnchor, router]);
 
   const handleClick = (e) => {
     e.preventDefault();
