@@ -10,8 +10,8 @@ const ThemeLayout = ({ children, ...props }) => {
     <div className={darkTheme ? "dark" : "light"}>
       <style jsx global>{`
         body {
-          background-color: ${darkTheme ? "#121212" : "#fffdf9"};
-          color: ${darkTheme ? "#e6e4e0" : "#2a2a2a"};
+          background-color: ${darkTheme ? "#2a2a2a" : "#fffdf9"};
+          color: ${darkTheme ? "#e6e4e0" : "#414141"};
         }
       `}</style>
       {children}
