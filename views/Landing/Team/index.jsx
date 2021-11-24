@@ -12,7 +12,7 @@ import ActiveAnchorContext from "@/store/ActiveAnchor";
 import styles from "./Team.module.scss";
 
 const Team = (props) => {
-  const { setActiveAnchor } = useContext(ActiveAnchorContext);
+  const { setActiveAnchor, isClicked } = useContext(ActiveAnchorContext);
 
   const { ref, inView, entry } = useInView({
     /* Optional options */
@@ -21,7 +21,7 @@ const Team = (props) => {
   });
 
   useEffect(() => {
-    if (inView) {
+    if (inView && !isClicked) {
       setActiveAnchor("#team");
     }
   });

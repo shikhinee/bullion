@@ -13,7 +13,7 @@ import ActiveAnchorContext from "@/store/ActiveAnchor";
 import styles from "./About.module.scss";
 
 const About = (props) => {
-  const { setActiveAnchor } = useContext(ActiveAnchorContext);
+  const { setActiveAnchor, isClicked } = useContext(ActiveAnchorContext);
   const { ref, inView, entry } = useInView({
     /* Optional options */
     threshold: 0.5,
@@ -21,7 +21,8 @@ const About = (props) => {
   });
 
   useEffect(() => {
-    if (inView) {
+    console.log(isClicked);
+    if (inView && !isClicked) {
       setActiveAnchor("#about");
     }
   });

@@ -19,7 +19,7 @@ import ActiveAnchorContext from "@/store/ActiveAnchor";
 import styles from "./Contact.module.scss";
 
 const Contact = (props) => {
-  const { setActiveAnchor } = useContext(ActiveAnchorContext);
+  const { setActiveAnchor, isClicked } = useContext(ActiveAnchorContext);
 
   const { ref, inView, entry } = useInView({
     /* Optional options */
@@ -28,7 +28,7 @@ const Contact = (props) => {
   });
 
   useEffect(() => {
-    if (inView) {
+    if (inView && !isClicked) {
       setActiveAnchor("#contact");
     }
   });

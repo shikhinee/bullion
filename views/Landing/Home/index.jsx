@@ -12,7 +12,7 @@ import AnimatedNumber from "@/components/AnimatedNumber";
 import styles from "./Home.module.scss";
 
 const Home = (props) => {
-  const { setActiveAnchor } = useContext(ActiveAnchorContext);
+  const { setActiveAnchor, isClicked } = useContext(ActiveAnchorContext);
 
   const { ref, inView, entry } = useInView({
     /* Optional options */
@@ -21,7 +21,7 @@ const Home = (props) => {
   });
 
   useEffect(() => {
-    if (inView) {
+    if (inView && !isClicked) {
       setActiveAnchor("#home");
     }
   });

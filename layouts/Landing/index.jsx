@@ -20,7 +20,8 @@ import styles from "./Landing.module.scss";
 
 const LandingLayout = ({ children, ...props }) => {
   const router = useRouter();
-  const { activeAnchor, setActiveAnchor } = useContext(ActiveAnchorContext);
+  const { activeAnchor, setActiveAnchorImportant } =
+    useContext(ActiveAnchorContext);
 
   useEffect(() => {
     if (router.pathname == "/") {
@@ -39,10 +40,10 @@ const LandingLayout = ({ children, ...props }) => {
     e.preventDefault();
     if (e.target.hash) {
       if (window.location.pathname !== "/") {
-        setActiveAnchor(e.target.hash);
+        setActiveAnchorImportant(e.target.hash);
         router.push("/");
       } else {
-        setActiveAnchor(e.target.hash);
+        setActiveAnchorImportant(e.target.hash);
       }
     } else {
       router.push(e.target.href);

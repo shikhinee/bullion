@@ -78,12 +78,6 @@ const WhitePaperRoutes = {
 };
 
 const Panel = ({ children, ...props }) => {
-  const [toggleState, setToggleState] = useState({
-    whitePaper: {
-      isOpen: true,
-      routes: WhitePaperRoutes,
-    },
-  });
   return (
     <div className={styles.container}>
       <div className={styles.tabsContainer}>

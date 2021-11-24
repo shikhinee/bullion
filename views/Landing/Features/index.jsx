@@ -11,7 +11,7 @@ import ActiveAnchorContext from "@/store/ActiveAnchor";
 import styles from "./Features.module.scss";
 
 const Features = (props) => {
-  const { setActiveAnchor } = useContext(ActiveAnchorContext);
+  const { setActiveAnchor, isClicked } = useContext(ActiveAnchorContext);
 
   const { ref, inView, entry } = useInView({
     /* Optional options */
@@ -20,7 +20,7 @@ const Features = (props) => {
   });
 
   useEffect(() => {
-    if (inView) {
+    if (inView && !isClicked) {
       setActiveAnchor("#features");
     }
   });
