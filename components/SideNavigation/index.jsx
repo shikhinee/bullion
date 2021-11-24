@@ -53,8 +53,8 @@ const SideNavigation = ({ isCollapsed, routes, ...props }) => {
               <a
                 className={
                   `#${value.route.split("#")[1]}` === whitePaperActiveAnchor
-                    ? styles.active
-                    : ""
+                    ? `${styles.navLink} ${styles.activeNavLink}`
+                    : styles.navLink
                 }
                 onClick={handleClick}
               >
@@ -70,8 +70,8 @@ const SideNavigation = ({ isCollapsed, routes, ...props }) => {
                     className={
                       `#${subRoute.route.split("#")[1]}` ===
                       whitePaperActiveAnchor
-                        ? styles.active
-                        : ""
+                        ? `${styles.navLink} ${styles.activeNavLink}`
+                        : styles.navLink
                     }
                     onClick={handleClick}
                   >
@@ -90,8 +90,8 @@ const SideNavigation = ({ isCollapsed, routes, ...props }) => {
             <a
               className={
                 `#${value.route.split("#")[1]}` === whitePaperActiveAnchor
-                  ? styles.active
-                  : ""
+                  ? `${styles.navLink} ${styles.activeNavLink}`
+                  : styles.navLink
               }
               onClick={handleClick}
             >
