@@ -1,16 +1,17 @@
 import { createContext, useState } from "react";
 
 const ActiveAnchorContext = createContext({
-  activeAnchor: null,
+  activeAnchor: "#home",
   setActiveAnchor: () => {},
 
-  whitePaperActiveAnchor: null,
+  whitePaperActiveAnchor: "#bullion",
   setWhitePaperActiveAnchor: () => {},
 });
 
 export const ActiveAnchorContextProvider = ({ children, ...props }) => {
-  const [activeAnchor, setActiveAnchor] = useState(null);
-  const [whitePaperActiveAnchor, setWhitePaperActiveAnchor] = useState(null);
+  const [activeAnchor, setActiveAnchor] = useState("#home");
+  const [whitePaperActiveAnchor, setWhitePaperActiveAnchor] =
+    useState("#bullion");
 
   const context = {
     activeAnchor: activeAnchor,
