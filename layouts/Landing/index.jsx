@@ -25,11 +25,6 @@ const LandingLayout = ({ children, ...props }) => {
   useEffect(() => {
     if (router.pathname == "/") {
       if (activeAnchor) {
-        // elementScrollIntoView(document.querySelector(activeAnchor), {
-        //   behavior: "smooth",
-        //   block: "start",
-        //   inline: "nearest",
-        // });
         smoothscroll.polyfill();
 
         document.querySelector(activeAnchor).scrollIntoView({
