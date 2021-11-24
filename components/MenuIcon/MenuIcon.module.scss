@@ -1,6 +1,7 @@
 @import "global";
 
 .container {
+  display: none;
   position: relative;
   background-color: transparent;
   border: none;
@@ -10,7 +11,7 @@
   transform: rotate(0deg);
   transition: .5s ease-in-out;
   cursor: pointer;
-
+  
   span {
     position: absolute;
     height: 0.3rem;
@@ -23,6 +24,9 @@
     @include themify() {
       background-color: has(clr-bg-inverse);
     }
+  }
+  @include respondMax(md){
+    display: block;
   }
 }
 .container span:nth-child(1) {

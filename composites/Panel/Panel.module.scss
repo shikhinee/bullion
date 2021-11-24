@@ -17,7 +17,6 @@
   justify-content: center;
   background-color: $clr-neutral-1;
   padding: 1em;
-
   z-index: 1;
 }
 
@@ -87,7 +86,6 @@
 }
 .content {
   position: sticky;
-  top: #{calc($navbarHeight) * 2};
   background: #222831;
   width: 100%;
   max-width: 40rem;

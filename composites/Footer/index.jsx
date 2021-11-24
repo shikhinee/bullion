@@ -40,7 +40,7 @@ const StyledTwitter = styled(Twitter)`
 `;
 const Footer = (props) => {
   return (
-    <div className={styles.container}>
+    <footer className={styles.container}>
       <div className={styles.content}>
         <div className={styles.contentTop}>
           <div className={styles.contentLeft}>
@@ -98,7 +98,7 @@ const Footer = (props) => {
         </div>
       </div>
 
-    </div>
+    </footer>
   );
 };
 

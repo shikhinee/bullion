@@ -8,7 +8,6 @@ import ActiveAnchorContext from "@/store/ActiveAnchor";
 
 //import COMPONENT from '@/components'
 import Menu from "@/components/Menu";
-import MobileMenu from "@/components/MobileMenu";
 import Logo from "@/components/Logo";
 import styles from "./Navbar.module.scss";
 
@@ -16,9 +15,6 @@ import MenuIcon from "@/components/MenuIcon";
 
 const Navbar = (props) => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
-  const handleMenu = () => {
-    setMenuIsOpen(!menuIsOpen);
-  };
   const { setActiveAnchor } = useContext(ActiveAnchorContext);
   return (
     <header className={styles.container}>
@@ -33,9 +29,11 @@ const Navbar = (props) => {
           </a>
         </Link>
 
-        {menuIsOpen && <Menu onClick={props.onClick} />}
+        <Menu onClick={props.onClick} />
 
-        <MenuIcon handler={handleMenu} isOpen={menuIsOpen} />
+        <MenuIcon handler={() => {
+          setMenuIsOpen(!menuIsOpen)
+        }} isOpen={menuIsOpen} />
       </nav>
     </header>
   );
