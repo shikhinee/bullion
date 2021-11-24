@@ -14,29 +14,18 @@ const StyledFacebook = styled(FacebookSquare)`
   color: #d4a600;
   margin-right: 2rem;
   cursor: pointer;
-  &:hover{
-    background-color: #919498;
-  }
 `;
 const StyledDribbble = styled(Dribbble)`
   width: 24px;
   color: #d4a600;
   margin-right: 2rem;
   cursor: pointer;
-  &:hover{
-    background-color: #919498;
-    color: #222831;
-  }
 `;
 const StyledTwitter = styled(Twitter)`
   width: 24px;
   color: #d4a600;
   margin-right: 2rem;
   cursor: pointer;
-  &:hover{
-    background-color: #919498;
-    color: #222831;
-  }
 `;
 const Footer = (props) => {
   return (
@@ -48,13 +37,13 @@ const Footer = (props) => {
               <Logo />
               <p><span>Улаанбаатар хот, Сүхбаатар дүүрэг</span><span> Example<br />(+976) 7011 1111</span></p>
               <div className={styles.socialContainer}>
-                <Link href="https://www.facebook.com/SolidFrameworksLLC">
+                <Link href="">
                   <StyledFacebook />
                 </Link>
-                <Link href="https://www.instagram.com/solidframeworks/">
+                <Link href="">
                   <StyledDribbble />
                 </Link>
-                <Link href="https://www.youtube.com/channel/UC3M2XBEJv5UfRHDRzjWAsTQ">
+                <Link href="">
                   <StyledTwitter />
                 </Link>
               </div>

@@ -35,4 +35,15 @@
   p {
     margin: 1rem 0;
   }
+  td, th {
+    border: 1px solid has(clr-text-inverse);
+    padding: 0.4rem;
+  }
+  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: $clr-primary;
+    color: has(clr-text);
+  }
 }
