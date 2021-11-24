@@ -14,16 +14,6 @@ const Menu = (props) => {
   return (
     <ul className={styles.container}>
       <li>
-        <Link href="/testfield">
-          <a
-            className={route == "/testfield" ? styles.isActive : ""}
-            onClick={props.onClick}
-          >
-            Test
-          </a>
-        </Link>
-      </li>
-      <li>
         <Link href="/#about">
           <a
             className={
