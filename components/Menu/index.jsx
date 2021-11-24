@@ -14,6 +14,18 @@ const Menu = (props) => {
   return (
     <ul className={styles.container}>
       <li>
+        <Link href="/#home">
+          <a
+            className={
+              activeAnchor == "#home" && route == "/" ? styles.isActive : ""
+            }
+            onClick={props.onClick}
+          >
+            Home
+          </a>
+        </Link>
+      </li>
+      <li>
         <Link href="/#about">
           <a
             className={

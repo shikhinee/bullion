@@ -64,7 +64,7 @@ const WhitepaperPage = (props) => {
             <ul>
               <li>Over 4 in 6 small business owners are denied loans from financial institutions in 2020</li>
               <li>Big Banks</li>
-              <dd>Granted approvals for 13.6% of loan applications to small businesses in 2020</dd>
+              <dd>-Granted approvals for 13.6% of loan applications to small businesses in 2020</dd>
               <li>Small Banks</li>
               <li>Institutional Lenders</li>
               <li>Alternative Lenders</li>
