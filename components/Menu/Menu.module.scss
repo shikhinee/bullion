@@ -1,15 +1,24 @@
 @import "global";
 .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: min-content;
   height: 7rem;
+
   display: flex;
   justify-content: center;
   align-items: center;
 
   @include themify() {
     background-color: rgba($color: has(clr-bg), $alpha: 1);
+  }
+
+  a {
+    text-decoration: none;
   }
 
   li {
@@ -22,10 +31,6 @@
       margin-right: 1em;
     }
   }
-}
-
-.navLink {
-  text-decoration: none;
 }
 
 .isActive {

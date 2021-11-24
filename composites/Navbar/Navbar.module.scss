@@ -1,8 +1,8 @@
 @import "global";
 
 .container {
+  position: relative;
   width: 100vw;
-  max-width: 100%;
   height: $navbarHeight;
   @include themify() {
     background-color: has(clr-bg);
