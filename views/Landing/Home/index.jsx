@@ -24,33 +24,35 @@ const Home = (props) => {
 			opacity: 0,
 			scale: 1,
 			y: 100,
-			}
+		}
 	};
 	const container = {
-		visible: { opacity: 1},
+		visible: { opacity: 1 },
 		hidden: {
 			opacity: 0,
 			transition: {
-				staggerChildren:1,
+				staggerChildren: 1,
 			}
-			}
+		}
 	};
-	 return (
-		 <div className={styles.container} id="home">
-			 <motion.div animate={inView ? 'visible' : 'hidden'}
-						variants={container}
-						transition={{duration: 1, ease: 'easeOut' }}
-						ref={ref}className={styles.content}>
-			 <h1>This is Home Page</h1>
-			 <motion.h1 animate={inView ? 'visible' : 'hidden'}
-						variants={variants}
-						transition={{duration: 1, ease: 'easeOut' }}
-						ref={ref}><AnimatedNumber /></motion.h1>
-			<motion.p animate={inView ? 'visible' : 'hidden'}
-						variants={variants}
-						transition={{duration: 1, ease: 'easeOut' }}
-						ref={ref}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium doloremque nostrum non vitae repellat ipsum voluptas explicabo laborum modi mollitia molestias tempore debitis veritatis, perspiciatis, blanditiis cupiditate saepe quasi quod?</motion.p>
-			 </motion.div>
+	return (
+		<div className={styles.container} id="home">
+			<motion.div animate={inView ? 'visible' : 'hidden'}
+				variants={container}
+				transition={{ duration: 1, ease: 'easeOut' }}
+				ref={ref} className={styles.content}>
+				<h1>This is Home Page</h1>
+				<motion.h1 animate={inView ? 'visible' : 'hidden'}
+					variants={variants}
+					transition={{ duration: 1, ease: 'easeOut' }}
+					ref={ref}>
+						<AnimatedNumber />
+						</motion.h1>
+				<motion.p animate={inView ? 'visible' : 'hidden'}
+					variants={variants}
+					transition={{ duration: 1, ease: 'easeOut' }}
+					ref={ref}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium doloremque nostrum non vitae repellat ipsum voluptas explicabo laborum modi mollitia molestias tempore debitis veritatis, perspiciatis, blanditiis cupiditate saepe quasi quod?</motion.p>
+			</motion.div>
 		</div>
 	)
 };
