@@ -11,7 +11,7 @@ import ActiveAnchorContext from "@/store/ActiveAnchor";
 //Styles must be imported here
 import styles from "./SideNavigation.module.scss";
 
-const SideNavigation = ({ isCollapsed, show, routes, ...props }) => {
+const SideNavigation = ({ isCollapsed, routes, ...props }) => {
   const router = useRouter();
   const { whitePaperActiveAnchor, setWhitePaperActiveAnchor } =
     useContext(ActiveAnchorContext);
@@ -104,10 +104,7 @@ const SideNavigation = ({ isCollapsed, show, routes, ...props }) => {
   });
 
   return (
-    <motion.aside
-      className={styles.container}
-      style={{ display: show ? "block" : "none" }}
-    >
+    <motion.aside className={styles.container}>
       <ul className={styles.list}>{sideMenu}</ul>
     </motion.aside>
   );

@@ -78,71 +78,32 @@ const WhitePaperRoutes = {
 };
 
 const Panel = ({ children, ...props }) => {
-  const [toggleState, setToggleState] = useState(1);
+  const [toggleState, setToggleState] = useState({
+    whitePaper: {
+      isOpen: true,
+      routes: WhitePaperRoutes,
+    },
+  });
   return (
     <div className={styles.container}>
       <div className={styles.tabsContainer}>
-        <div
-          className={
-            toggleState === 1
-              ? `${styles.tabs} ${styles.activeTabs}`
-              : `${styles.tabs}`
-          }
-          onClick={() => setToggleState(1)}
-        >
-          <h2>WHITEPAPER 1.0</h2>
+        <div className={styles.tab}>
+          <span>WHITEPAPER 1.0</span>
         </div>
 
-        {/* <div
-          className={
-            toggleState === 2
-              ? `${styles.tabs} ${styles.activeTabs}`
-              : `${styles.tabs}`
-          }
-          onClick={() => setToggleState(2)}
-        >
-          <h2>EXECUTIVE SUMMARY</h2>
+        <div className={styles.tab}>
+          <span>EXECUTIVE SUMMARY</span>
         </div>
 
-        <div
-          className={
-            toggleState === 3
-              ? `${styles.tabs} ${styles.activeTabs}`
-              : `${styles.tabs}`
-          }
-          onClick={() => setToggleState(3)}
-        >
-          <h2>TEAM PROFILES</h2>
-        </div> */}
+        <div className={styles.tab}>
+          <span>TEAM PROFILES</span>
+        </div>
       </div>
 
       <div className={styles.contentTabs}>
-        <SideNavigation
-          show={toggleState === 1 ? true : false}
-          routes={WhitePaperRoutes}
-        />
+        <SideNavigation routes={WhitePaperRoutes} />
 
         {children}
-
-        {/* <div
-          className={
-            toggleState === 2
-              ? `${styles.content}  ${styles.activeContent}`
-              : `${styles.content}`
-          }
-        >
-          <SideNavigation routes={Routes} />
-        </div> */}
-
-        {/* <div
-          className={
-            toggleState === 3
-              ? `${styles.content}  ${styles.activeContent}`
-              : `${styles.content}`
-          }
-        >
-          <SideNavigation routes={Routes} />
-        </div> */}
       </div>
     </div>
   );
