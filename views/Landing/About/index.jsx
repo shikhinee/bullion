@@ -21,7 +21,6 @@ const About = (props) => {
   });
 
   useEffect(() => {
-    console.log(isClicked);
     if (inView && !isClicked) {
       setActiveAnchor("#about");
     }

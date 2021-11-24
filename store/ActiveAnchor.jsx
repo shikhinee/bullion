@@ -11,6 +11,8 @@ const ActiveAnchorContext = createContext({
   setWhitePaperActiveAnchor: () => {},
 });
 
+let currentDelay;
+
 export const ActiveAnchorContextProvider = ({ children, ...props }) => {
   const [isClicked, setIsClicked] = useState(false);
   const [activeAnchor, setActiveAnchor] = useState("#home");
@@ -18,14 +20,16 @@ export const ActiveAnchorContextProvider = ({ children, ...props }) => {
     useState("#bullion");
 
   const setActiveAnchorImportant = (hash) => {
-    if (isClicked) return;
+    if (isClicked) clearTimeout(currentDelay);
 
     setIsClicked(true);
     setActiveAnchor(hash);
 
-    setTimeout(() => {
+    const delay = setTimeout(() => {
       setIsClicked(false);
-    }, 600);
+    }, 1000);
+
+    currentDelay = delay;
   };
 
   const context = {
