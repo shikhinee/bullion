@@ -9,7 +9,7 @@ import Contact from "@/views/Landing/Contact";
 
 import styles from "./Root.module.scss";
 
-import Canvas from "@/components/CanvasLanding/index.jsx";
+import Canvas from "@/views/Landing/CanvasLanding/index.jsx";
 
 const RootPage = (props) => {
   return (
