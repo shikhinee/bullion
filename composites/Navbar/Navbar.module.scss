@@ -4,9 +4,6 @@
   position: relative;
   width: 100vw;
   height: $navbarHeight;
-  @include themify() {
-    background-color: has(clr-bg);
-  }
   position: fixed;
   top: 0;
   left: 0;
