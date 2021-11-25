@@ -17,34 +17,40 @@ const Navbar = (props) => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [navbar, setNavbar] = useState(false);
   const { setActiveAnchor } = useContext(ActiveAnchorContext);
+
   const changeBackground = () => {
-    if(window.scrollY >= 80){
+    if (window.scrollY >= 80) {
       setNavbar(true);
     } else {
       setNavbar(false);
     }
-  }
+  };
+
   useEffect(() => {
-    window.addEventListener('scroll', changeBackground)
-  })
+    window.addEventListener("scroll", changeBackground);
+  });
+
   return (
-    <header className={navbar ? `${styles.container} ${styles.active}` : `${styles.container}`}>
+    <header
+      className={
+        navbar ? `${styles.container} ${styles.active}` : `${styles.container}`
+      }
+    >
       <nav className={styles.nav}>
-        <Link href="/#home">
-          <a
-            onClick={(e) => {
-              setActiveAnchor(e.target.hash);
-            }}
-          >
+        <Link href="/">
+          <a>
             <Logo />
           </a>
         </Link>
 
         <Menu onClick={props.onClick} />
 
-        <MenuIcon handler={() => {
-          setMenuIsOpen(!menuIsOpen)
-        }} isOpen={menuIsOpen} />
+        <MenuIcon
+          handler={() => {
+            setMenuIsOpen(!menuIsOpen);
+          }}
+          isOpen={menuIsOpen}
+        />
       </nav>
     </header>
   );

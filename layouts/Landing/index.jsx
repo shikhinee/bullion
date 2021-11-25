@@ -38,6 +38,7 @@ const LandingLayout = ({ children, ...props }) => {
 
   const handleClick = (e) => {
     e.preventDefault();
+
     if (e.target.hash) {
       if (window.location.pathname !== "/") {
         setActiveAnchorImportant(e.target.hash);
