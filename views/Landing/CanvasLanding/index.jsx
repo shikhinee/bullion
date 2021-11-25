@@ -113,7 +113,7 @@ const CanvasLanding = (props) => {
           <Wave />
         </Suspense>
         <EffectComposer>
-          <Noise opacity={0.1} />
+          <Noise opacity={0.05} />
           <ToneMapping
             blendFunction={BlendFunction.NORMAL} // blend mode
             adaptive={false} // toggle adaptive luminance map usage
