@@ -7,13 +7,6 @@
   flex-direction: column;
   width: 100%;
   align-items: center;
-
-  section {
-    width: 100%;
-    height: max-content;
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 .content {
@@ -22,20 +15,54 @@
   max-width: has(sm);
   padding: 1.6rem 2.4rem;
   top: $navbarHeight;
-  h1 {
-    text-align:left;
-    margin: 1.5rem 0;
+
+  :where(section) {
+    position: relative;
+    width: 100%;
+
+    margin-bottom: 8em;
   }
-  h2 {
-    margin: 1rem 0;
+
+  :where(h1) {
+    position: relative;
+    margin-bottom: 0.5em;
   }
-  h3 {
-    text-align: center;
+
+  :where(h2) {
+    position: relative;
+    font-weight: 400;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
   }
-  p {
-    margin: 1rem 0;
+
+  :where(h3) {
+    position: relative;
+    margin-top: 2em;
+    margin-bottom: .5em;
+    font-weight: 400;
+    color: $clr-neutral-8;
   }
-  td, th {
+
+  :where(p) {
+    position: relative;
+    margin-bottom: 1em;
+  }
+
+  :where(ul) {
+    position: relative;
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+  }
+
+  :where(li) {
+    position: relative;
+    &:not(:last-of-type) {
+      margin-bottom: 1em;
+    }
+  }
+
+  td,
+  th {
     border: 1px solid has(clr-text-inverse);
     padding: 0.4rem;
   }
@@ -46,4 +73,15 @@
     background-color: $clr-primary;
     color: has(clr-text);
   }
+}
+
+.ulTitle {
+  margin-bottom: 0;
+}
+
+.highlight {
+  background-color: $clr-neutral-2;
+  color: $clr-neutral-8;
+  padding: 0.1em .5em;
+  border-radius: .5rem;
 }

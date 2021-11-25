@@ -47,41 +47,41 @@ const SideNavigation = ({ isCollapsed, routes, ...props }) => {
   const sideMenu = Object.entries(routes).map(([key, value]) => {
     if (value.subRoutes) {
       return (
-        <ul className={styles.list} key={key}>
-          <li>
-            <Link href={value.route}>
-              <a
-                className={
-                  `#${value.route.split("#")[1]}` === whitePaperActiveAnchor
-                    ? `${styles.navLink} ${styles.activeNavLink}`
-                    : styles.navLink
-                }
-                onClick={handleClick}
-              >
-                {value.title}
-              </a>
-            </Link>
-          </li>
-          {value.subRoutes.map((subRoute) => {
-            return (
-              <li key={subRoute.route}>
-                <Link href={subRoute.route}>
-                  <a
-                    className={
-                      `#${subRoute.route.split("#")[1]}` ===
-                      whitePaperActiveAnchor
-                        ? `${styles.navLink} ${styles.activeNavLink}`
-                        : styles.navLink
-                    }
-                    onClick={handleClick}
-                  >
-                    {subRoute.title}
-                  </a>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+        <li key={key}>
+          <Link href={value.route}>
+            <a
+              className={
+                `#${value.route.split("#")[1]}` === whitePaperActiveAnchor
+                  ? `${styles.navLink} ${styles.activeNavLink}`
+                  : styles.navLink
+              }
+              onClick={handleClick}
+            >
+              {value.title}
+            </a>
+          </Link>
+          <ul className={styles.list} key={key}>
+            {value.subRoutes.map((subRoute) => {
+              return (
+                <li key={subRoute.route}>
+                  <Link href={subRoute.route}>
+                    <a
+                      className={
+                        `#${subRoute.route.split("#")[1]}` ===
+                        whitePaperActiveAnchor
+                          ? `${styles.navLink} ${styles.activeNavLink}`
+                          : styles.navLink
+                      }
+                      onClick={handleClick}
+                    >
+                      {subRoute.title}
+                    </a>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </li>
       );
     } else {
       return (

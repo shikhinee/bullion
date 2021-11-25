@@ -8,7 +8,7 @@
   height: min-content;
   box-sizing: border-box;
   padding: 1.6rem;
-  @include respondMax(sm){
+  @include respondMax(sm) {
     display: none;
   }
 }
@@ -41,7 +41,7 @@
     }
   }
 
-  &:not(:first-of-type) {
+  ul {
     margin: 1.6rem 0 1.6rem 1.6rem;
   }
 }
