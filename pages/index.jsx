@@ -1,12 +1,15 @@
+import { motion } from "framer-motion";
+
 import LandingLayout from "@/layouts/Landing";
 import Home from "@/views/Landing/Home";
 import About from "@/views/Landing/About";
 import Features from "@/views/Landing/Features";
 import Team from "@/views/Landing/Team";
 import Contact from "@/views/Landing/Contact";
+
 import styles from "./Root.module.scss";
 
-import { motion } from "framer-motion";
+import Canvas from "@/components/CanvasLanding/index.jsx";
 
 const RootPage = (props) => {
   return (
@@ -17,6 +20,7 @@ const RootPage = (props) => {
       transition={{ duration: 1 }}
       className={styles.container}
     >
+      <Canvas />
       <Home />
       <About />
       <Features />
