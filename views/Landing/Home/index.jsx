@@ -64,7 +64,7 @@ const Home = (props) => {
         <motion.p
           animate={inView ? "visible" : "hidden"}
           variants={variants}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ delay: 0.3, duration: 1, ease: "easeOut" }}
           ref={ref}
         >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
