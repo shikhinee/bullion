@@ -1,7 +1,7 @@
 //Next, React (core node_modules) imports must be placed here
 import Link from "next/link";
 
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 
 //import STORE from '@/store'
 import ActiveAnchorContext from "@/store/ActiveAnchor";
@@ -15,9 +15,20 @@ import MenuIcon from "@/components/MenuIcon";
 
 const Navbar = (props) => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const [navbar, setNavbar] = useState(false);
   const { setActiveAnchor } = useContext(ActiveAnchorContext);
+  const changeBackground = () => {
+    if(window.scrollY >= 80){
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  }
+  useEffect(() => {
+    window.addEventListener('scroll', changeBackground)
+  })
   return (
-    <header className={styles.container}>
+    <header className={navbar ? `${styles.container} ${styles.active}` : `${styles.container}`}>
       <nav className={styles.nav}>
         <Link href="/#home">
           <a
