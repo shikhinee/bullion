@@ -76,7 +76,11 @@ const Menu = (props) => {
       <li>
         <Link href="/whitepaper">
           <a
-            className={route == "/whitepaper" ? styles.isActive : ""}
+            className={
+              route == "/whitepaper"
+                ? `${styles.isActive} ${styles.ctaItem}`
+                : styles.ctaItem
+            }
             onClick={props.onClick}
           >
             Whitepaper

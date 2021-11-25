@@ -7,22 +7,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  list-style: none;
 
   a {
     text-decoration: none;
   }
 
   li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-
     &:not(:last-of-type) {
       margin-right: 1em;
     }
   }
-  @include respondMax(md){
+
+  @include respondMax(md) {
     display: none;
     position: absolute;
     top: 0;
@@ -39,6 +36,16 @@
   }
 }
 
+.ctaItem {
+  display: block;
+  font-weight: 400;
+
+  padding: 0.5em 1em;
+  border-radius: 0.5rem;
+  border: 0.1rem solid $clr-neutral-5;
+}
+
 .isActive {
-  color: orange;
+  color: $clr-primary;
+  border-color: $clr-primary;
 }
