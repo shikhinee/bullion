@@ -31,7 +31,8 @@
 }
 
 .list {
-  list-style: none;
+  list-style: upper-roman;
+  list-style-position: inside;
   margin: 0;
   padding: 0;
 
@@ -42,6 +43,8 @@
   }
 
   ul {
+    list-style: lower-roman;
+    list-style-position: inside;
     margin: 1.6rem 0 1.6rem 1.6rem;
   }
 }
