@@ -1,6 +1,6 @@
 //Next, React (core node_modules) imports must be placed here
 import * as THREE from "three";
-import { useRef, Suspense } from "react";
+import { useRef } from "react";
 import { Canvas, useFrame, extend, useThree } from "@react-three/fiber";
 import { shaderMaterial } from "@react-three/drei";
 import {
@@ -21,8 +21,8 @@ const WaveShaderMaterial = shaderMaterial(
   {
     uColorPrimary: new THREE.Color(0.0, 0.0, 0.0),
     uColorSecondary: new THREE.Color(0.0, 0.0, 0.0),
-    warpSpeed: 1,
-    speed: 1,
+    warpSpeed: 0,
+    speed: 0,
   },
   // Vertex Shader
   glsl`
@@ -30,14 +30,10 @@ const WaveShaderMaterial = shaderMaterial(
 
     varying vec2 vUv;
 
-    #pragma glslify: snoise3 = require('glsl-noise/simplex/3d');
-
     void main() {
       vUv = uv;
 
-      vec3 pos = position;
-
-      gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
+      gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
     }
   `,
   // Fragment Shader -- Color
@@ -73,9 +69,6 @@ const Wave = () => {
   const shaderRef = useRef();
   const { mouse } = useThree();
 
-  let x = 0;
-  let y = 0;
-
   useFrame(() => {
     shaderRef.current.speed = mouse.x * 0.7;
     shaderRef.current.warpSpeed = mouse.y * 0.7;
@@ -83,7 +76,7 @@ const Wave = () => {
 
   return (
     <mesh>
-      <planeBufferGeometry attach="geometry" args={[6, 4, 2, 2]} />
+      <planeBufferGeometry attach="geometry" args={[6, 4, 1, 1]} />
       <waveShaderMaterial
         uColorPrimary={"#ffb347"}
         uColorSecondary={"#121212"}
@@ -101,15 +94,13 @@ const CanvasLanding = (props) => {
       <Canvas
         onPointerOver={null}
         performance={{ min: 0.1, max: 0.5 }}
-        camera={{ fov: 20 }}
+        camera={{ fov: 25 }}
         onCreated={({ camera }) => {
           camera.rotateZ(Math.PI * 0.2);
         }}
       >
-        <Suspense fallback={null}>
-          <Wave />
-        </Suspense>
-        <EffectComposer>
+        <Wave />
+        {/* <EffectComposer>
           <Noise opacity={0.05} />
           <ToneMapping
             blendFunction={BlendFunction.NORMAL} // blend mode
@@ -124,7 +115,7 @@ const CanvasLanding = (props) => {
             blendFunction={BlendFunction.NORMAL} // blend mode
             offset={[0.02, 0.002]} // color offset
           />
-        </EffectComposer>
+        </EffectComposer> */}
       </Canvas>
     </div>
   );
