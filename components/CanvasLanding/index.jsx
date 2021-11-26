@@ -1,7 +1,7 @@
 //Next, React (core node_modules) imports must be placed here
 import * as THREE from "three";
 import { useRef, Suspense } from "react";
-import { Canvas, useFrame, extend } from "@react-three/fiber";
+import { Canvas, useFrame, extend, useThree } from "@react-three/fiber";
 import { shaderMaterial } from "@react-three/drei";
 import {
   EffectComposer,
@@ -75,11 +75,12 @@ extend({ WaveShaderMaterial });
 
 const Wave = () => {
   const shaderRef = useRef();
+  const { mouse } = useThree();
 
   let x = 0;
   let y = 0;
 
-  useFrame(({ clock, mouse }) => {
+  useFrame(({ clock }) => {
     shaderRef.current.uTime = clock.getElapsedTime();
 
     shaderRef.current.speed = mouse.x * 0.7;
