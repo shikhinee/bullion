@@ -46,9 +46,8 @@ const About = (props) => {
   };
 
   return (
-    <motion.div className={styles.container} id="about">
+    <motion.div className={styles.container} id="about" ref={ref}>
       <motion.div
-        ref={ref}
         animate={controls}
         initial="hidden"
         variants={variants}
