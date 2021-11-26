@@ -27,7 +27,7 @@ const WaveShaderMaterial = shaderMaterial(
   },
   // Vertex Shader
   glsl`
-    precision mediump float;
+    precision lowp float;
 
     varying vec2 vUv;
 
@@ -45,7 +45,7 @@ const WaveShaderMaterial = shaderMaterial(
   `,
   // Fragment Shader -- Color
   glsl`
-    precision mediump float;
+    precision lowp float;
 
     uniform vec3 uColorPrimary;
     uniform vec3 uColorSecondary;
