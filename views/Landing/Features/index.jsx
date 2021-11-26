@@ -23,7 +23,8 @@ const Features = (props) => {
 
   useEffect(() => {
     if (inView && !isClicked) {
-      setActiveAnchor("#features");
+      setActiveAnchor("#contact");
+    } else if (inView) {
       animation.start("visible");
     } else {
       animation.start("hidden");

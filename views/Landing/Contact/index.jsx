@@ -27,6 +27,7 @@ const Contact = (props) => {
   useEffect(() => {
     if (inView && !isClicked) {
       setActiveAnchor("#contact");
+    } else if (inView) {
       animation.start("visible");
     } else {
       animation.start("hidden");
