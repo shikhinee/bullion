@@ -100,22 +100,17 @@ const CanvasLanding = (props) => {
         }}
       >
         <Wave />
-        {/* <EffectComposer>
+        <EffectComposer>
           <Noise opacity={0.05} />
           <ToneMapping
             blendFunction={BlendFunction.NORMAL} // blend mode
             adaptive={false} // toggle adaptive luminance map usage
-            resolution={256} // texture resolution of the luminance map
-            middleGrey={0.6} // middle grey factor
-            maxLuminance={1.0} // maximum luminance
-            averageLuminance={1.0} // average luminance
-            adaptationRate={1.0} // luminance adaptation rate
           />
           <ChromaticAberration
             blendFunction={BlendFunction.NORMAL} // blend mode
             offset={[0.02, 0.002]} // color offset
           />
-        </EffectComposer> */}
+        </EffectComposer>
       </Canvas>
     </div>
   );
