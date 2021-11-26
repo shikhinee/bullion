@@ -24,7 +24,8 @@ const About = (props) => {
 
   useEffect(() => {
     if (inView && !isClicked) {
-      setActiveAnchor("#contact");
+      setActiveAnchor("#about");
+      animation.start("visible");
     } else if (inView) {
       animation.start("visible");
     } else {

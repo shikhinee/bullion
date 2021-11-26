@@ -23,7 +23,8 @@ const Home = (props) => {
 
   useEffect(() => {
     if (inView && !isClicked) {
-      setActiveAnchor("#contact");
+      setActiveAnchor("#home");
+      animation.start("visible");
     } else if (inView) {
       animation.start("visible");
     } else {
