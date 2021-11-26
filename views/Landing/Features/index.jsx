@@ -38,7 +38,7 @@ const Features = (props) => {
   };
 
   return (
-    <div className={styles.container} id="features">
+    <div className={styles.container} id="features" ref={ref}>
       <div className={styles.content}>
         <div className={styles.panel}>
           <h1>This is Features Page</h1>
@@ -54,7 +54,6 @@ const Features = (props) => {
           initial="hidden"
           animate={animation}
           variants={variants}
-          ref={ref}
         >
           <div className={styles.card}>
             <h3>Feature Headline</h3>

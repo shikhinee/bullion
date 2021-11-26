@@ -42,12 +42,11 @@ const Contact = (props) => {
     },
   };
   return (
-    <div className={styles.container} id="contact">
+    <div className={styles.container} id="contact" ref={ref}>
       <motion.div
         className={styles.content}
         animate={animation}
         variants={variants}
-        ref={ref}
       >
         <h1>This is Contact Page</h1>
         <p>

@@ -46,13 +46,13 @@ const About = (props) => {
   };
 
   return (
-    <div className={styles.container} id="about">
+    <motion.div className={styles.container} id="about">
       <motion.div
-        className={styles.content}
         ref={ref}
         animate={controls}
         initial="hidden"
         variants={variants}
+        className={styles.content}
       >
         <div className={styles.left}>
           <h1>
@@ -78,7 +78,7 @@ const About = (props) => {
           </div>
         </div>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 

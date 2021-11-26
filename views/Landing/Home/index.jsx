@@ -38,7 +38,7 @@ const Home = (props) => {
     },
   };
   return (
-    <div className={styles.container} id="home">
+    <div className={styles.container} id="home" ref={ref}>
       <motion.div
         initial="hidden"
         animate={animation}
