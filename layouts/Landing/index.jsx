@@ -20,12 +20,12 @@ import styles from "./Landing.module.scss";
 
 const LandingLayout = ({ children, ...props }) => {
   const router = useRouter();
-  const { activeAnchor, setActiveAnchorImportant } =
+  const { activeAnchor, setActiveAnchorImportant, isClicked } =
     useContext(ActiveAnchorContext);
 
   useEffect(() => {
     if (router.pathname == "/") {
-      if (activeAnchor) {
+      if (isClicked) {
         smoothscroll.polyfill();
 
         document.querySelector(activeAnchor).scrollIntoView({
