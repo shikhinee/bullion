@@ -29,7 +29,7 @@ const About = (props) => {
     } else {
       animation.start("hidden");
     }
-  }, [animation, inView]);
+  }, [inView]);
 
   const variants = {
     visible: {

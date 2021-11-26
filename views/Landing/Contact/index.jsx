@@ -31,7 +31,7 @@ const Contact = (props) => {
     } else {
       animation.start("hidden");
     }
-  }, [inView, animation]);
+  }, [inView]);
 
   const variants = {
     visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.5 } },
