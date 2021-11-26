@@ -19,7 +19,6 @@ import styles from "./CanvasLanding.module.scss";
 const WaveShaderMaterial = shaderMaterial(
   // Uniform
   {
-    uTime: 0,
     uColorPrimary: new THREE.Color(0.0, 0.0, 0.0),
     uColorSecondary: new THREE.Color(0.0, 0.0, 0.0),
     warpSpeed: 1,
@@ -30,8 +29,6 @@ const WaveShaderMaterial = shaderMaterial(
     precision lowp float;
 
     varying vec2 vUv;
-
-    uniform float uTime;
 
     #pragma glslify: snoise3 = require('glsl-noise/simplex/3d');
 
@@ -49,7 +46,6 @@ const WaveShaderMaterial = shaderMaterial(
 
     uniform vec3 uColorPrimary;
     uniform vec3 uColorSecondary;
-    uniform float uTime;
     uniform float warpSpeed;
     uniform float speed;
 
@@ -80,9 +76,7 @@ const Wave = () => {
   let x = 0;
   let y = 0;
 
-  useFrame(({ clock }) => {
-    shaderRef.current.uTime = clock.getElapsedTime();
-
+  useFrame(() => {
     shaderRef.current.speed = mouse.x * 0.7;
     shaderRef.current.warpSpeed = mouse.y * 0.7;
   });
