@@ -8,6 +8,7 @@ import ActiveAnchorContext from "@/store/ActiveAnchor";
 //import COMPOSITES from '@/composites'
 
 //import COMPONENT from '@/components'
+import CanvasLanding from "@/components/CanvasLanding";
 import styles from "./Home.module.scss";
 
 const Home = (props) => {
@@ -47,6 +48,7 @@ const Home = (props) => {
   };
   return (
     <div className={styles.container} id="home" ref={ref}>
+      <CanvasLanding />
       <motion.div
         initial="hidden"
         animate={animation}

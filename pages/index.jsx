@@ -9,8 +9,6 @@ import Contact from "@/views/Landing/Contact";
 
 import styles from "./Root.module.scss";
 
-import Canvas from "@/views/Landing/CanvasLanding/index.jsx";
-
 const RootPage = (props) => {
   return (
     <motion.main
@@ -20,7 +18,6 @@ const RootPage = (props) => {
       transition={{ duration: 1 }}
       className={styles.container}
     >
-      <Canvas />
       <Home />
       <About />
       <Features />
