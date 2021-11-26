@@ -21,6 +21,10 @@ const Team = (props) => {
   });
 
   useEffect(() => {
+    if (isClicked && activeAnchor !== "#team") {
+      return;
+    }
+    
     if (isClicked) {
       // animation.start("visible");
     } else if (inView) {

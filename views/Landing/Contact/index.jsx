@@ -14,7 +14,8 @@ import ActiveAnchorContext from "@/store/ActiveAnchor";
 import styles from "./Contact.module.scss";
 
 const Contact = (props) => {
-  const { setActiveAnchor, isClicked } = useContext(ActiveAnchorContext);
+  const { activeAnchor, setActiveAnchor, isClicked } =
+    useContext(ActiveAnchorContext);
 
   const { ref, inView } = useInView({
     /* Optional options */
@@ -25,9 +26,15 @@ const Contact = (props) => {
   const animation = useAnimation();
 
   useEffect(() => {
+    if (isClicked && activeAnchor !== "#contact") {
+      return;
+    }
+
     if (isClicked) {
+      // console.log("CONTACT: I was clicked and now running Animation");
       animation.start("visible");
     } else if (inView) {
+      // console.log("CONTACT: I was inView now running Animation");
       animation.start("visible");
       setActiveAnchor("#contact");
     } else {

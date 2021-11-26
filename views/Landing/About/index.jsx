@@ -23,6 +23,9 @@ const About = (props) => {
   const animation = useAnimation();
 
   useEffect(() => {
+    if (isClicked && activeAnchor !== "#about") {
+      return;
+    }
     if (isClicked) {
       animation.start("visible");
     } else if (inView) {

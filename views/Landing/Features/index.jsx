@@ -22,6 +22,10 @@ const Features = (props) => {
   const animation = useAnimation();
 
   useEffect(() => {
+    if (isClicked && activeAnchor !== "#features") {
+      return;
+    }
+    
     if (isClicked) {
       animation.start("visible");
     } else if (inView) {

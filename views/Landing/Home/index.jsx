@@ -22,6 +22,10 @@ const Home = (props) => {
   const animation = useAnimation();
 
   useEffect(() => {
+    if (isClicked && activeAnchor !== "#home") {
+      return;
+    }
+    
     if (isClicked) {
       animation.start("visible");
     } else if (inView) {
