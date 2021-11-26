@@ -1,7 +1,7 @@
 //Next, React (core node_modules) imports must be placed here
 import Image from "next/image";
 import { useEffect, useContext } from "react";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 //import STORE from '@/store'
@@ -20,11 +20,16 @@ const About = (props) => {
     triggerOnce: false,
   });
 
+  const controls = useAnimation();
+
   useEffect(() => {
     if (inView && !isClicked) {
       setActiveAnchor("#about");
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
     }
-  });
+  }, [controls, inView]);
 
   const variants = {
     visible: { opacity: 1, scale: 1, y: 0, rotate: 0 },
@@ -57,14 +62,16 @@ const About = (props) => {
         <motion.div className={styles.left}>
           <motion.h1 transition={{ delayChildren: 1 }}>
             <motion.span
-              animate={inView ? "visible" : "hidden"}
+              initial="hidden"
+              animate={controls}
               variants={variants1}
               transition={{ duration: 1, ease: "easeOut" }}
             >
               This is{" "}
             </motion.span>
             <motion.span
-              animate={inView ? "visible" : "hidden"}
+              initial="hidden"
+              animate={controls}
               variants={variants2}
               transition={{ duration: 1, ease: "easeOut" }}
             >
@@ -72,7 +79,8 @@ const About = (props) => {
             </motion.span>
           </motion.h1>
           <motion.p
-            animate={inView ? "visible" : "hidden"}
+            initial="hidden"
+            animate={controls}
             variants={variants}
             transition={{ delayChildren: 2, duration: 2, ease: "easeOut" }}
           >
@@ -84,7 +92,8 @@ const About = (props) => {
         </motion.div>
         <motion.div className={styles.right}>
           <motion.div
-            animate={inView ? "visible" : "hidden"}
+            initial="hidden"
+            animate={controls}
             variants={variants1}
             transition={{ duration: 1, ease: "easeOut" }}
             className={styles.background}
