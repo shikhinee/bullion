@@ -24,16 +24,19 @@ const LandingLayout = ({ children, ...props }) => {
     useContext(ActiveAnchorContext);
 
   useEffect(() => {
-    if (router.pathname == "/") {
-      if (activeAnchor && isClicked) {
-        smoothscroll.polyfill();
-
-        document.querySelector(activeAnchor).scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      }
+    if (!isClicked) {
+      return;
     }
+
+    if (activeAnchor && router.pathname == "/") {
+      smoothscroll.polyfill();
+
+      document.querySelector(activeAnchor).scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+    
   }, [activeAnchor, router]);
 
   const handleClick = (e) => {

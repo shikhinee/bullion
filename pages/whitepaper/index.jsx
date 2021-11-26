@@ -125,8 +125,9 @@ const WhitepaperPage = (props) => {
                 Big Banks
                 <ul>
                   <li>
-                    Granted approvals for <span className={styles.highlight}>13.6%</span> of loan applications to small
-                    businesses in 2020
+                    Granted approvals for{" "}
+                    <span className={styles.highlight}>13.6%</span> of loan
+                    applications to small businesses in 2020
                   </li>
                 </ul>
               </li>
@@ -134,8 +135,9 @@ const WhitepaperPage = (props) => {
                 Small Banks
                 <ul>
                   <li>
-                    Granted approvals for <span className={styles.highlight}>18.5%</span> of loan applications to small
-                    businesses in 2020
+                    Granted approvals for{" "}
+                    <span className={styles.highlight}>18.5%</span> of loan
+                    applications to small businesses in 2020
                   </li>
                 </ul>
               </li>
@@ -143,8 +145,9 @@ const WhitepaperPage = (props) => {
                 Institutional Lenders
                 <ul>
                   <li>
-                    Granted approvals for <span className={styles.highlight}>22%</span> of loan applications to small
-                    businesses in 2020
+                    Granted approvals for{" "}
+                    <span className={styles.highlight}>22%</span> of loan
+                    applications to small businesses in 2020
                   </li>
                 </ul>
               </li>
@@ -169,9 +172,7 @@ const WhitepaperPage = (props) => {
                 </ul>
               </li>
             </ul>
-            <p>
-              <h3>Neglected Savers and Investors</h3>
-            </p>
+            <h3>Neglected Savers and Investors</h3>
             <p>
               The structure of the global economy and the financial system that
               supports it, allows for attractive wealth enhancing opportunities
@@ -226,48 +227,52 @@ const WhitepaperPage = (props) => {
               real-world measurements.
             </p>
             <table id="customers">
-              <tr>
-                <th>Country</th>
-                <th>Loan Agreement</th>
-                <th>Traditional Banks</th>
-                <th>BULLION DAO</th>
-              </tr>
-              <tr>
-                <td>Mongolia</td>
-                <td>Interest Rate (Debtors)</td>
-                <td>11-18%</td>
-                <td>Germany</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Interest Rate (Creditors)</td>
-                <td>1.5- 1.8%</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>Australia</td>
-                <td>Interest Rate (Debtors)</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Interest Rate (Creditors))</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>United States</td>
-                <td>Interest Rate (Debtors)</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Interest Rate (Creditors)</td>
-                <td></td>
-                <td></td>
-              </tr>
+              <thead>
+                <tr>
+                  <th>Country</th>
+                  <th>Loan Agreement</th>
+                  <th>Traditional Banks</th>
+                  <th>BULLION DAO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mongolia</td>
+                  <td>Interest Rate (Debtors)</td>
+                  <td>11-18%</td>
+                  <td>Germany</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Interest Rate (Creditors)</td>
+                  <td>1.5- 1.8%</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Australia</td>
+                  <td>Interest Rate (Debtors)</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Interest Rate (Creditors))</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>United States</td>
+                  <td>Interest Rate (Debtors)</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Interest Rate (Creditors)</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
             </table>
 
             <h2 id="solution-debtors">3.1 Loan Takers (Debtors)</h2>
@@ -310,33 +315,41 @@ const WhitepaperPage = (props) => {
               purposes.
             </p>
             <table>
-              <tr>
-                <th>Country</th>
-                <th>Collateral</th>
-                <th>Traditional Bank: Collateralization</th>
-                <th>BULLION: Collateralization</th>
-              </tr>
-              <tr>
-                <td>Mongolia</td>
-                <td>Precious Metals (Gold, Silver, etc.)</td>
-                <td>80-85% of Collateral</td>
-                <td>82-87% of collateral</td>
-              </tr>
+              <thead>
+                <tr>
+                  <th>Country</th>
+                  <th>Collateral</th>
+                  <th>Traditional Bank: Collateralization</th>
+                  <th>BULLION: Collateralization</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mongolia</td>
+                  <td>Precious Metals (Gold, Silver, etc.)</td>
+                  <td>80-85% of Collateral</td>
+                  <td>82-87% of collateral</td>
+                </tr>
+              </tbody>
             </table>
             <p>Table 3.1.1: Collateralization Comparison</p>
             <table>
-              <tr>
-                <th>Country</th>
-                <th>Collateral</th>
-                <th>Traditional Bank: Interest Rate</th>
-                <th>BULLION: Interest Rate</th>
-              </tr>
-              <tr>
-                <td>Mongolia</td>
-                <td>Precious Metals (Gold, Silver, etc.)</td>
-                <td>Banking System Prevailing rate</td>
-                <td>Banking System Prevailing rate - Bullion Dao Discount</td>
-              </tr>
+              <thead>
+                <tr>
+                  <th>Country</th>
+                  <th>Collateral</th>
+                  <th>Traditional Bank: Interest Rate</th>
+                  <th>BULLION: Interest Rate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mongolia</td>
+                  <td>Precious Metals (Gold, Silver, etc.)</td>
+                  <td>Banking System Prevailing rate</td>
+                  <td>Banking System Prevailing rate - Bullion Dao Discount</td>
+                </tr>
+              </tbody>
             </table>
             <p>Table 3.1.2: Interest Rate Comparison</p>
             <h3>3.1.2 BULLION Gold (C-BAU)- How Interest is Paid</h3>

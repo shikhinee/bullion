@@ -28,6 +28,10 @@ const Navbar = (props) => {
 
   useEffect(() => {
     window.addEventListener("scroll", changeBackground);
+
+    return () => {
+      window.removeEventListener("scroll", changeBackground);
+    };
   });
 
   return (
