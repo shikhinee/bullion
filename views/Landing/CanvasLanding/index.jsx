@@ -88,7 +88,7 @@ const Wave = () => {
 
   return (
     <mesh>
-      <planeBufferGeometry attach="geometry" args={[6, 4, 64, 64]} />
+      <planeBufferGeometry attach="geometry" args={[6, 4, 2, 2]} />
       <waveShaderMaterial
         uColorPrimary={"#ffb347"}
         uColorSecondary={"#121212"}
