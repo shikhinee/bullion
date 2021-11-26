@@ -8,7 +8,6 @@ import ActiveAnchorContext from "@/store/ActiveAnchor";
 //import COMPOSITES from '@/composites'
 
 //import COMPONENT from '@/components'
-import AnimatedNumber from "@/components/AnimatedNumber";
 import styles from "./Home.module.scss";
 
 const Home = (props) => {
@@ -53,19 +52,10 @@ const Home = (props) => {
         className={styles.content}
       >
         <h1>This is Home Page</h1>
-        <motion.h1
-          animate={inView ? "visible" : "hidden"}
-          variants={variants}
-          transition={{ duration: 1, ease: "easeOut" }}
-          ref={ref}
-        >
-          <AnimatedNumber />
-        </motion.h1>
         <motion.p
           animate={inView ? "visible" : "hidden"}
           variants={variants}
           transition={{ delay: 0.3, duration: 1, ease: "easeOut" }}
-          ref={ref}
         >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
           doloremque nostrum non vitae repellat ipsum voluptas explicabo laborum
