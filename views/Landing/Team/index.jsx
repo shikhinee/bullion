@@ -12,19 +12,21 @@ import ActiveAnchorContext from "@/store/ActiveAnchor";
 import styles from "./Team.module.scss";
 
 const Team = (props) => {
-  const { setActiveAnchor, isClicked } = useContext(ActiveAnchorContext);
+  const { activeAnchor, setActiveAnchor, isClicked } =
+    useContext(ActiveAnchorContext);
 
   const { ref, inView } = useInView({
     /* Optional options */
-    threshold: 0.5,
+    threshold: 0.6,
     triggerOnce: false,
   });
 
   useEffect(() => {
     if (isClicked && activeAnchor !== "#team") {
+      // animation.start("hidden");
       return;
     }
-    
+
     if (isClicked) {
       // animation.start("visible");
     } else if (inView) {

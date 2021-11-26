@@ -19,7 +19,7 @@ const Contact = (props) => {
 
   const { ref, inView } = useInView({
     /* Optional options */
-    threshold: 0.5,
+    threshold: 0.6,
     triggerOnce: false,
   });
 
@@ -27,6 +27,7 @@ const Contact = (props) => {
 
   useEffect(() => {
     if (isClicked && activeAnchor !== "#contact") {
+      animation.start("hidden");
       return;
     }
 

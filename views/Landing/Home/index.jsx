@@ -11,11 +11,12 @@ import ActiveAnchorContext from "@/store/ActiveAnchor";
 import styles from "./Home.module.scss";
 
 const Home = (props) => {
-  const { setActiveAnchor, isClicked } = useContext(ActiveAnchorContext);
+  const { activeAnchor, setActiveAnchor, isClicked } =
+    useContext(ActiveAnchorContext);
 
   const { ref, inView } = useInView({
     /* Optional options */
-    threshold: 0.5,
+    threshold: 0.6,
     triggerOnce: false,
   });
 
@@ -23,9 +24,10 @@ const Home = (props) => {
 
   useEffect(() => {
     if (isClicked && activeAnchor !== "#home") {
+      animation.start("hidden");
       return;
     }
-    
+
     if (isClicked) {
       animation.start("visible");
     } else if (inView) {
