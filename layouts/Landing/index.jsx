@@ -34,7 +34,7 @@ const LandingLayout = ({ children, ...props }) => {
         });
       }
     }
-  }, [activeAnchor, router]);
+  }, [isClicked, router]);
 
   const handleClick = (e) => {
     e.preventDefault();
