@@ -104,6 +104,7 @@ const CanvasLanding = (props) => {
   return (
     <div className={styles.container}>
       <Canvas
+        performance={{ min: 0.1, max: 0.5 }}
         camera={{ fov: 20 }}
         onCreated={({ camera }) => {
           camera.rotateZ(Math.PI * 0.2);
