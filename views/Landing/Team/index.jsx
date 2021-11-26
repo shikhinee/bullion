@@ -14,17 +14,22 @@ import styles from "./Team.module.scss";
 const Team = (props) => {
   const { setActiveAnchor, isClicked } = useContext(ActiveAnchorContext);
 
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     /* Optional options */
     threshold: 0.5,
     triggerOnce: false,
   });
 
   useEffect(() => {
-    if (inView && !isClicked) {
+    if (isClicked) {
+      // animation.start("visible");
+    } else if (inView) {
+      // animation.start("visible");
       setActiveAnchor("#team");
+    } else {
+      // animation.start("hidden");
     }
-  });
+  }, [inView]);
 
   return (
     <div className={styles.container} id="team" ref={ref}>

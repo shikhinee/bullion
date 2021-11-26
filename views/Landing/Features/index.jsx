@@ -22,10 +22,10 @@ const Features = (props) => {
   const animation = useAnimation();
 
   useEffect(() => {
-    if (inView && !isClicked) {
-      setActiveAnchor("#features");
+    if (isClicked) {
       animation.start("visible");
     } else if (inView) {
+      setActiveAnchor("#features");
       animation.start("visible");
     } else {
       animation.start("hidden");
