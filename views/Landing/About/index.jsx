@@ -53,14 +53,13 @@ const About = (props) => {
   };
   return (
     <div className={styles.container} id="about">
-      <div className={styles.content}>
+      <div className={styles.content} ref={ref}>
         <motion.div className={styles.left}>
           <motion.h1 transition={{ delayChildren: 1 }}>
             <motion.span
               animate={inView ? "visible" : "hidden"}
               variants={variants1}
               transition={{ duration: 1, ease: "easeOut" }}
-              ref={ref}
             >
               This is{" "}
             </motion.span>
@@ -68,7 +67,6 @@ const About = (props) => {
               animate={inView ? "visible" : "hidden"}
               variants={variants2}
               transition={{ duration: 1, ease: "easeOut" }}
-              ref={ref}
             >
               About Page
             </motion.span>
@@ -77,7 +75,6 @@ const About = (props) => {
             animate={inView ? "visible" : "hidden"}
             variants={variants}
             transition={{ delayChildren: 2, duration: 2, ease: "easeOut" }}
-            ref={ref}
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
             doloremque nostrum non vitae repellat ipsum voluptas explicabo
@@ -90,7 +87,6 @@ const About = (props) => {
             animate={inView ? "visible" : "hidden"}
             variants={variants1}
             transition={{ duration: 1, ease: "easeOut" }}
-            ref={ref}
             className={styles.background}
           >
             <Image
