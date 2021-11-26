@@ -1,37 +1,37 @@
-@import 'global';
+@import "global";
 
-.container { 
-    position: relative;
-    display: flex;
-    height: 100vh;
-    width: 100%;
-    @include themify() {
-        background-color: has(clr-bg);
-      }
-    justify-content: center;
+.container {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  @include themify() {
+    background-color: has(clr-bg);
+  }
+  justify-content: center;
 }
 .content {
-    position: absolute;
-    max-width: map-get($map: $breakpoints, $key: lg);
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    p {
-        @include themify(){
-            color: has(clr-bg-inverse);
-        }
-        font-weight: 300;
+  max-width: map-get($map: $breakpoints, $key: lg);
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  p {
+    @include themify() {
+      color: has(clr-bg-inverse);
     }
-    h1 { 
-        width: max-content;
-        background-image: linear-gradient(90deg, rgba(210,214,21,1) 0%, rgba(251,126,0,1) 100%);
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+    font-weight: 300;
+  }
+  h1 {
+    width: max-content;
+    background-image: linear-gradient(
+      90deg,
+      rgba(210, 214, 21, 1) 0%,
+      rgba(251, 126, 0, 1) 100%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }

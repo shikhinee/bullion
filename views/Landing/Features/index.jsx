@@ -1,6 +1,6 @@
 //Next, React (core node_modules) imports must be placed here
 import { useContext, useEffect } from "react";
-import { motion } from "framer-motion";
+import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 //import STORE from '@/store'
 import ActiveAnchorContext from "@/store/ActiveAnchor";
@@ -13,20 +13,25 @@ import styles from "./Features.module.scss";
 const Features = (props) => {
   const { setActiveAnchor, isClicked } = useContext(ActiveAnchorContext);
 
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     /* Optional options */
     threshold: 0.5,
     triggerOnce: false,
   });
 
+  const animation = useAnimation();
+
   useEffect(() => {
     if (inView && !isClicked) {
       setActiveAnchor("#features");
+      animation.start("visible");
+    } else {
+      animation.start("hidden");
     }
   });
 
   const variants = {
-    visible: { scale: 1 },
+    visible: { scale: 1, transition: { duration: 0.5 } },
     hidden: {
       scale: 0.8,
     },
@@ -44,86 +49,56 @@ const Features = (props) => {
             perspiciatis, blanditiis cupiditate saepe quasi quod?
           </p>
         </div>
-        <div className={styles.cards}>
-          <motion.div
-            className={styles.card}
-            animate={inView ? "visible" : "hidden"}
-            variants={variants}
-            transition={{ duration: 1, ease: "easeOut" }}
-            ref={ref}
-          >
+        <motion.div
+          className={styles.cards}
+          initial="hidden"
+          animate={animation}
+          variants={variants}
+          ref={ref}
+        >
+          <div className={styles.card}>
             <h3>Feature Headline</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quia
               fuga numquam, cupiditate.
             </p>
-          </motion.div>
-          <motion.div
-            className={styles.card}
-            animate={inView ? "visible" : "hidden"}
-            variants={variants}
-            transition={{ duration: 1, ease: "easeOut" }}
-            ref={ref}
-          >
+          </div>
+          <div className={styles.card}>
             <h3>Feature Headline</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quia
               fuga numquam, cupiditate.
             </p>
-          </motion.div>
-          <motion.div
-            className={styles.card}
-            animate={inView ? "visible" : "hidden"}
-            variants={variants}
-            transition={{ duration: 1, ease: "easeOut" }}
-            ref={ref}
-          >
+          </div>
+          <div className={styles.card}>
             <h3>Feature Headline</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quia
               fuga numquam, cupiditate.
             </p>
-          </motion.div>
-          <motion.div
-            className={styles.card}
-            animate={inView ? "visible" : "hidden"}
-            variants={variants}
-            transition={{ duration: 1, ease: "easeOut" }}
-            ref={ref}
-          >
+          </div>
+          <div className={styles.card}>
             <h3>Feature Headline</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quia
               fuga numquam, cupiditate.
             </p>
-          </motion.div>
-          <motion.div
-            className={styles.card}
-            animate={inView ? "visible" : "hidden"}
-            variants={variants}
-            transition={{ duration: 1, ease: "easeOut" }}
-            ref={ref}
-          >
+          </div>
+          <div className={styles.card}>
             <h3>Feature Headline</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quia
               fuga numquam, cupiditate.
             </p>
-          </motion.div>
-          <motion.div
-            className={styles.card}
-            animate={inView ? "visible" : "hidden"}
-            variants={variants}
-            transition={{ duration: 1, ease: "easeOut" }}
-            ref={ref}
-          >
+          </div>
+          <div className={styles.card}>
             <h3>Feature Headline</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quia
               fuga numquam, cupiditate.
             </p>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </div>
     </div>
   );
