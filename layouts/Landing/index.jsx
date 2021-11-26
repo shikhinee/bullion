@@ -25,7 +25,8 @@ const LandingLayout = ({ children, ...props }) => {
 
   useEffect(() => {
     if (router.pathname == "/") {
-      if (isClicked) {
+      if (activeAnchor && isClicked) {
+        console.log("I was run")
         smoothscroll.polyfill();
 
         document.querySelector(activeAnchor).scrollIntoView({
@@ -34,7 +35,7 @@ const LandingLayout = ({ children, ...props }) => {
         });
       }
     }
-  }, [isClicked, router]);
+  }, [activeAnchor, router]);
 
   const handleClick = (e) => {
     e.preventDefault();
