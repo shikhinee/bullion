@@ -28,7 +28,7 @@ const Features = (props) => {
     } else {
       animation.start("hidden");
     }
-  });
+  }, [inView, animation]);
 
   const variants = {
     visible: { scale: 1, transition: { duration: 0.5 } },

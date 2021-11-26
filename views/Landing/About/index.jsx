@@ -20,16 +20,16 @@ const About = (props) => {
     triggerOnce: false,
   });
 
-  const controls = useAnimation();
+  const animation = useAnimation();
 
   useEffect(() => {
     if (inView && !isClicked) {
       setActiveAnchor("#about");
-      controls.start("visible");
+      animation.start("visible");
     } else {
-      controls.start("hidden");
+      animation.start("hidden");
     }
-  }, [controls, inView]);
+  }, [animation, inView]);
 
   const variants = {
     visible: {
@@ -48,7 +48,7 @@ const About = (props) => {
   return (
     <motion.div className={styles.container} id="about" ref={ref}>
       <motion.div
-        animate={controls}
+        animate={animation}
         initial="hidden"
         variants={variants}
         className={styles.content}
