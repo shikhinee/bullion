@@ -49,12 +49,12 @@ const Navbar = (props) => {
 
         <Menu onClick={props.onClick} />
 
-        <MenuIcon
+        {/* <MenuIcon
           handler={() => {
             setMenuIsOpen(!menuIsOpen);
           }}
           isOpen={menuIsOpen}
-        />
+        /> */}
       </nav>
     </header>
   );

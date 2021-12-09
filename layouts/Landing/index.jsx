@@ -58,7 +58,7 @@ const LandingLayout = ({ children, ...props }) => {
     <div className={styles.container}>
       <Navbar onClick={handleClick} />
       <AnimatePresence exitBeforeEnter>{children}</AnimatePresence>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
