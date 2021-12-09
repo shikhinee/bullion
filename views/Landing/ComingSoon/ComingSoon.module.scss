@@ -31,10 +31,15 @@
     text-transform: none;
     color: $clr-neutral-8;
     margin: 0.1em 0;
+    font-size: 3em;
+    letter-spacing: 0.03em;
       &:not(:last-of-type) {
         width: 100%;
         justify-content: space-between;
         display: flex;
+      }
+      @include respondMax(xs){
+          font-size: 2.5em;
       }
   }
   .gold {
