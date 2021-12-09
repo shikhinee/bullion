@@ -64,6 +64,8 @@ const ComingSoon = (props) => {
 					Coming Soon...
 				</p>
 			</motion.div>
+			<p className={styles.copyright}>Bullion&copy; All Rights Reserved</p>
+
 		</div>
 	)
 };
