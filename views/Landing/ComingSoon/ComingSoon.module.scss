@@ -22,15 +22,13 @@
     @include themify() {
       color: has(clr-bg-inverse);
     }
-    font-weight: 300;
+    font-weight: 400;
     width: 100%;
-    margin-top: 0.5em;
     font-size: 1.5em;
   }
   h1 {
     text-transform: none;
     color: $clr-neutral-8;
-    margin: 0.1em 0;
     font-size: 3em;
     letter-spacing: 0.03em;
       &:not(:last-of-type) {
