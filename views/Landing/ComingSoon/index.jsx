@@ -57,9 +57,8 @@ const ComingSoon = (props) => {
 				ref={ref}
 				className={styles.content}
 			>
-				<h1><span>Own,</span><span>Trade,</span></h1>
-				<h1><span>Collaterize,</span><span>and</span></h1>
-				<h1>Redeem <span className={styles.gold}>Gold</span></h1>
+				<h1><span className={styles.gold}>Gold-backed</span></h1>
+				<h1><span>Defi </span><span>protocol</span></h1>
 				<p className={styles.gold}>
 					Coming Soon...
 				</p>
