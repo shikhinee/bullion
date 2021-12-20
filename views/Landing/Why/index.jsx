@@ -12,7 +12,7 @@ const Why = (props) => {
 	 return (
 		 <div className={styles.container}>
 			<div className={styles.giphy}>
-			<Image src="/bullion.gif" className={styles.gif} layout="fill"></Image>
+			<Image src="/bullion.gif" priority className={styles.gif} layout="fill"></Image>
 			</div>
 			<div className={styles.horizontal}>
 				<div className={styles.loanAccess}>

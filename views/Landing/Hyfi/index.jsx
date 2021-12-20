@@ -1,5 +1,5 @@
 //Next, React (core node_modules) imports must be placed here
-
+import Image from "next/image"
 //import STORE from '@/store'
 
 //import COMPOSITES from '@/composites'
@@ -11,7 +11,12 @@ import styles from './Hyfi.module.scss'
 const Hyfi = (props) => {
 	 return (
 		 <div className={styles.container}>
-			<h2>HyFi Ecosystem</h2>
+			<div className={styles.cta}>
+				 <h2>HyFi Ecosystem</h2>
+				 <div className={styles.arrow}>
+				 <Image src="/arrowlong.svg" width={130} height={50} layout="responsive"/>
+				 </div>
+		 	</div>
 		</div>
 	)
 };
