@@ -1,61 +1,25 @@
 @import 'global';
 
-.container { 
+.container {
+    width: 90%;
     display: flex;
-    width: 100%;
-    height: auto;
-    @include themify() {
-        background-color: has(clr-text);
-      }
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+.feature {
+    width: 100%;
+    display: flex;
+    max-width: 80rem;
+}
+.image {
+    width: 10rem;
+    height: 10rem;
+    margin-right: 10rem
+}
 .content {
-    margin: 20% 0;
-    max-width: has(lg);
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    p {
-        @include themify(){
-            color: has(clr-bg);
-        }
-        font-weight: 300;
-    }
-    h1 {
-        @include themify(){
-            color: has(clr-text-inverse)
-        }
-    }
-    h3 {
-        @include themify(){
-            color: has(clr-h3-inverse);
-        }
-    }
-    @include respondMax(md){
-        flex-direction: column;
-    }
-}
-.panel {
     width: 100%;
-}
-.cards {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.card {
+    max-width: 60rem;
     display: flex;
     flex-direction: column;
-    width: 20rem;
-    height: 20rem;
-    @include themify(){
-        background: has(clr-bg-inverse);
-    }
-    padding: 1rem;
-    margin: 1rem;
-    border-radius: 1rem;
-    text-align: center;
-    justify-content: center;
 }

@@ -1,7 +1,7 @@
 $navbarHeight: 7rem;
 
 // TYPOGRAPHY VALUES
-$font-sans: -apple-system, BlinkMacSystemFont, sans-serif;
+$font-sans: 'Inter', sans-serif;
 $font-mono: "Fira Code", monospace;
 
 // BREAKPOINTS
@@ -22,13 +22,13 @@ $clr-secondary: #FFD467;
 
 // GREYSCALE (Darkest to Lightest)
 $clr-neutral-0: #121212;
-$clr-neutral-1: #2a2a2a;
+$clr-neutral-1: #000000;
 $clr-neutral-2: #414141;
 $clr-neutral-3: #595959;
 $clr-neutral-4: #64696f;
 $clr-neutral-5: #b3b1ae;
 $clr-neutral-6: #cccac7;
-$clr-neutral-7: #e6e4e0;
+$clr-neutral-7: #f5f5f5;
 $clr-neutral-8: #fffdf9;
 
 // THEMES

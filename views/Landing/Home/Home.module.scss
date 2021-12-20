@@ -3,7 +3,7 @@
 .container {
   position: relative;
   display: flex;
-  height: 100vh;
+  height: 76rem;
   width: 100%;
   @include themify() {
     background-color: has(clr-bg);
@@ -11,13 +11,12 @@
   justify-content: center;
 }
 .content {
-  max-width: map-get($map: $breakpoints, $key: lg);
   width: 90%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  justify-content: flex-end;
+  align-items: flex-start;
+
   p {
     @include themify() {
       color: has(clr-bg-inverse);
@@ -25,13 +24,12 @@
     font-weight: 300;
   }
   h1 {
-    width: max-content;
-    background-image: linear-gradient(
-      90deg,
-      rgba(210, 214, 21, 1) 0%,
-      rgba(251, 126, 0, 1) 100%
-    );
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    width: 100%;
+    @include themify() {
+      color: has(clr-bg-inverse);
+    }
+    z-index: 99;
+    max-width: has(md);
+    margin-bottom: 2em;
   }
 }

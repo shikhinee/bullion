@@ -25,7 +25,7 @@ const Menu = (props) => {
           </a>
         </Link>
       </li>
-      {/* <li>
+      <li>
         <Link href="/#about">
           <a
             className={
@@ -86,7 +86,7 @@ const Menu = (props) => {
             Whitepaper
           </a>
         </Link>
-      </li> */}
+      </li>
     </ul>
   );
 };

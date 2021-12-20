@@ -1,12 +1,15 @@
 import { motion } from "framer-motion";
 
 import LandingLayout from "@/layouts/Landing";
-// import Home from "@/views/Landing/Home";
-// import About from "@/views/Landing/About";
-// import Features from "@/views/Landing/Features";
-// import Team from "@/views/Landing/Team";
-// import Contact from "@/views/Landing/Contact";
-import ComingSoon from "@/views/Landing/ComingSoon";
+import Home from "@/views/Landing/Home";
+import About from "@/views/Landing/About";
+import Description from "@/views/Landing/Description";
+import Why from "@/views/Landing/Why";
+import Features from "@/views/Landing/Features";
+import Hyfi from "@/views/Landing/Hyfi";
+import Team from "@/views/Landing/Team";
+import Contact from "@/views/Landing/Contact";
+// import ComingSoon from "@/views/Landing/ComingSoon";
 import styles from "./Root.module.scss";
 
 const RootPage = (props) => {
@@ -18,12 +21,15 @@ const RootPage = (props) => {
       transition={{ duration: 1 }}
       className={styles.container}
     >
-      <ComingSoon />
-      {/* <Home />
+      {/* <ComingSoon /> */}
+      <Home />
       <About />
-      <Features />
+      <Description />
+      <Why/>
+      <Features/>
+      <Hyfi/>
       <Team />
-      <Contact /> */}
+      <Contact />
     </motion.main>
   )
 };

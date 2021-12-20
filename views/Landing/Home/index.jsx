@@ -56,13 +56,8 @@ const Home = (props) => {
         ref={ref}
         className={styles.content}
       >
-        <h1>This is Home Page</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
-          doloremque nostrum non vitae repellat ipsum voluptas explicabo laborum
-          modi mollitia molestias tempore debitis veritatis, perspiciatis,
-          blanditiis cupiditate saepe quasi quod?
-        </p>
+        <h1>Decentralized Gold-backed <br /> Liquidity Market Protocol
+        </h1>
       </motion.div>
     </div>
   );
