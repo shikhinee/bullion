@@ -58,13 +58,7 @@ const Contact = (props) => {
         animate={animation}
         variants={variants}
       >
-        <h1>This is Contact Page</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
-          doloremque nostrum non vitae repellat ipsum voluptas explicabo laborum
-          modi mollitia molestias tempore debitis veritatis, perspiciatis,
-          blanditiis cupiditate saepe quasi quod?
-        </p>
+        <h1>Contact us!</h1>
       </motion.div>
     </div>
   );
