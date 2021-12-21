@@ -44,7 +44,7 @@ const Team = (props) => {
   return (
     <div className={styles.container} id="team" ref={ref}>
       <div className={styles.heading}>
-        <h3>Why BULLION</h3>
+        <h3>BULLION Team</h3>
         <span>|</span>
         <div className={styles.blogo}>
           <Image src="/blogo.png" width={40} height={40} layout="responsive"></Image>
@@ -131,6 +131,46 @@ const Team = (props) => {
               <h2>Michael Johnson</h2>
               <p>Mining Engineer (from TOA) & Metallurgist</p>
             </div>
+            <div className={styles.heading}>
+              <h3>BULLION Advisors</h3>
+              <span>|</span>
+              <div className={styles.blogo}>
+                <Image src="/blogo.png" width={40} height={40} layout="responsive"></Image>
+              </div>
+            </div>
+            <div
+              className={
+                toggleState === 8
+                  ? `${styles.tabs} ${styles.activeTabs}`
+                  : `${styles.tabs}`
+              }
+              onClick={() => toggleTab(8)}
+            >
+              <h2>Joseph Lee</h2>
+              <p>Legal, Economic Financial Advisor</p>
+            </div>
+            <div
+              className={
+                toggleState === 9
+                  ? `${styles.tabs} ${styles.activeTabs}`
+                  : `${styles.tabs}`
+              }
+              onClick={() => toggleTab(9)}
+            >
+              <h2>Anar Amarjargal</h2>
+              <p>Economic advisor</p>
+            </div>
+            <div
+              className={
+                toggleState === 10
+                  ? `${styles.tabs} ${styles.activeTabs}`
+                  : `${styles.tabs}`
+              }
+              onClick={() => toggleTab(10)}
+            >
+              <h2>Eric Choi</h2>
+              <p>Blockchain Advisor</p>
+            </div>
           </div>
         </div>
         <div className={styles.right}>
@@ -149,7 +189,7 @@ const Team = (props) => {
               <Image width={"100%"} height={"100%"} src="/davidgong.png" layout="responsive" objectFit="contain" alt="team" />
             </div>
             <div className={styles.header}>
-            <h2>Ganzorig Volooj</h2>
+              <h2>Ganzorig Volooj</h2>
               <p>Co-Founder, Investor</p>
             </div>
             <p>
@@ -167,7 +207,7 @@ const Team = (props) => {
               <Image width={"100%"} height={"100%"} src="/davidgong.png" layout="responsive" objectFit="contain" alt="team" />
             </div>
             <div className={styles.header}>
-            <h2>Ireedui Zorigt</h2>
+              <h2>Ireedui Zorigt</h2>
               <p>Director: Community development, Social media Marketing & Gold Processing Engineer</p>
             </div>
             <p>
@@ -204,7 +244,7 @@ const Team = (props) => {
               <Image width={"100%"} height={"100%"} src="/davidgong.png" layout="responsive" objectFit="contain" alt="team" />
             </div>
             <div className={styles.header}>
-            <h2>Naranzul Ganzorig</h2>
+              <h2>Naranzul Ganzorig</h2>
               <p>Founder, CEO</p>
             </div>
             <p>
@@ -241,7 +281,7 @@ const Team = (props) => {
               <Image width={"100%"} height={"100%"} src="/davidgong.png" layout="responsive" objectFit="contain" alt="team" />
             </div>
             <div className={styles.header}>
-            <h2>David Gong</h2>
+              <h2>David Gong</h2>
               <p>Director: Business Development (Global Crypto)</p>
             </div>
             <p>
@@ -264,6 +304,60 @@ const Team = (props) => {
             </div>
             <p>
               Mr. Johnson is a qualified engineer with more than 40 years of global experience in the heavy industry, mining and construction sector. He has managed projects for multinational corporations, enterprises, and startups.  He is the President & founder of TOA Consulting, an international consultancy and project management company. His successful track record includes work with globally recognised corporations such as Arcelor Mittal, AHMSA, Mobarakeh Steel Company, SMS Siemac, and Iron Ore Canada, spanning China, North America, South East and Central Asia, and Iran.
+            </p>
+          </div>
+          <div
+            className={
+              toggleState === 8
+                ? `${styles.content}  ${styles.activeContent}`
+                : `${styles.content}`
+            }
+          >
+            <div className={styles.image}>
+              <Image width={"100%"} height={"100%"} src="/davidgong.png" layout="responsive" objectFit="contain" alt="team" />
+            </div>
+            <div className={styles.header}>
+              <h2>Joseph Lee</h2>
+              <p>Legal, Economic Financial Advisor</p>
+            </div>
+            <p>
+            Joseph is an investment banker, lawyer, and blockchain entrepreneur with over 17 years of professional experience. As an investment banker he is specialised in corporate restructuring, project financing, M&A, and operational ‘turnarounds’. His track record spans mining, energy, infrastructure, agriculture, fintech, and blockchain. This experience includes economic policy advisory to central government agencies in North Asia. At present, Joseph also serves as a director and economic advisor to  DIIANT, a global IT consulting firm and leader in digital transformation, specialising in design, technical architecture, product development and implementation of secure and scalable distributed systems. Born in Korea and raised in Australia, Joseph holds a Bachelor of Science (Actuarial Studies, Mathematics), Applied Finance, and a Juris Doctor.
+            </p>
+          </div>
+          <div
+            className={
+              toggleState === 9
+                ? `${styles.content}  ${styles.activeContent}`
+                : `${styles.content}`
+            }
+          >
+            <div className={styles.image}>
+              <Image width={"100%"} height={"100%"} src="/davidgong.png" layout="responsive" objectFit="contain" alt="team" />
+            </div>
+            <div className={styles.header}>
+              <h2>Anar Amarjargal</h2>
+              <p>Economic advisor</p>
+            </div>
+            <p>
+            Anar has over 10 years of professional experience in overseeing the day to day operations, translating strategy into actionable goals for business performance and growth throughout the greater Mongolia region. He is the former COO of the Mongolian Mortgage Corporation HFC LLC, Independent Board Member for the Mongolian Stock Exchange, and the Director of Amarjargal Foundation NGO. Anar holds an MBA in Investment Management from the University of Finance and Economics of Mongolia, and a BA in Economics (emphasis on Intellectual Property) from the University of Colorado at Boulder.
+            </p>
+          </div>
+          <div
+            className={
+              toggleState === 10
+                ? `${styles.content}  ${styles.activeContent}`
+                : `${styles.content}`
+            }
+          >
+            <div className={styles.image}>
+              <Image width={"100%"} height={"100%"} src="/davidgong.png" layout="responsive" objectFit="contain" alt="team" />
+            </div>
+            <div className={styles.header}>
+              <h2>Eric Choi</h2>
+              <p>Blockchain Advisor</p>
+            </div>
+            <p>
+            Eric is one of key figures in the Asian blockchain industry. As a 7 year veteran of the global blockchain industry, Eric is acknowledged by past clients and business partners as someone who makes the impossible possible in the blockchain. Eric has a natural talent in applying blockchain technology to the most obscure of traditional market businesses and phenomena. He has a successful track record of blockchain implementation in traditional finance, online gaming, entertainment (TV and online), and infrastructure. Eric has consulted for more than 50 crypto projects to date. At present, Eric serves as the CEO of DIIANT, a global IT consulting firm and leader in digital transformation, where he oversees the design, technical architecture, product development and implementation of secure and scalable distributed systems.
             </p>
           </div>
         </div>

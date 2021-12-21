@@ -2,13 +2,14 @@
 
 .container {
     display: flex;
-    height: 100vh;
+    height: auto;
     width: 90%;
     @include themify() {
         background-color: has(clr-bg);
     }
     justify-content: center;
     flex-direction: column;
+    position: relative;
 }
 .team {
     width: 100%;
@@ -22,9 +23,23 @@
     align-items: flex-start;
 }
 .right {
+    position: sticky;
+    top: 7rem;
     width: 100%;
+    height: max-content;
     display: flex;
     flex-direction: column;
+    @include respondMax(md){
+        display: none;
+    }
+    @include respondMax(sm){
+        position: absolute;
+        display: flex;
+        top: 0;
+        @include themify(){
+            background-color: has(clr-bg);
+        }
+    }
 }
 .heading {
     display: flex;
@@ -32,7 +47,7 @@
     width: 100%;
     align-items: center;
     position: relative;
-    margin-bottom: 1em;
+    margin: 2em 0;
     span {
         margin: 0 1em;
     }

@@ -31,7 +31,7 @@ const Description = (props) => {
   const { ref, inView } = useInView({
     /* Optional options */
     threshold: 0.6,
-    triggerOnce: false,
+    triggerOnce: true,
   });
 
   const animation = useAnimation();
