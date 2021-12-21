@@ -1,7 +1,8 @@
 //Next, React (core node_modules) imports must be placed here
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import ActiveAnchorContext from "@/store/ActiveAnchor";
 import Image from "next/image";
 //import STORE from '@/store'
 
@@ -41,6 +42,9 @@ const textAnimationFadeIn = {
 };
 
 const Why = (props) => {
+  const { activeAnchor, setActiveAnchor, isClicked } =
+    useContext(ActiveAnchorContext);
+
   const [ref, inView] = useInView({
     /* Optional options */
     threshold: 0.4,
@@ -64,8 +68,16 @@ const Why = (props) => {
   const animation3 = useAnimation();
 
   useEffect(() => {
-    if (inView) {
+    if (isClicked && activeAnchor !== "#why") {
+      animation.start("hidden");
+      return;
+    }
+
+    if (isClicked) {
       animation.start("visible");
+    } else if (inView) {
+      animation.start("visible");
+      setActiveAnchor("#why");
     } else {
       animation.start("hidden");
     }

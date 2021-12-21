@@ -1,7 +1,7 @@
 //Next, React (core node_modules) imports must be placed here
 import { useEffect, useContext, useState } from "react";
 import { useRouter } from "next/router";
-import { AnimatePresence, motion, AnimateSharedLayout } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import smoothscroll from "smoothscroll-polyfill";
 
 //import STORE from '@/store'
