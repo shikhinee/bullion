@@ -11,11 +11,7 @@ const App = ({ Component, pageProps: { session, ...pageProps } }) => {
   const LayoutWithRef = () => {
     return (
       <Layout>
-        {
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-        }
+        <Component {...pageProps} />
       </Layout>
     );
   };

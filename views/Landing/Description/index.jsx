@@ -10,6 +10,20 @@ import ActiveAnchorContext from "@/store/ActiveAnchor";
 
 import styles from "./Description.module.scss";
 
+const textAnimationFadeIn = {
+  hidden: {
+    opacity: 0,
+    y: 64,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1.2,
+    },
+  },
+};
+
 const Description = (props) => {
   const { activeAnchor, setActiveAnchor, isClicked } =
     useContext(ActiveAnchorContext);
@@ -38,19 +52,19 @@ const Description = (props) => {
     }
   }, [inView]);
 
-  const variants = {
-    visible: { scale: 1, transition: { duration: 0.5 } },
-    hidden: {
-      scale: 0.8,
-    },
-  };
-
   return (
     <div className={styles.container} id="features" ref={ref}>
       <div className={styles.content}>
-        <h2>
-        BULLION is a blockchain based lending platform that enables precious metal owners, including Gold, Silver, or Copper, to receive loans at competitive rates of interest, based on the precious metals that are pledged as collateral.
-        </h2>
+        <motion.h2
+          initial="hidden"
+          variants={textAnimationFadeIn}
+          animate={animation}
+        >
+          BULLION is a blockchain based lending platform that enables precious
+          metal owners, including Gold, Silver, or Copper, to receive loans at
+          competitive rates of interest, based on the precious metals that are
+          pledged as collateral.
+        </motion.h2>
       </div>
     </div>
   );

@@ -11,6 +11,37 @@ import ActiveAnchorContext from "@/store/ActiveAnchor";
 import CanvasLanding from "@/components/CanvasLanding";
 import styles from "./Home.module.scss";
 
+const variants = {
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      when: "beforeChildren",
+      duration: 1.2,
+      ease: "easeInOut",
+    },
+  },
+  hidden: {
+    opacity: 0,
+    scale: 1,
+  },
+};
+
+const textAnimationFadeIn = {
+  hidden: {
+    opacity: 0,
+    y: 64,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 1.2,
+      duration: 1.2,
+    },
+  },
+};
+
 const Home = (props) => {
   const { activeAnchor, setActiveAnchor, isClicked } =
     useContext(ActiveAnchorContext);
@@ -39,13 +70,6 @@ const Home = (props) => {
     }
   }, [inView]);
 
-  const variants = {
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
-    hidden: {
-      opacity: 0,
-      scale: 1,
-    },
-  };
   return (
     <div className={styles.container} id="home" ref={ref}>
       <CanvasLanding />
@@ -56,8 +80,18 @@ const Home = (props) => {
         ref={ref}
         className={styles.content}
       >
-        <h1>Decentralized Gold-backed <br /> Liquidity Market Protocol
-        </h1>
+        <motion.h1>
+          Decentralized{" "}
+          <motion.span
+            initial="hidden"
+            variants={textAnimationFadeIn}
+            animate="visible"
+            className={styles.highlight}
+          >
+            Gold-backed
+          </motion.span>{" "}
+          <br /> Liquidity Market Protocol
+        </motion.h1>
       </motion.div>
     </div>
   );
