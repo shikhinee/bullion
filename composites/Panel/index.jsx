@@ -18,25 +18,23 @@ const WhitePaperRoutes = {
   },
 
   problem: {
-    title: "Problem: Financial Exclusion",
+    title: "Problem:",
     route: `${rootPath}/#problem`,
+    subRoutes: [
+      {
+        title: "Financial Exclusion",
+        route: `${rootPath}/#financial-exclusion`,
+      }
+    ]
   },
 
   solution: {
-    title: "Solution: Bullion Dao",
+    title: "Solution: Bullion",
     route: `${rootPath}/#solution`,
     subRoutes: [
       {
-        title: "Loan Takers (Debtors)",
-        route: `${rootPath}/#solution-debtors`,
-      },
-      {
-        title: "Loan Suppliers (Creditors)",
-        route: `${rootPath}/#solution-creditors`,
-      },
-      {
-        title: "Loan Interest",
-        route: `${rootPath}/#solution-interest`,
+        title: "Financial Inclusion",
+        route: `${rootPath}/#financial-inclusion`,
       },
     ],
   },
@@ -70,6 +68,14 @@ const WhitePaperRoutes = {
     title: "Overview",
     route: `${rootPath}/#overview`,
   },
+  team: {
+    title: "Team",
+    route: `${rootPath}/#team`,
+  },
+  advisors: {
+    title: "Advisors",
+    route: `${rootPath}/#advisors`,
+  },
 
   references: {
     title: "References",
@@ -82,15 +88,7 @@ const Panel = ({ children, ...props }) => {
     <div className={styles.container}>
       <div className={styles.tabsContainer}>
         <div className={styles.tab}>
-          <span>WHITEPAPER 1.0</span>
-        </div>
-
-        <div className={styles.tab}>
-          <span>EXECUTIVE SUMMARY</span>
-        </div>
-
-        <div className={styles.tab}>
-          <span>TEAM PROFILES</span>
+          <span>WHITEPAPER 0.2</span>
         </div>
       </div>
 

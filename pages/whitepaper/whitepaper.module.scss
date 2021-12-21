@@ -24,6 +24,7 @@
   }
 
   :where(h1) {
+    font-size: 2.5em;
     position: relative;
     margin-bottom: 0.5em;
   }
@@ -33,6 +34,7 @@
     font-weight: 400;
     margin-top: 2em;
     margin-bottom: 0.5em;
+    font-size: 2em;
   }
 
   :where(h3) {
@@ -41,6 +43,7 @@
     margin-bottom: .5em;
     font-weight: 400;
     color: $clr-neutral-8;
+    font-size: 1.25em;
   }
 
   :where(p) {
@@ -70,7 +73,7 @@
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: $clr-primary;
+    background-color: $clr-neutral-4;
     color: has(clr-text);
   }
 }

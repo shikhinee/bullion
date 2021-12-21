@@ -56,7 +56,7 @@ const WhitepaperPage = (props) => {
           </section>
           <section id="problem">
             <h1>2. Problem:</h1>
-            <h2>2.1 Financial Exclusion</h2>
+            <h2 id="financial-exclusion">2.1 Financial Exclusion</h2>
             <h3>2.1.1 Access Problem Faced by Small to Medium Enterprise (SME) Miners</h3>
             <p>
               Often, small-to-medium-sized commodity businesses do not have access to the most competitively priced financial services, let alone a guarantee that even noncompetitively structured services will be available. Despite the significant turnover of mining/commodity businesses, the liquid assets they deal with, and the turnover&apos;s reliability, there is a general commercial discontentment towards the current financial system.
@@ -157,7 +157,7 @@ const WhitepaperPage = (props) => {
             <p>
               BULLION proffers the decentralized and collateralized lending and borrowing of money between Debtors and Creditors. In the execution of a loan agreement in a decentralized environment, there exists many advantages over traditional bank loans. In particular, the absence of an intermediary renders middleman fees obsolete thereby reducing interest rates owed by debtors and enabling more of the apportioned interest to be delivered to the creditors. A global risk pricing system has been applied to determine the interest on borrowed money coupled with a gold equivalency standard to ensure loans and the corresponding interest rates are determined based on real-world measurements.
             </p>
-            <h2 id="solution-debtors">3.1 Financial Inclusion</h2>
+            <h2 id="financial-inclusion">3.1 Financial Inclusion</h2>
 
             <h3>3.1.1 C-TROY: Loan Agreement</h3>
             <p>
