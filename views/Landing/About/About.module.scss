@@ -2,7 +2,7 @@
 
 .container { 
     display: flex;
-    height: 100vh;
+    height: 60vh;
     width: 100%;
     @include themify() {
         background-color: has(clr-bg);
