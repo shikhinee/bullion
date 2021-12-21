@@ -172,6 +172,8 @@ const WhitepaperPage = (props) => {
             <p>
               Once the two aforementioned conditions have been satisfied, the loan agreement will be executed thereby minting C-TROY token. This safeguards Creditors from an event of default by the Debtor, ensuring the return of their principal and interest within the agreed upon time, whilst providing Debtors with the credibility required to obtain the loans.
             </p>
+            <div className={styles.tableContainer}>
+
             <table>
               <thead>
                 <tr>
@@ -190,10 +192,13 @@ const WhitepaperPage = (props) => {
                 </tr>
               </tbody>
             </table>
+            </div>
             <p>Table 3.1.1: Collateralization Comparison</p>
             <p>
               A “Gold-Equivalency Standard” will be applied to all non-gold assets deposited as collateral prior to the minting of the loan agreement, C-TROY. If a  certificate of deposit for a non-gold asset, such as for 1 troy oz of Silver, the following Gold-Equivalency Standard is applied for the conversion to C-TROY.
             </p>
+            <div className={styles.tableContainer}>
+
             <table id="customers">
               <thead>
                 <tr>
@@ -224,6 +229,7 @@ const WhitepaperPage = (props) => {
                 </tr>
               </tbody>
             </table>
+            </div>
             <p>
               NB: this is an illustrative example, and actual calculations will be based on prevailing market rates.
             </p>
@@ -253,6 +259,7 @@ const WhitepaperPage = (props) => {
               4.1 Token Ecosystem- Bringing it all Together
             </h2>
             <h2 id="token-allocation">4.2 Token Allocation</h2>
+            <div className={styles.tableContainer}>
             <table>
               <thead>
                 <tr>
@@ -337,6 +344,7 @@ const WhitepaperPage = (props) => {
                 </tr>
               </tbody>
             </table>
+            </div>
           </section>
           <section id="partnerships">
             <h1>5. Partnerships</h1>
@@ -390,12 +398,12 @@ const WhitepaperPage = (props) => {
               Mrs Naranzul is a young leader who is a business woman, teacher and researcher. She has been educated in the UK for accounting and finance. She established her own financial enterprise which provides management consulting, accounting services and a research center. Along with chasing her career, she has been supporting the management of her father’s business, gold mining company, and sought a way of solvency for better financial source and services. Therefore, she is now extending her Finsigh Investment company with the Bullion Project where SME gold miners can get an efficient service through cheaper cost of capital compared to traditional banking systems which makes it a transformational start-up in Mongolia where it’s based on Hybrid Finance, HyFi system which many SME miners and investors can be hugely benefited.
               </li>
             </ul>
-            <h3>Ganzorig Volooj - Co-Founder, Investor</h3>
+            {/* <h3>Ganzorig Volooj - Co-Founder, Investor</h3>
             <ul>
               <li>
                 Ganzorig is a successful businessman who has over 20 years of experience in heavy industry in Mongolia. He is an electrical engineer who later studied further in China for foreign trade and economy which enabled him to cooperate with foreign investors. He started his business in the construction industry in 2010 and extended it into the mining sector from 2011. He is now running his gold mining business i.e. Khamtiin Ekh Bulag LLC in Bureghangai soum, Bulgan aimag, Mongolia.
               </li>
-            </ul>
+            </ul> */}
             <h3>Michael Johnson - Mining Engineer (from TOA) & Metallurgist</h3>
             <ul>
               <li>
@@ -408,13 +416,13 @@ const WhitepaperPage = (props) => {
               David’s blockchain experience is primarily business development and research, always looking for opportunities to learn and provide a unique perspective. He is an early contributor to Columbia University’s undergraduate organization for distributed ledger technology, Blockchain@Columbia, and Researcher at the CBDC Blockchain Research Institute and Cypherium, a layer-1 blockchain protocol for CBDC interoperability. He holds a B.A. in Political Science from Columbia University.
               </li>
             </ul>
-            <h3>Ranadip - CTO</h3>
+            <h3>Ranadip Saha - CTO</h3>
             <ul>
               <li>
               Ranadip leads the design architecture and implementation of distributed systems. He has been working with various teams on Ethereum based projects since 2017. He has also worked on a patented reputation management system for mail prioritization and spam filtering using Hyperledger. His expertise lies in DeFi based projects such as governance and reward management systems. He has also worked previously as a full stack developer mainly working on backend systems based on Python and Node.Js and frontend web applications based on ReactJs.
               </li>
             </ul>
-            <h3>
+            {/* <h3>
               Ireedui Zorigt - Director: Community development, Social media
               Marketing & Gold Processing Engineer
             </h3>
@@ -422,13 +430,13 @@ const WhitepaperPage = (props) => {
               <li>
               He has worked for Khamtiin Ekh Bulag LLC for over 10 years since its establishment. His main area of expertise is gold processing which is the most interesting and critical part of the whole process. In recent years, he is also well known for his achievements as an athlete in heavy powerlifting. He is one of the main personnel in Khamtiin Ekh Bulag LLC who has the greatest discipline and a good example to other staff.
               </li>
-            </ul>
-            <h3>Burte Ujin- Social Media Marketing</h3>
+            </ul> */}
+            {/* <h3>Burte Ujin- Social Media Marketing</h3>
             <ul>
               <li>
               Burte-Ujin is an influencer, marketer, and entrepreneur of 11 years experience. In 2009, she founded “The Lof” Mongolia’s largest gaming center franchise, which has revolutionised the Mongolian Esports landscape. Burte-Ujin is also a board member of Mongolia’s Esports Association. Her influencer and marketing professional experience spans well known political campaigns, blockchain, TV, retail product endorsement and brand management. Graduating from Raffles International Institute, with a bachelors in commerce majoring in marketing , she is fluent in Mongolian, Russian and English.
               </li>
-            </ul>
+            </ul> */}
             </section>
             <section id="advisors">
             <h1>9. Advisors</h1>

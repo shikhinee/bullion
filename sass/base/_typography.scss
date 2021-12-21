@@ -26,6 +26,7 @@ p {
 
   @include respondMax(sm) {
     letter-spacing: normal;
+    font-size: 2.5em;
   }
 }
 
@@ -36,6 +37,9 @@ p {
   line-height: 1.3em;
   @include baseThemify() {
     color: has(clr-text);
+  }
+  @include respondMax(sm){
+    font-size: 1.5em;
   }
 }
 

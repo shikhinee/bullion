@@ -15,7 +15,12 @@
   max-width: has(sm);
   padding: 1.6rem 2.4rem;
   top: $navbarHeight;
-
+  @include respondMax(xs){
+    .tableContainer {
+      max-width: 32rem;
+      overflow-x: scroll;
+    }
+  }
   :where(section) {
     position: relative;
     width: 100%;

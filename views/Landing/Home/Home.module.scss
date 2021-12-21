@@ -32,9 +32,6 @@
     max-width: has(md);
     margin-bottom: 2em;
     font-weight: 300;
-    @include respondMax(md){
-      font-size: 3em;
-    }
   }
 
 }
