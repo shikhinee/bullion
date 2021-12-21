@@ -33,21 +33,23 @@ const Footer = (props) => {
       <div className={styles.content}>
         <div className={styles.contentTop}>
             <div>
+              <Link href="https://t.me/bullionofficial">
               <div className={styles.cta}>
-                <h2 className={styles.hoverUnderline}>We're happy to work with you</h2>
+                <h2 className={styles.hoverUnderline}>Join us</h2>
                 <div className={styles.arrow}>
                   <Image src="/arrowlong.svg" width={130} height={50} layout="responsive" />
                 </div>
               </div>
-              <h3>pr@bullion.codes</h3>              
+              </Link>
+              <a href="mailto:pr@bullion.codes"><h3>pr@bullion.codes</h3></a>              
               <div className={styles.socialContainer}>
-                <Link href="">
+                <Link href="https://t.me/bullionofficial ">
                   <StyledTelegram />
                 </Link>
-                <Link href="">
+                <Link href="https://twitter.com/bullioncodes ">
                   <StyledTwitter />
                 </Link>
-                <Link href="">
+                <Link href="https://medium.com/@bullionofficial ">
                   <StyledMedium />
                 </Link>
               </div>
