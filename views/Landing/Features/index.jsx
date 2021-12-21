@@ -134,25 +134,28 @@ const Features = (props) => {
         initial="hidden"
         animate={animation2}
       >
-        <motion.div
-          // animate={{
-          //   rotate: [0, 360],
-          // }}
-          transition={{
-            duration: 3.6,
-            repeat: Infinity,
-            repeatType: "loop",
-            ease: "linear",
-          }}
-          className={styles.image}
-        >
-          <Image
-            src="/ilogo.png"
-            width={100}
-            height={100}
-            layout="responsive"
-          ></Image>
-        </motion.div>
+        <div className={styles.clearFix}>
+          <motion.div
+            animate={{
+              rotate: [0, 360],
+            }}
+            transition={{
+              duration: 3.6,
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "linear",
+            }}
+            className={styles.image}
+          >
+            <Image
+              src="/ilogo.png"
+              width={100}
+              height={100}
+              layout="responsive"
+            ></Image>
+          </motion.div>
+        </div>
+
         <div className={styles.feature}>
           <div className={styles.content}>
             <motion.h2 variants={textAnimationFadeIn}>

@@ -31,7 +31,7 @@
   z-index: -1;
 
   @include respondMax(md) {
-    filter: blur(10px);
+    filter: blur(1rem);
     left: 50%;
     transform: translateX(-50%);
   }
@@ -42,6 +42,14 @@
   position: sticky;
   top: 0;
   height: 100vh;
+
+  @media screen and (min-aspect-ratio: 2/1) {
+    width: 66%;
+  }
+
+  @media screen and (max-height: 200rem) {
+    width: 66vh;
+  }
 }
 
 .gif {
