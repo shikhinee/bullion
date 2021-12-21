@@ -35,67 +35,31 @@ const WhitepaperPage = (props) => {
             <p>November 19, 2021</p>
             <h2>Abstract</h2>
             <p>
-              This paper introduces BULLION, a Peer-to-Peer Lending Platform
-              applying recent innovations in distributed ledger technology,
-              specifically decentralized finance (DeFi), and proffering access
-              to more equitable and efficient loans.
+              This paper introduces BULLION, a gold-backed DeFi lending platform applying recent innovations in distributed ledger technology, specifically decentralized finance (DeFi), to proffer access to more equitable, efficient, peer-to-peer loans.
             </p>
             <h2>Version 1.0</h2>
             <p>
-              Disclaimers: Information contained herein is subject to change.
-              BULLION is not an investment product. BULLION is not intended in
-              its design or distribution to be utilized as a form of investment,
-              speculation, or as a financial product. No information herein
-              constitutes financial advice. PLEASE do your OWN research before
-              participating in BULLION. Neither the BULLION team nor any of its
-              representative affiliates will ever solicit investment advice.
+              Disclaimers: Information contained herein is subject to change. BULLION is not an investment product. BULLION is not intended in its design or distribution to be utilized as a form of investment, speculation, or as a financial product. No information herein constitutes financial advice. PLEASE do your OWN research before participating in BULLION. Neither the BULLION team nor any of its representative affiliates will ever solicit investment advice.
             </p>
           </section>
           <section id="introduction">
             <h1>1. Introduction</h1>
             <p>
-              BULLION is the founders’ contribution to reducing marginalization
-              and prejudice plaguing our economy, inducing a wide array of
-              systemic instabilities. By drawing from the strengths of the
-              former “Bretton Woods System” where currencies were backed by gold
-              reserves, we enable the under-serviced savers and borrowers in the
-              current banking and financial sector, to receive more equitable
-              access to financial services.
+              BULLION is the founders’ contribution to reducing marginalization and prejudice plaguing our global economy that has induced a wide array of systemic instabilities. By drawing from the strengths of the former  “Bretton Woods System'' where currencies were backed by gold reserves, we not only seek to remedy the economic shock that has perturbed the under-serviced members of society, but also proffer an opportunity to become productive economic agents, at liberty, to realize their economic aspirations. Focusing on the issues plaguing global finance, specifically, the market for loans, BULLION connects savers and borrowers in the current banking and financial sector to receive equitable access to more competitive financial services all within a decentralized environment.
             </p>
             <p>
-              Recent advancements in the application of blockchain technology in
-              the financial sector, specifically decentralized finance (DeFi),
-              has enabled the creation of sophisticated decentralized financial
-              primitives, akin to services offered in the legacy financial
-              system, including loans, payments, and derivatives to name a few.
-              By eliminating intermediaries, all together, with distributed
-              ledger technology, BULLION aims to create a more accessible,
-              equitable, and robust commodity-backed peer-to-peer banking system
-              where participants of the BULLION reap all of the benefits.
+              Recent advancements of blockchain technology, specifically decentralized finance (DeFi), have enabled the creation of sophisticated decentralized financial primitives that are akin to services offered in the legacy financial system, including loans, payments, and derivatives, to name a few. By eliminating intermediaries altogether, BULLION aims to create a more accessible, equitable, and economically attractive banking system where participants of BULLION reap all of the benefits. We champion the cause for non-major producers, savers, and investors of commodities, such as gold, platinum, silver, or copper, who are inadequately serviced by today’s legacy financial system. BULLION aims to contribute to financial inclusion by providing access to optimally priced capital to commodity owners and opportunities for better returns on capital for savers and investors.
             </p>
             <p>
-              We champion the cause for non-major producers, savers, and
-              investors of commodities, such as gold, platinum, silver, or
-              copper, who are inadequately serviced by today’s legacy financial
-              system. BULLION aims to contribute to financial inclusion by
-              providing access to optimally priced capital to commodity owners
-              and opportunities for better returns on capital for savers and
-              investors.
+              BULLION’s approach to delivering more equitable financial services to the world constitutes a variety of dynamics at play in the evolution of the global financial system, including the implementation of advanced digital technologies to legacy systems. The founders of BULLION assert that the new shift in financial paradigm is not in the continued separation of traditional and DeFi centric economic agents, but one borne of cooperation and inclusion. It is the merger of Centralized Finance (CeFi) and Decentralized Finance (DeFi) that we call “HyFi”, short for Hybrid Finance, to transpire advances in today’s economic system.
             </p>
           </section>
           <section id="problem">
-            <h1>2. Problem: Financial Exclusion</h1>
-            <h2>2.1 Loan Access</h2>
-            <h3>Small to Medium Enterprise (SME) Miners</h3>
+            <h1>2. Problem:</h1>
+            <h2>2.1 Financial Exclusion</h2>
+            <h3>2.1.1 Access Problem Faced by Small to Medium Enterprise (SME) Miners</h3>
             <p>
-              Oftentimes, small-to-medium sized commodity businesses, such as
-              miners or producers of gold, silver, platinum, and copper do not
-              have access to the most competitively priced financial services,
-              let alone a guarantee that even uncompetitively structured
-              services will be available. Despite the large turnover of
-              mining/commodity businesses, liquid assets in which they deal and
-              the reliability of the turnover, there is a general commercial
-              discontentment towards the current financial system.
+              Often, small-to-medium-sized commodity businesses do not have access to the most competitively priced financial services, let alone a guarantee that even noncompetitively structured services will be available. Despite the significant turnover of mining/commodity businesses, the liquid assets they deal with, and the turnover's reliability, there is a general commercial discontentment towards the current financial system.
             </p>
             <p className={styles.ulTitle}>The reasons as we see it:</p>
             <ul>
@@ -172,167 +136,42 @@ const WhitepaperPage = (props) => {
                 </ul>
               </li>
             </ul>
-            <h3>Neglected Savers and Investors</h3>
+            <h3>2.1.2 Neglected Savers and Investors</h3>
             <p>
-              The structure of the global economy and the financial system that
-              supports it, allows for attractive wealth enhancing opportunities
-              only to be presented to those persons or entities that already
-              have substantial wealth or economic power. The result is a
-              crystalised wealth structure with little or no economic “class”
-              mobility. Economically marginalised individuals or nations remain
-              that way.
+              The structure of the global economy and the financial system that supports it allows for attractive wealth-enhancing opportunities only to be presented to those individuals or entities that already have substantial wealth or economic power. The result is a crystalized wealth structure with little or no economic “class” mobility. Economically marginalized individuals or nations remain challenged without recourse for social mobility.
             </p>
             <p>
-              Savers and investors who are not of a size that fall within the
-              threshold of commercial viability to be provided financial
-              services and attractive wealth enhancing opportunities, remain as
-              valuable capital to fuel enterprise operation and growth. Such
-              capital just lacks the means of being efficiently pooled and
-              mobilised to connect with where it is needed such as the
-              aforementioned “SME Miners”. Solving this problem not only
-              mobilises more capital in the market but it also presents
-              otherwise off reach, wealth enhancing opportunities for the
-              neglected savers and investors in the market.
+              Savers and investors who are not of a size that falls within the threshold of commercial viability to be provided financial services and attractive wealth-enhancing opportunities remain valuable capital to fuel enterprise operation and growth. Such capital lacks the means of being efficiently pooled and mobilized to connect with where it is needed, such as the aforementioned “SME Miners.” Solving this problem mobilizes more capital in the market and presents otherwise off-reach, wealth-enhancing opportunities for the neglected savers and investors.
             </p>
 
-            <h3>Economic Instability</h3>
+            <h3>2.1.3 Economic Instability</h3>
             <p>
-              The economic system built on reckless monetary and fiscal policy
-              and amplified by fractional banking has shown us many times over
-              throughout history that economies precariously balancing between
-              stability or order and economi chaos.
+              The economic system built on reckless monetary and fiscal policy, further amplified by fractional banking, has shown us many times throughout history that economies precariously balance between stability or order and economic chaos (The Hill).
             </p>
             <p>
-              Despite the decisions that have created and maintained this
-              current situation being made by those who possess economic and
-              political power, the ramifications of the symptomatic instability
-              are borne by the people and entities that are least equipped to
-              handle it.
+              Despite the decisions that have been created and maintained, this current situation is being exacerbated by those who possess economic and political power. The ramifications of the symptomatic instability are borne by the people and entities that are least equipped to handle it.
             </p>
           </section>
           <section id="solution">
-            <h1>3. Solution: BULLION DAO</h1>
+            <h1>3. Solution: BULLION</h1>
             <p>
-              The BULLION DAO proffers the decentralized and collateralized
-              lending and borrowing of money between “Loan Takers” and “Loan
-              Suppliers”. In the execution of a loan agreement in a
-              decentralized environment, there exists many advantages over
-              traditional bank loans. In particular, the absence of an
-              intermediary renders middleman fees obsolete thereby reducing
-              interest rates owed by debtors and enabling more of the
-              apportioned interest to be delivered to the creditors. A global
-              risk pricing system has been applied to determine the interest on
-              borrowed money coupled with a gold equivalency standard to ensure
-              loans and the corresponding interest rates are determined based on
-              real-world measurements.
+              BULLION proffers the decentralized and collateralized lending and borrowing of money between Debtors and Creditors. In the execution of a loan agreement in a decentralized environment, there exists many advantages over traditional bank loans. In particular, the absence of an intermediary renders middleman fees obsolete thereby reducing interest rates owed by debtors and enabling more of the apportioned interest to be delivered to the creditors. A global risk pricing system has been applied to determine the interest on borrowed money coupled with a gold equivalency standard to ensure loans and the corresponding interest rates are determined based on real-world measurements.
             </p>
-            <table id="customers">
-              <thead>
-                <tr>
-                  <th>Country</th>
-                  <th>Loan Agreement</th>
-                  <th>Traditional Banks</th>
-                  <th>BULLION DAO</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Mongolia</td>
-                  <td>Interest Rate (Debtors)</td>
-                  <td>11-18%</td>
-                  <td>Germany</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Interest Rate (Creditors)</td>
-                  <td>1.5- 1.8%</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>Australia</td>
-                  <td>Interest Rate (Debtors)</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Interest Rate (Creditors))</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>United States</td>
-                  <td>Interest Rate (Debtors)</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Interest Rate (Creditors)</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
+            <h2 id="solution-debtors">3.1 Financial Inclusion</h2>
 
-            <h2 id="solution-debtors">3.1 Loan Takers (Debtors)</h2>
-
-            <h3>3.1.1 BULLION Gold (C-BAU)- How Gold Loans are obtained</h3>
+            <h3>3.1.1 C-TROY: Loan Agreement</h3>
             <p>
-              “Loan Takers” are participants of the BULLION ecosystem who submit
-              proof of a bank registered collateral deposit in the form of a
-              “Certificate of Deposit” to verify ownership and provide evidence
-              that the collateral is stored securely in a private vault.
+              C-TROY Token is a digital loan agreement, secured on-chain, entitling the Creditor to interest payments based on Bullion’s proprietary interest optimization mechanism. The following factors are considered in the execution of the loan agreement:
             </p>
+            <ol>
+              <li><h4>Interest Rate (Creditor)</h4>
+                <p>The loan agreement can be executed once there is a match of the loan amount and the corresponding interest rate. Creditors can earn interest for supplying loans to Debtors through the TROY token. </p></li>
+              <li><h4>Proof-of-Collateral (Debtor)</h4>
+                <p>Submit a bank registered collateral in the form of a “Certificate of Deposit” to verify ownership and provide evidence that the collateral is stored securely in a private vault. The credibility of the debtor is secured through the provision of the proof of collateral, serving as a reliable means to verify the legitimacy of the debtor.</p></li>
+            </ol>
             <p>
-              Upon verification of the “Certificate of Deposit” by the BULLION
-              DAO, C-BAU, a 100% gold backed utility token representing 1 troy
-              ounce (oz) of a gold reserve bar, is minted at a 1 troy oz to 1
-              token ratio. The supply of C-BAU is determined based on the amount
-              of gold that is in reserve. With more gold added to the reserve,
-              more C-BAU will be minted. C-BAU can either be used to exchange
-              for physical gold or staked to execute a loan agreement.
+              Once the two aforementioned conditions have been satisfied, the loan agreement will be executed thereby minting C-TROY token. This safeguards Creditors from an event of default by the Debtor, ensuring the return of their principal and interest within the agreed upon time, whilst providing Debtors with the credibility required to obtain the loans.
             </p>
-            <p>
-              In order to acquire loans through the BULLION DAO, Loan Takers
-              must “stake” or “collateralize” their C-BAU at a 1 to 1 ratio.
-              This means for every 1 C-BAU that is staked, a risk adjusted
-              percentage of the value of 1 troy oz gold in USD, can be borrowed.
-              This risk adjustment % or debt to equity ratio, is determined by
-              perceived gold volatility. It will likely track the
-              collateralisation ratios, set by the traditional banking sector.
-              In other words, subject to volatility of the price of the
-              collateral, a percentage of the value of the collateral at the
-              time of staking will be the ultimate loan principal amount. For an
-              example consider the information In table 3.1 the current
-              collateral value to loan amount % is given as 82-87%, meaning that
-              if gold is currently valued at $1800 per ounce, the borrower will
-              be able to borrow $1,476-$1566 for every ounce staked.
-            </p>
-            <p>
-              Table 3.1: Comparison of how BULLION will be more competitive than
-              the current banking system. The figures given are for illustrative
-              purposes.
-            </p>
-            <table>
-              <thead>
-                <tr>
-                  <th>Country</th>
-                  <th>Collateral</th>
-                  <th>Traditional Bank: Collateralization</th>
-                  <th>BULLION: Collateralization</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Mongolia</td>
-                  <td>Precious Metals (Gold, Silver, etc.)</td>
-                  <td>80-85% of Collateral</td>
-                  <td>82-87% of collateral</td>
-                </tr>
-              </tbody>
-            </table>
-            <p>Table 3.1.1: Collateralization Comparison</p>
             <table>
               <thead>
                 <tr>
@@ -351,57 +190,62 @@ const WhitepaperPage = (props) => {
                 </tr>
               </tbody>
             </table>
-            <p>Table 3.1.2: Interest Rate Comparison</p>
-            <h3>3.1.2 BULLION Gold (C-BAU)- How Interest is Paid</h3>
+            <p>Table 3.1.1: Collateralization Comparison</p>
             <p>
-              At maturity, the loan principal will be returned to the Loan
-              Supplier in the currency on which the loan agreement was executed.
-              Interest incurred from the loan will be made payable solely in the
-              BULLION DAO native utility token, BAU. This forms the utility or
-              use case for BAU, which will be offered to users through various
-              token sales and listings. (see: 3.1.3 Loan Interest)
+              A “Gold-Equivalency Standard” will be applied to all non-gold assets deposited as collateral prior to the minting of the loan agreement, C-TROY. If a  certificate of deposit for a non-gold asset, such as for 1 troy oz of Silver, the following Gold-Equivalency Standard is applied for the conversion to C-TROY.
             </p>
-            <h3>3.1.3 BULLION Gold (C-BAU)- Precious and Other Metals</h3>
+            <table id="customers">
+              <thead>
+                <tr>
+                  <th>Steps</th>
+                  <th>“Gold Equivalency Standard”</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>1 troy oz of Gold = $1,849 <a href="https://data.chain.link/ethereum/mainnet/commodities/xau-usd">(XAU/USD)</a> | 1 troy oz of Silver = $24.59 <a href="https://data.chain.link/ethereum/mainnet/commodities/xag-usd">(XAG/USD)</a></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>$1,849 / $24.59 = 75.19</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>1 troy oz of Gold = 75.19 troy oz of Silver</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>1/75.19 = 0.0133 oz of Gold in 1 troy oz of Silver</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Mint 0.0133 C-TROY</td>
+                </tr>
+              </tbody>
+            </table>
             <p>
-              A “Gold-Equivalency Standard” will be applied to all non-gold
-              assets deposited as collateral prior to the minting of C-BAU. For
-              example, if a certificate of deposit for 1troy oz of Gold is
-              submitted, then 1 C-BAU is minted. However, if a certificate of
-              deposit for a non-gold asset, such as for 1 troy oz of Silver is
-              submitted, the following Gold-Equivalency Standard is applied for
-              the conversion to C-BAU.
+              NB: this is an illustrative example, and actual calculations will be based on prevailing market rates.
             </p>
-            <h2 id="solution-creditors">3.2 Loan Suppliers (Creditors)</h2>
-            <h3>3.2.1 Highly Liquid Stablecoins (USDT, USDC, BUSD, TUSD)</h3>
+            <h3>3.1.2 TROY: Interest Token</h3>
             <p>
-              Loan Suppliers are participants who deposit any one of highly
-              liquid stablecoins that are each pegged to 1 US dollar, such as
-              USDT or USDC to the protocol. In return, Loan Suppliers will be
-              rewarded interest based on loans supplied. The starting interest
-              rate will be set at a market competitive APY (higher than other
-              DeFi lending protocols such as Aave, Compound, etc.) and the
-              longer one supplies the loans, the higher the interest rate.
-              Interest on loans supplied will be made payable in the BULLION DAO
-              native utility token, BAU. This forms the utility or use case for
-              BAU, which will be offered to users through various token sales
-              and listings. (see: 3.1.3 Loan Interest)
+            Interest is paid by Debtors in the form of the Bullion native utility token, TROY. The movements in the TROY token will allow Debtors (payers of TROY) and Creditors (receivers of TROY), to potentially reduce their interest rate exposure or increase the amount received in interest respectively. This forms the utility or use case for TROY, which will be offered to users through various token sales and listings.
             </p>
-            <h2 id="solution-interest">3.3 Loan Interest</h2>
-            <h3>3.3.1 BULLION Utility Token (BAU)</h3>
+            <h3>3.1.3 Depositing & Earning</h3>
             <p>
-              BAU, is the native utility token for the BULLION DAO, used to pay
-              off interest incurred in the loan agreement between Loan Takers
-              and Loan Suppliers. This token will be listed and traded on both
-              centralized and decentralized digital assets exchanges.
+            Creditors are participants who deposit any one of highly liquid stablecoins that are each pegged to 1 US dollar, such as USDT or USDC to the protocol. In return, Creditors will be rewarded interest based on loans supplied. There are two ways for Creditors to earn interest, a “Base Rate” and “Alpha Rate”. 
             </p>
-            <p>
-              In order to further incentivize participation on the protocol, an
-              initial staking rewards pool will be launched to reward early
-              ecosystem contributors. They can elect to pledge their BAU to earn
-              rewards through the Initial Staking Rewards Pool with a variable
-              APY (vesting schedule applied to mitigate dumping) or earn fixed
-              rewards through the Perpetual Staking Rewards Pool.
-            </p>
+            <ul>
+              <li>
+              <h4>Base Rate:</h4>
+              <p>The starting base interest rate will be set at a market competitive APY (equal to other DeFi lending protocols such as Aave, Compound, etc). Interest on loans supplied will be made payable in the BULLION native utility token, TROY.</p>
+              </li>
+              <li>
+                <h4>Alpha Rate:</h4>
+                <p>For every executed loan agreement, interest is optimized in accordance with Bullion’s proprietary interest optimization mechanism. (this is our way of optimizing the inefficiencies of centralization).</p>
+              </li>
+            </ul>
+            <p>In order to further incentivize participation on the protocol, an initial staking rewards pool will be launched to reward early ecosystem contributors. They can elect to pledge their TROY to earn rewards through the Initial Staking Rewards Pool with a variable APY (vesting schedule applied to mitigate dumping) or earn fixed rewards through the Perpetual Staking Rewards Pool.</p>
           </section>
           <section id="token">
             <h1>4. Bullion Token Economy</h1>
@@ -409,6 +253,90 @@ const WhitepaperPage = (props) => {
               4.1 Token Ecosystem- Bringing it all Together
             </h2>
             <h2 id="token-allocation">4.2 Token Allocation</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Allocation</th>
+                  <th>Amount (TROY)</th>
+                  <th>% of Total Supply</th>
+                  <th>Issuance</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Private Sale</td>
+                  <td>350,000,000</td>
+                  <td>6%</td>
+                  <td>Initial Circulating Supply. No Vesting</td>
+                </tr>
+                <tr>
+                  <td>Public Sale</td>
+                  <td>1,150,000,000</td>
+                  <td>19%</td>
+                  <td>Initial Circulating Supply. No Vesting</td>
+                </tr>
+                <tr>
+                  <td>Initial Staking Rewards Pool</td>
+                  <td>1,200,000,000</td>
+                  <td>20%</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Perpetual Rewards Pool</td>
+                  <td>300,000,000</td>
+                  <td>5%</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Developers Pool</td>
+                  <td>300,000,000</td>
+                  <td>5%</td>
+                  <td>Vesting until necessary for use. Controlled by the Foundation for the continued development of the protocol</td>
+                </tr>
+                <tr>
+                  <td>Marketing</td>
+                  <td>600,000,000</td>
+                  <td>10%</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Operations</td>
+                  <td>600,000,000</td>
+                  <td>10%</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Team</td>
+                  <td>240,000,000</td>
+                  <td>4%</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Partners</td>
+                  <td>720,000,000</td>
+                  <td>12%</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Founders</td>
+                  <td>300,000,000</td>
+                  <td>5%</td>
+                  <td>20% Initial Circulating Supply. Remaining vested and released per month over 12 months</td>
+                </tr>
+                <tr>
+                  <td>Advisors</td>
+                  <td>240,000,000</td>
+                  <td>4%</td>
+                  <td>20% Initial Circulating Supply. Remaining vested and released per month over 12 months</td>
+                </tr>
+                <tr>
+                  <td>TOTAL SUPPLY</td>
+                  <td>60,000,000,000</td>
+                  <td>100%</td>
+                  <td>18,480,000,000 TROY Initial Circulating Supply</td>
+                </tr>
+              </tbody>
+            </table>
           </section>
           <section id="partnerships">
             <h1>5. Partnerships</h1>
@@ -436,92 +364,54 @@ const WhitepaperPage = (props) => {
           <section id="roadmap">
             <h1>6. Roadmap</h1>
             <ul>
-              <li>IEO- Late November 2021</li>
-              <li>International listing #1- Dec 2021</li>
+              <li>International IEO</li>
+              <li>Mongolian listing</li>
+              <li>Decentralized Exchange listing #1</li>
               <li>Partnership Announcement #1</li>
-              <li>International Listing #2 Dec 2021</li>
-              <li>Partnership Announcement #2 Jan 2022</li>
-              <li>Development Update Feb 2022</li>
-              <li>International Listing #3 Feb 2022</li>
-              <li>Partnership Announcement #3 March 2022</li>
-              <li>Development Update April 2022</li>
+              <li>International Listing #2</li>
+              <li>Partnership Announcement #2</li>
+              <li>Development Update</li>
+              <li>International Listing #3</li>
+              <li>Partnership Announcement #3</li>
+              <li>Development Update</li>
             </ul>
           </section>
           <section id="overview">
             <h1>7. Overview</h1>
             <p>
-              The importance of financial stability is well recognized globally,
-              but inequality still pervades the infrastructure on which
-              financial services are provided.
+            Bullion is a decentralized gold-backed liquidity market protocol where users can participate as Creditors or Debtors. Just like in traditional finance, Creditors provide liquidity to the Bullion loan market to earn interest for a deposit and are also subject to receive additional interest upon a match with a Debtor through executing a loan agreement. Debtors are able to borrow against their collateralized asset, gold, to fund their business operations and by borrowing, able to obtain liquidity (working capital) without selling their assets and hence, are entitled to the potential upside value gain of their underlying collateral. The importance of financial stability is well recognized globally, but inequality still pervades the infrastructure on which financial services are provided. By applying a global risk pricing mechanism and a gold equivalency standard, coupled with advances in distributed ledger technology, Bullion offers an alternative, peer to peer means to obtain loans thereby enhancing access to capital.
             </p>
           </section>
-          <section id="references">
-            <h1>8. References</h1>
-            <h3>Mr Ganzorig Volooj - Founder, CEO</h3>
+          <section id="team">
+            <h1>8. Team</h1>
+            <h3>Naranzul Ganzorig - Founder, CEO</h3>
             <ul>
               <li>
-                Mr Ganzorig is a successful businessman who has over 20 years of
-                experience in heavy industry in Mongolia. He is an electrical
-                engineer who later studied further in China for foreign trade
-                and economy which enabled him to cooperate with foreign
-                investors. He started his business in the construction industry
-                in 2010 and extended it into the mining sector from 2011. He is
-                now running his gold mining business i.e. Khamtiin Ekh Bulag LLC
-                in Bureghangai soum, Bulgan aimag, Mongolia.
+              Mrs Naranzul is a young leader who is a business woman, teacher and researcher. She has been educated in the UK for accounting and finance. She established her own financial enterprise which provides management consulting, accounting services and a research center. Along with chasing her career, she has been supporting the management of her father’s business, gold mining company, and sought a way of solvency for better financial source and services. Therefore, she is now extending her Finsigh Investment company with the Bullion Project where SME gold miners can get an efficient service through cheaper cost of capital compared to traditional banking systems which makes it a transformational start-up in Mongolia where it’s based on Hybrid Finance, HyFi system which many SME miners and investors can be hugely benefited.
+              </li>
+            </ul>
+            <h3>Ganzorig Volooj - Co-Founder, Investor</h3>
+            <ul>
+              <li>
+                Ganzorig is a successful businessman who has over 20 years of experience in heavy industry in Mongolia. He is an electrical engineer who later studied further in China for foreign trade and economy which enabled him to cooperate with foreign investors. He started his business in the construction industry in 2010 and extended it into the mining sector from 2011. He is now running his gold mining business i.e. Khamtiin Ekh Bulag LLC in Bureghangai soum, Bulgan aimag, Mongolia.
               </li>
             </ul>
             <h3>Michael Johnson - Mining Engineer (from TOA) & Metallurgist</h3>
             <ul>
               <li>
-                Mr. Johnson is a qualified engineer with more than 40 years of
-                global experience in the heavy industry, mining and construction
-                sector. He has managed projects for multinational corporations,
-                enterprises, and startups. He is the President & founder of TOA
-                Consulting, an international consultancy and project management
-                company. His successful track record includes work with globally
-                recognised corporations such as Arcelor Mittal, AHMSA, Mobarakeh
-                Steel Company, SMS Siemac, and Iron Ore Canada, spanning China,
-                North America, South East and Central Asia, and Iran.
+              Mr. Johnson is a qualified engineer with more than 40 years of global experience in the heavy industry, mining and construction sector. He has managed projects for multinational corporations, enterprises, and startups.  He is the President & founder of TOA Consulting, an international consultancy and project management company. His successful track record includes work with globally recognised corporations such as Arcelor Mittal, AHMSA, Mobarakeh Steel Company, SMS Siemac, and Iron Ore Canada, spanning China, North America, South East and Central Asia, and Iran.
               </li>
             </ul>
-            <h3>David Gong - Director: Business Development (Global Crypto)</h3>
+            <h3>David Gong- Director: Business Development (Global Crypto)</h3>
             <ul>
               <li>
-                David’s blockchain experience is primarily business development
-                and research, always looking for opportunities to learn and
-                provide a unique perspective. He is an early contributor to
-                Columbia University’s undergraduate organization for distributed
-                ledger technology, Blockchain@Columbia, and Researcher at the
-                CBDC Blockchain Research Institute and Cypherium, a layer-1
-                blockchain protocol for CBDC interoperability. He holds a B.A.
-                in Political Science from Columbia University.
+              David’s blockchain experience is primarily business development and research, always looking for opportunities to learn and provide a unique perspective. He is an early contributor to Columbia University’s undergraduate organization for distributed ledger technology, Blockchain@Columbia, and Researcher at the CBDC Blockchain Research Institute and Cypherium, a layer-1 blockchain protocol for CBDC interoperability. He holds a B.A. in Political Science from Columbia University.
               </li>
             </ul>
             <h3>Ranadip - CTO</h3>
             <ul>
               <li>
-                Ranadip leads the design architecture and implementation of
-                distributed systems. He has been working with various teams on
-                Ethereum based projects since 2017. He has also worked on a
-                patented reputation management system for mail prioritization
-                and spam filtering using Hyperledger. His expertise lies in DeFi
-                based projects such as governance and reward management systems.
-                He has also worked previously as a full stack developer mainly
-                working on backend systems based on Python and Node.Js and
-                frontend web applications based on ReactJs.
-              </li>
-            </ul>
-            <h3>Naranzul Ganzorig - Financial Advisor</h3>
-            <ul>
-              <li>
-                Mr Ganzorig is a successful businessman who has over 20 years of
-                experience in heavy industry in Mongolia. He is an electrical
-                engineer who later studied further in China for foreign trade
-                and economy which enabled him to cooperate with foreign
-                investors. He started his business in the construction industry
-                in 2010 and extended it into the mining sector from 2011. He is
-                now running his gold mining business i.e. Khamtiin Ekh Bulag LLC
-                in Bureghangai soum, Bulgan aimag, Mongolia.
+              Ranadip leads the design architecture and implementation of distributed systems. He has been working with various teams on Ethereum based projects since 2017. He has also worked on a patented reputation management system for mail prioritization and spam filtering using Hyperledger. His expertise lies in DeFi based projects such as governance and reward management systems. He has also worked previously as a full stack developer mainly working on backend systems based on Python and Node.Js and frontend web applications based on ReactJs.
               </li>
             </ul>
             <h3>
@@ -530,60 +420,18 @@ const WhitepaperPage = (props) => {
             </h3>
             <ul>
               <li>
-                Mr Ganzorig is a successful businessman who has over 20 years of
-                experience in heavy industry in Mongolia. He is an electrical
-                engineer who later studied further in China for foreign trade
-                and economy which enabled him to cooperate with foreign
-                investors. He started his business in the construction industry
-                in 2010 and extended it into the mining sector from 2011. He is
-                now running his gold mining business i.e. Khamtiin Ekh Bulag LLC
-                in Bureghangai soum, Bulgan aimag, Mongolia.
+              He has worked for Khamtiin Ekh Bulag LLC for over 10 years since its establishment. His main area of expertise is gold processing which is the most interesting and critical part of the whole process. In recent years, he is also well known for his achievements as an athlete in heavy powerlifting. He is one of the main personnel in Khamtiin Ekh Bulag LLC who has the greatest discipline and a good example to other staff.
               </li>
             </ul>
-            <h3>Mr Ganzorig Ulziibayar - Policy and Economic Auditor</h3>
+            <h3>Burte Ujin- Social Media Marketing</h3>
             <ul>
               <li>
-                Mr Ganzorig is a successful businessman who has over 20 years of
-                experience in heavy industry in Mongolia. He is an electrical
-                engineer who later studied further in China for foreign trade
-                and economy which enabled him to cooperate with foreign
-                investors. He started his business in the construction industry
-                in 2010 and extended it into the mining sector from 2011. He is
-                now running his gold mining business i.e. Khamtiin Ekh Bulag LLC
-                in Bureghangai soum, Bulgan aimag, Mongolia.
+              Burte-Ujin is an influencer, marketer, and entrepreneur of 11 years experience. In 2009, she founded “The Lof” Mongolia’s largest gaming center franchise, which has revolutionised the Mongolian Esports landscape. Burte-Ujin is also a board member of Mongolia’s Esports Association. Her influencer and marketing professional experience spans well known political campaigns, blockchain, TV, retail product endorsement and brand management. Graduating from Raffles International Institute, with a bachelors in commerce majoring in marketing , she is fluent in Mongolian, Russian and English.
               </li>
             </ul>
-            <h3>Anar Amarjargal - Economic advisor</h3>
-            <ul>
-              <li>
-                {" "}
-                Anar has over 10 years of professional experience in overseeing
-                the day to day operations, translating strategy into actionable
-                goals for business performance and growth throughout the greater
-                Mongolia region. He is the former COO of the Mongolian Mortgage
-                Corporation HFC LLC, Independent Board Member for the Mongolian
-                Stock Exchange, and the Director of Amarjargal Foundation NGO.
-                Anar holds an MBA in Investment Management from the University
-                of Finance and Economics of Mongolia, and a BA in Economics
-                (emphasis on Intellectual Property) from the University of
-                Colorado at Boulder.
-              </li>
-            </ul>
-            <h3>Burte Ujin - Social Media Marketing</h3>
-            <ul>
-              <li>
-                Burte-Ujin is an influencer, marketer, and entrepreneur of 11
-                years experience. In 2009, she founded “The Lof” Mongolia’s
-                largest gaming center franchise, which has revolutionised the
-                Mongolian Esports landscape. Burte-Ujin is also a board member
-                of Mongolia’s Esports Association. Her influencer and marketing
-                professional experience spans well known political campaigns,
-                blockchain, TV, retail product endorsement and brand management.
-                Graduating from Raffles International Institute, with a
-                bachelors in commerce majoring in marketing , she is fluent in
-                Mongolian, Russian and English.
-              </li>
-            </ul>
+            </section>
+            <section id="advisors">
+            <h1>9. Advisors</h1>
             <h3>Joseph Lee - Legal, Economic Financial Director</h3>
             <ul>
               <li>
@@ -604,6 +452,22 @@ const WhitepaperPage = (props) => {
                 Mathematics), Applied Finance, and a Juris Doctor.
               </li>
             </ul>
+            <h3>Anar Amarjargal - Economic advisor</h3>
+            <ul>
+              <li>
+                {" "}
+                Anar has over 10 years of professional experience in overseeing
+                the day to day operations, translating strategy into actionable
+                goals for business performance and growth throughout the greater
+                Mongolia region. He is the former COO of the Mongolian Mortgage
+                Corporation HFC LLC, Independent Board Member for the Mongolian
+                Stock Exchange, and the Director of Amarjargal Foundation NGO.
+                Anar holds an MBA in Investment Management from the University
+                of Finance and Economics of Mongolia, and a BA in Economics
+                (emphasis on Intellectual Property) from the University of
+                Colorado at Boulder.
+              </li>
+            </ul>
             <h3>Eric Choi- Blockchain Advisor</h3>
             <ul>
               <li>
@@ -622,6 +486,15 @@ const WhitepaperPage = (props) => {
                 architecture, product development and implementation of secure
                 and scalable distributed systems.
               </li>
+            </ul>
+            </section>
+          <section id="references">
+          <h1>10. References</h1>
+            <ul>
+              <li><a href="https://thehill.com/opinion/finance/504702-the-feds-reckless-experiment">https://thehill.com/opinion/finance/504702-the-feds-reckless-experiment</a></li>
+              <li><a href="https://ncrc.org/disinvestment/">https://ncrc.org/disinvestment/</a></li>
+              <li><a href="https://www.iowapublicradio.org/2020-12-15/unequal-access-to-banking-and-loans-works-against-black-business-owners">https://www.iowapublicradio.org/2020-12-15/unequal-access-to-banking-and-loans-works-against-black-business-owners</a></li>
+              <li><a href="https://news.crunchbase.com/news/small-business-startup-capital-black-businesses/">https://news.crunchbase.com/news/small-business-startup-capital-black-businesses/</a></li>
             </ul>
           </section>
         </div>
