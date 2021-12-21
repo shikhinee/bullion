@@ -102,79 +102,82 @@ const Why = (props) => {
   return (
     <div className={styles.container} id="why">
       <div className={styles.giphy}>
-        <Image
-          src="/bullion.gif"
-          priority
-          className={styles.gif}
-          layout="fill"
-        ></Image>
+        <div className={styles.gifInner}>
+          <Image
+            src="/bullion.gif"
+            priority
+            className={styles.gif}
+            layout="fill"
+          ></Image>
+        </div>
       </div>
-      <div className={styles.horizontal}>
-        <motion.div
-          className={styles.loanAccess}
-          ref={ref}
-          variants={variants}
-          initial="hidden"
-          animate={animation}
-        >
-          <motion.div className={styles.heading} variants={textAnimationFadeIn}>
-            <h3>Why BULLION</h3>
-            <span>|</span>
-            <div className={styles.blogo}>
-              <Image
-                src="/blogo.png"
-                width={40}
-                height={40}
-                layout="responsive"
-              ></Image>
-            </div>
-          </motion.div>
-          <motion.h2 variants={textAnimationFadeIn}>Loan Access</motion.h2>
-          <motion.p variants={textAnimationFadeIn}>
-            The BULLION liquidity market protocol provides the means for
-            underserved “savers” and “borrowers”, especially small-to-midsize
-            businesses in traditional finance, to receive equitable access to
-            competitively priced financial services.
-          </motion.p>
-        </motion.div>
 
-        <motion.div
-          className={styles.volatility}
-          ref={ref2}
-          variants={variants}
-          initial="hidden"
-          animate={animation2}
-        >
-          <motion.h2 variants={textAnimationFadeIn}>
-            Volatility & Lending <br /> System Stability
-          </motion.h2>
-          <motion.p variants={textAnimationFadeIn}>
-            In order to reconcile the attraction for liquidity providing
-            speculators with stability desired by lenders and borrowers, TROY
-            token will be subject to an equilibrium seeking supply control
-            mechanism.
-          </motion.p>
-        </motion.div>
+      <div className={styles.overlay}></div>
 
-        <motion.div
-          className={styles.hyfi}
-          ref={ref3}
-          variants={variants}
-          initial="hidden"
-          animate={animation3}
-        >
-          <motion.h2 variants={textAnimationFadeIn}>
-            Hybrid Finance (HyFi)
-          </motion.h2>
-          <motion.p variants={textAnimationFadeIn}>
-            Hybrid Finance or “HyFi '' draws strengths of the Bretton Woods
-            System and facilitates asset tokenization to bring real world value
-            to the blockchain. Benefits of tokenization include open access,
-            on-chain transparency, and reduced transactional friction
-            experienced by legacy systems.
-          </motion.p>
+      <motion.div
+        className={styles.loanAccess}
+        ref={ref}
+        variants={variants}
+        initial="hidden"
+        animate={animation}
+      >
+        <motion.div className={styles.heading} variants={textAnimationFadeIn}>
+          <h3>Why BULLION</h3>
+          <span>|</span>
+          <div className={styles.blogo}>
+            <Image
+              src="/blogo.png"
+              width={40}
+              height={40}
+              layout="responsive"
+            ></Image>
+          </div>
         </motion.div>
-      </div>
+        <motion.h2 variants={textAnimationFadeIn}>Loan Access</motion.h2>
+        <motion.p variants={textAnimationFadeIn}>
+          The BULLION liquidity market protocol provides the means for
+          underserved “savers” and “borrowers”, especially small-to-midsize
+          businesses in traditional finance, to receive equitable access to
+          competitively priced financial services.
+        </motion.p>
+      </motion.div>
+
+      <motion.div
+        className={styles.volatility}
+        ref={ref2}
+        variants={variants}
+        initial="hidden"
+        animate={animation2}
+      >
+        <motion.h2 variants={textAnimationFadeIn}>
+          Volatility & Lending <br /> System Stability
+        </motion.h2>
+        <motion.p variants={textAnimationFadeIn}>
+          In order to reconcile the attraction for liquidity providing
+          speculators with stability desired by lenders and borrowers, TROY
+          token will be subject to an equilibrium seeking supply control
+          mechanism.
+        </motion.p>
+      </motion.div>
+
+      <motion.div
+        className={styles.hyfi}
+        ref={ref3}
+        variants={variants}
+        initial="hidden"
+        animate={animation3}
+      >
+        <motion.h2 variants={textAnimationFadeIn}>
+          Hybrid Finance (HyFi)
+        </motion.h2>
+        <motion.p variants={textAnimationFadeIn}>
+          Hybrid Finance or “HyFi '' draws strengths of the Bretton Woods System
+          and facilitates asset tokenization to bring real world value to the
+          blockchain. Benefits of tokenization include open access, on-chain
+          transparency, and reduced transactional friction experienced by legacy
+          systems.
+        </motion.p>
+      </motion.div>
     </div>
   );
 };

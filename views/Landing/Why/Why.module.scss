@@ -1,23 +1,16 @@
 @import "global";
 
 .container {
+  position: relative;
   width: 90%;
-  display: flex;
-}
-
-.giphy {
-  width: 100%;
-  position: sticky;
-  top: 0;
-  height: 100vh;
-}
-
-.horizontal {
-  width: 100%;
+  max-width: has(lg);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+
+  @include respondMax(md) {
+    align-items: center;
+  }
 
   h2 {
     margin: 1em 0;
@@ -27,18 +20,33 @@
   }
 }
 
-.gif {
+.giphy {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  max-width: 72rem;
+  min-width: 32rem;
+  height: 100%;
+  z-index: -1;
+
+  @include respondMax(md) {
+    filter: blur(10px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.gifInner {
+  width: 100%;
+  position: sticky;
+  top: 0;
   height: 100vh;
 }
 
-.loanAccess {
-  height: 100vh;
-  width: 90%;
-  max-width: 62rem;
-    display: flex;
-  flex-direction: column;
-  justify-content: center;
+.gif {
+  width: 100%;
+  height: 100%;
 }
 
 .heading {
@@ -56,20 +64,44 @@
   }
 }
 
+.loanAccess {
+  height: 100vh;
+  width: 100%;
+  max-width: 62rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .volatility {
   height: 100vh;
-  width: 90%;
+  width: 100%;
   max-width: 62rem;
-    display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .hyfi {
   height: 100vh;
-  width: 90%;
+  width: 100%;
   max-width: 62rem;
-    display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: -1;
+
+  @include respondMax(md) {
+    display: block;
+  }
 }

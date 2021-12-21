@@ -94,22 +94,25 @@ const Features = (props) => {
         animate={animation}
       >
         <motion.h3 variants={textAnimationFadeIn}>BULLION Features</motion.h3>
-        <motion.div
-          animate={{ opacity: [1, 0], rotateY: [0, 90] }}
-          transition={{
-            duration: 1,
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
-          className={styles.image}
-        >
-          <Image
-            src="/blogo.png"
-            width={150}
-            height={150}
-            layout="responsive"
-          ></Image>
-        </motion.div>
+        <div className={styles.clearFix}>
+          <motion.div
+            animate={{ opacity: [1, 0], rotateY: [0, 90] }}
+            transition={{
+              duration: 1,
+              repeat: Infinity,
+              repeatType: "reverse",
+            }}
+            className={styles.image}
+          >
+            <Image
+              src="/blogo.png"
+              width={150}
+              height={150}
+              layout="responsive"
+            ></Image>
+          </motion.div>
+        </div>
+
         <div className={styles.feature}>
           <div className={styles.content}>
             <motion.h2 variants={textAnimationFadeIn}>
@@ -132,9 +135,9 @@ const Features = (props) => {
         animate={animation2}
       >
         <motion.div
-          animate={{
-            rotate: [0, 360],
-          }}
+          // animate={{
+          //   rotate: [0, 360],
+          // }}
           transition={{
             duration: 3.6,
             repeat: Infinity,

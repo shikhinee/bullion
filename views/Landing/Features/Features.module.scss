@@ -1,44 +1,50 @@
-@import 'global';
+@import "global";
 
 .container {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .features {
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-    h3 {
-        margin-bottom: 2em;
-    }
-    h2 {
-        margin-bottom: 1em;
-    }
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h3 {
+    margin-bottom: 2em;
+  }
+  h2 {
+    margin-bottom: 1em;
+  }
 }
+
+.clearFix {
+  -webkit-perspective: 50rem;
+}
+
 .feature {
-    width: 100%;
-    display: flex;
-    max-width: 80rem;
-    justify-content: center;
-    align-items: flex-start;
+  width: 100%;
+  display: flex;
+  max-width: 80rem;
+  justify-content: center;
+  align-items: flex-start;
 }
 .image {
-    width: 15rem;
-    height: 15rem;
-    margin-right: 5rem;
-    margin: 3em 0;
+  box-sizing: border-box;
+  width: 15rem;
+  height: 15rem;
+  margin-right: 5rem;
+  margin: 3em 0;
 }
 .content {
-    width: 100%;
-    max-width: 60rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+  width: 100%;
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
