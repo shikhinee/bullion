@@ -31,7 +31,7 @@ const About = (props) => {
   return (
     <div className={styles.container} ref={ref}>
       <div className={styles.content}>
-        <Image layout="fill" src="/mineimage.png" objectFit="cover"></Image>
+        <Image layout="fill" src="/mineimage.png" objectFit="cover" alt="mine"></Image>
       </div>
     </div>
   );

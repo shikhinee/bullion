@@ -1,6 +1,6 @@
 //Next, React (core node_modules) imports must be placed here
 import { motion } from "framer-motion";
-
+import Image from "next/image";
 //import STORE from '@/store'
 
 //import LAYOUT from '@/layouts'
@@ -172,8 +172,10 @@ const WhitepaperPage = (props) => {
             <p>
               Once the two aforementioned conditions have been satisfied, the loan agreement will be executed thereby minting C-TROY token. This safeguards Creditors from an event of default by the Debtor, ensuring the return of their principal and interest within the agreed upon time, whilst providing Debtors with the credibility required to obtain the loans.
             </p>
+            <div>
+            <Image width={"100%"} height={"100%"} src="/bullionecosystem.png" layout="responsive" objectFit="contain" alt="Ecosystem"/>
+            </div>
             <div className={styles.tableContainer}>
-
             <table>
               <thead>
                 <tr>
@@ -498,7 +500,7 @@ const WhitepaperPage = (props) => {
             </section>
           <section id="references">
           <h1>10. References</h1>
-            <ul>
+            <ul className={styles.references}>
               <li><a href="https://thehill.com/opinion/finance/504702-the-feds-reckless-experiment">https://thehill.com/opinion/finance/504702-the-feds-reckless-experiment</a></li>
               <li><a href="https://ncrc.org/disinvestment/">https://ncrc.org/disinvestment/</a></li>
               <li><a href="https://www.iowapublicradio.org/2020-12-15/unequal-access-to-banking-and-loans-works-against-black-business-owners">https://www.iowapublicradio.org/2020-12-15/unequal-access-to-banking-and-loans-works-against-black-business-owners</a></li>
