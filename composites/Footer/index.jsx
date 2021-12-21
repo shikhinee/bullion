@@ -59,8 +59,7 @@ const Footer = (props) => {
         <div className={styles.contentBottom}>
           <div className={styles.legal}>
             <div className={styles.legalLeft}>
-              <p>2021 Bullion Project. - Privacy Policy</p>
-              <p>Terms of Use</p>
+              <p>2021 Bullion Project</p>
             </div>
             <div className={styles.legalRight}>
             &lt;/&gt; Solid Frameworks
