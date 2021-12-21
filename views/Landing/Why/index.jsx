@@ -88,7 +88,7 @@ const Why = (props) => {
   }, [inView3]);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="why">
       <div className={styles.giphy}>
         <Image
           src="/bullion.gif"

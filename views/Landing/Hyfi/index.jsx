@@ -7,7 +7,7 @@ import Link from "next/link"
 
 //import COMPONENT from '@/components'
 
-import styles from './Hyfi.module.scss'
+import styles from "./Hyfi.module.scss";
 
 const Hyfi = (props) => {
 	 return (

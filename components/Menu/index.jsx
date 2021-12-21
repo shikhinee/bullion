@@ -49,6 +49,19 @@ const Menu = (props) => {
           </a>
         </Link>
       </li>
+
+      <li>
+        <Link href="/#why">
+          <a
+            className={
+              activeAnchor == "#why" && route == "/" ? styles.isActive : ""
+            }
+            onClick={props.onClick}
+          >
+            Why Bullion?
+          </a>
+        </Link>
+      </li>
       <li>
         <Link href="/#team">
           <a
@@ -58,18 +71,6 @@ const Menu = (props) => {
             onClick={props.onClick}
           >
             Team
-          </a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/#contact">
-          <a
-            className={
-              activeAnchor == "#contact" && route == "/" ? styles.isActive : ""
-            }
-            onClick={props.onClick}
-          >
-            Contact
           </a>
         </Link>
       </li>

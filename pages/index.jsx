@@ -25,13 +25,13 @@ const RootPage = (props) => {
       <Home />
       <About />
       <Description />
-      <Why/>
-      <Features/>
-      <Hyfi/>
+      <Why />
+      <Features />
+      <Hyfi />
       <Team />
       {/* <Contact /> */}
     </motion.main>
-  )
+  );
 };
 
 RootPage.Layout = LandingLayout;
