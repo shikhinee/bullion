@@ -1,8 +1,9 @@
 //Next, React (core node_modules) imports must be placed here
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
+import ActiveAnchorContext from "@/store/ActiveAnchor";
 //import STORE from '@/store'
 
 //import COMPOSITES from '@/composites'
@@ -40,9 +41,10 @@ const textAnimationFadeIn = {
   },
 };
 
-const iconAnimation = {};
-
 const Features = (props) => {
+  const { activeAnchor, setActiveAnchor, isClicked } =
+    useContext(ActiveAnchorContext);
+
   const [ref, inView] = useInView({
     /* Optional options */
     threshold: 0.6,
@@ -59,8 +61,16 @@ const Features = (props) => {
   const animation2 = useAnimation();
 
   useEffect(() => {
-    if (inView) {
+    if (isClicked && activeAnchor !== "#features") {
+      animation.start("hidden");
+      return;
+    }
+
+    if (isClicked) {
       animation.start("visible");
+    } else if (inView) {
+      animation.start("visible");
+      setActiveAnchor("#features");
     } else {
       animation.start("hidden");
     }
@@ -75,7 +85,7 @@ const Features = (props) => {
   }, [inView2]);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="features">
       <motion.div
         className={styles.features}
         ref={ref}

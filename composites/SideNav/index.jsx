@@ -1,14 +1,33 @@
 //Next, React (core node_modules) imports must be placed here
 import Link from "next/link";
 import { useRouter } from "next/router";
-
 import { useContext } from "react";
-
 import ActiveAnchorContext from "@/store/ActiveAnchor";
+import styled from "styled-components";
+import { Telegram, Medium, Twitter } from "@styled-icons/boxicons-logos";
 
 import MenuIcon from "@/components/MenuIcon";
 
 import styles from "./SideNav.module.scss";
+
+const StyledTelegram = styled(Telegram)`
+  width: 24px;
+  color: #f5f5f5;
+  margin-right: 2rem;
+  cursor: pointer;
+`;
+const StyledMedium = styled(Medium)`
+  width: 24px;
+  color: #f5f5f5;
+  margin-right: 2rem;
+  cursor: pointer;
+`;
+const StyledTwitter = styled(Twitter)`
+  width: 24px;
+  color: #f5f5f5;
+  margin-right: 2rem;
+  cursor: pointer;
+`;
 
 const SideNav = ({ menuIsOpen, menuHandler, ...props }) => {
   const { route } = useRouter();
@@ -37,14 +56,14 @@ const SideNav = ({ menuIsOpen, menuHandler, ...props }) => {
           </Link>
         </li>
         <li>
-          <Link href="/#about">
+          <Link href="/#why">
             <a
               className={
-                activeAnchor == "#about" && route == "/" ? styles.isActive : ""
+                activeAnchor == "#why" && route == "/" ? styles.isActive : ""
               }
               onClick={props.onClick}
             >
-              About
+              Bullion
             </a>
           </Link>
         </li>
@@ -59,19 +78,6 @@ const SideNav = ({ menuIsOpen, menuHandler, ...props }) => {
               onClick={props.onClick}
             >
               Features
-            </a>
-          </Link>
-        </li>
-
-        <li>
-          <Link href="/#why">
-            <a
-              className={
-                activeAnchor == "#why" && route == "/" ? styles.isActive : ""
-              }
-              onClick={props.onClick}
-            >
-              Why Bullion?
             </a>
           </Link>
         </li>
@@ -102,6 +108,20 @@ const SideNav = ({ menuIsOpen, menuHandler, ...props }) => {
           </Link>
         </li>
       </ul>
+      <div className={styles.socialLinks}>
+        <div>
+          <Link href="">
+            <StyledTelegram />
+          </Link>
+          <Link href="">
+            <StyledTwitter />
+          </Link>
+          <Link href="">
+            <StyledMedium />
+          </Link>
+        </div>
+        <span className={styles.email}>pr@bullion.codes</span>
+      </div>
     </aside>
   );
 };

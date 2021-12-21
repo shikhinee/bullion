@@ -37,15 +37,7 @@ const Description = (props) => {
   const animation = useAnimation();
 
   useEffect(() => {
-    if (isClicked && activeAnchor !== "#features") {
-      animation.start("hidden");
-      return;
-    }
-
-    if (isClicked) {
-      animation.start("visible");
-    } else if (inView) {
-      setActiveAnchor("#features");
+    if (inView) {
       animation.start("visible");
     } else {
       animation.start("hidden");
@@ -53,7 +45,7 @@ const Description = (props) => {
   }, [inView]);
 
   return (
-    <div className={styles.container} id="features" ref={ref}>
+    <div className={styles.container} ref={ref}>
       <div className={styles.content}>
         <motion.h2
           initial="hidden"

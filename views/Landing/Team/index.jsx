@@ -1,5 +1,5 @@
 //Next, React (core node_modules) imports must be placed here
-import Image from "next/image"
+import Image from "next/image";
 import { useContext, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
@@ -47,7 +47,12 @@ const Team = (props) => {
         <h3>BULLION Team</h3>
         <span>|</span>
         <div className={styles.blogo}>
-          <Image src="/blogo.png" width={40} height={40} layout="responsive"></Image>
+          <Image
+            src="/blogo.png"
+            width={40}
+            height={40}
+            layout="responsive"
+          ></Image>
         </div>
       </div>
       <div className={styles.team}>
