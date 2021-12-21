@@ -13,10 +13,8 @@ import styles from "./Navbar.module.scss";
 
 import MenuIcon from "@/components/MenuIcon";
 
-const Navbar = (props) => {
-  const [menuIsOpen, setMenuIsOpen] = useState(false);
+const Navbar = ({ menuIsOpen, menuHandler, ...props }) => {
   const [navbar, setNavbar] = useState(false);
-  const { setActiveAnchor } = useContext(ActiveAnchorContext);
 
   const changeBackground = () => {
     if (window.scrollY >= 80) {
@@ -47,11 +45,11 @@ const Navbar = (props) => {
           </a>
         </Link>
 
-        <Menu onClick={props.onClick} />
+        <Menu onClick={props.onClick} isOpen={menuIsOpen} />
 
         <MenuIcon
           handler={() => {
-            setMenuIsOpen(!menuIsOpen);
+            menuHandler(!menuIsOpen);
           }}
           isOpen={menuIsOpen}
         />

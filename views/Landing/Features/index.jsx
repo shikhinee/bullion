@@ -1,41 +1,160 @@
 //Next, React (core node_modules) imports must be placed here
-import Image from "next/image"
+import { useEffect } from "react";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import Image from "next/image";
 //import STORE from '@/store'
 
 //import COMPOSITES from '@/composites'
 
 //import COMPONENT from '@/components'
 
-import styles from './Features.module.scss'
+import styles from "./Features.module.scss";
+
+const variants = {
+  hidden: {
+    opacity: 0,
+    y: 64,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const textAnimationFadeIn = {
+  hidden: {
+    opacity: 0,
+    y: 32,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+    },
+  },
+};
+
+const iconAnimation = {};
 
 const Features = (props) => {
-	 return (
-		 <div className={styles.container}>
-			 <div className={styles.features}>
-			<h3>BULLION Features</h3>
-			<div className={styles.image}>
-				<Image src="/blogo.png" width={150} height={150} layout="responsive"></Image>
-				</div>
-			<div className={styles.feature}>
-				<div className={styles.content}>
-					<h2>Interest Payment & Loan Obligations</h2>
-					<p>TROY, is the platform native utility token on BULLION, featuring a wide array of DeFi features (staking, payments, loans, collateralization, etc.) used to reward Creditors of the protocol for interest incurred as a result of the loan agreement.</p>
-				</div>
-			</div>
-			</div>
-			<div className={styles.features}>
-			<div className={styles.image}>
-				<Image src="/ilogo.png" width={100} height={100} layout="responsive"></Image>
-				</div>
-			<div className={styles.feature}>
-				<div className={styles.content}>
-					<h2>Lender & Borrower Matching</h2>
-					<p>C-TROY is minted to represent a loan agreement between the Debtor and Creditor, and the certificate of deposits received from a recognized bank or vault verifies the existence of the gold. </p>
-				</div>
-			</div>
-			</div>
-		</div>
-	)
+  const [ref, inView] = useInView({
+    /* Optional options */
+    threshold: 0.6,
+    triggerOnce: false,
+  });
+
+  const [ref2, inView2] = useInView({
+    /* Optional options */
+    threshold: 0.6,
+    triggerOnce: false,
+  });
+
+  const animation = useAnimation();
+  const animation2 = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      animation.start("visible");
+    } else {
+      animation.start("hidden");
+    }
+  }, [inView]);
+
+  useEffect(() => {
+    if (inView2) {
+      animation2.start("visible");
+    } else {
+      animation2.start("hidden");
+    }
+  }, [inView2]);
+
+  return (
+    <div className={styles.container}>
+      <motion.div
+        className={styles.features}
+        ref={ref}
+        variants={variants}
+        initial="hidden"
+        animate={animation}
+      >
+        <motion.h3 variants={textAnimationFadeIn}>BULLION Features</motion.h3>
+        <motion.div
+          animate={{ opacity: [1, 0], rotateY: [0, 90] }}
+          transition={{
+            duration: 1,
+            repeat: Infinity,
+            repeatType: "reverse",
+          }}
+          className={styles.image}
+        >
+          <Image
+            src="/blogo.png"
+            width={150}
+            height={150}
+            layout="responsive"
+          ></Image>
+        </motion.div>
+        <div className={styles.feature}>
+          <div className={styles.content}>
+            <motion.h2 variants={textAnimationFadeIn}>
+              Interest Payment & Loan Obligations
+            </motion.h2>
+            <motion.p variants={textAnimationFadeIn}>
+              TROY, is the platform native utility token on BULLION, featuring a
+              wide array of DeFi features (staking, payments, loans,
+              collateralization, etc.) used to reward Creditors of the protocol
+              for interest incurred as a result of the loan agreement.
+            </motion.p>
+          </div>
+        </div>
+      </motion.div>
+      <motion.div
+        className={styles.features}
+        ref={ref2}
+        variants={variants}
+        initial="hidden"
+        animate={animation2}
+      >
+        <motion.div
+          animate={{
+            rotate: [0, 360],
+          }}
+          transition={{
+            duration: 3.6,
+            repeat: Infinity,
+            repeatType: "loop",
+            ease: "linear",
+          }}
+          className={styles.image}
+        >
+          <Image
+            src="/ilogo.png"
+            width={100}
+            height={100}
+            layout="responsive"
+          ></Image>
+        </motion.div>
+        <div className={styles.feature}>
+          <div className={styles.content}>
+            <motion.h2 variants={textAnimationFadeIn}>
+              Lender & Borrower Matching
+            </motion.h2>
+            <motion.p variants={textAnimationFadeIn}>
+              C-TROY is minted to represent a loan agreement between the Debtor
+              and Creditor, and the certificate of deposits received from a
+              recognized bank or vault verifies the existence of the gold.{" "}
+            </motion.p>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  );
 };
 
 export default Features;
