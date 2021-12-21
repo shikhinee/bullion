@@ -63,7 +63,7 @@ const SideNav = ({ menuIsOpen, menuHandler, ...props }) => {
               }
               onClick={props.onClick}
             >
-              Why Bullion?
+              Bullion
             </a>
           </Link>
         </li>

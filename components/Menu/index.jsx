@@ -33,7 +33,7 @@ const Menu = (props) => {
             }
             onClick={props.onClick}
           >
-            Why Bullion?
+            Bullion
           </a>
         </Link>
       </li>
