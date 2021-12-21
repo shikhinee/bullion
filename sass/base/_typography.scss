@@ -46,7 +46,7 @@ p {
   text-transform: capitalize;
 
   @include baseThemify() {
-    color: has(clr-h3);
+    color: has(clr-bg-inverse);
   }
 }
 

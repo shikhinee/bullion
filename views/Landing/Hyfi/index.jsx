@@ -12,7 +12,7 @@ const Hyfi = (props) => {
 	 return (
 		 <div className={styles.container}>
 			<div className={styles.cta}>
-				 <h2>HyFi Ecosystem</h2>
+				 <h2 className={styles.hoverUnderline}>HyFi Ecosystem</h2>
 				 <div className={styles.arrow}>
 				 <Image src="/arrowlong.svg" width={130} height={50} layout="responsive"/>
 				 </div>

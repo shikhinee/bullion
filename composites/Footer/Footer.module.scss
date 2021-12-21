@@ -7,28 +7,12 @@
     background-color: has(clr-bg);
   }
   justify-content: center;
-  padding-top: 3em;
-  h1 {
-    padding: 1.5em 0;
-    text-transform: none;
-    color: $clr-neutral-8;
-    letter-spacing: 0;
-    font-size: 2em;
-    @include respondMax(md) {
-      font-size: 1.5em;
-    }
-  }
+  padding-top: 8em;
 }
 .content {
   width: 90%;
-  max-width: has(lg);
   display: flex;
   flex-direction: column;
-  h2 {
-    letter-spacing: normal;
-    padding: 0.5em 0;
-    font-size: 1.2em;
-  }
   hr{
     width: 100%;
   }
@@ -36,56 +20,8 @@
 .contentTop{
   display: flex;
   padding: 2em 0;
-  p{
-    @include themify(){
-      color: has(clr-text);
-    }
-    padding: 0.2em 0;
-  }
-  @include respondMax(md) {
-    flex-direction: column;
-  }
-}
-.contentLeft {
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-  p{
-    display: flex;
-    flex-direction: column;
-  }
-  @include respondMax(sm) {
-    flex-direction: column;
-  }
-  .web {
-    p {
-      cursor: pointer;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-}
-.contentRight {
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-  @include respondMax(sm) {
-    flex-direction: column;
-  }
-  .strategy {
-    @include respondMax(md) {
-      margin-left: 20%;
-    }
-    @include respondMax(sm) {
-      margin-left: 0;
-        }
-  }
-  p {
-    cursor: pointer;
-    &:hover {
-      text-decoration: underline;
-    }
+  h3 {
+    text-transform: none;
   }
 }
 .socialContainer {
@@ -97,9 +33,6 @@
   @include respondMax(md) {
     flex-direction: column;
   }
-}
-.design, .web, .strategy {
-  margin-right: 1em;
 }
 .legal {
   display: flex;
@@ -124,7 +57,57 @@
 }
 
 .legalLeft {
-  @include respondMax(md) {
-    margin-bottom: 3em;
+  display: flex;
+}
+.cta {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5em;
+  cursor: pointer;
+  &:hover {
+    .hoverUnderline:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+    .arrow {
+      animation: slide1 1s ease-in-out infinite;
+    }
+    @keyframes slide1 {
+      0%,
+      100% {
+        transform: translate(0, 0);
+      }
+    
+      50% {
+        transform: translate(10px, 0);
+      }
+    }
   }
+  .hoverUnderline {
+    display: inline-block;
+    position: relative;
+    padding: 0.2em 0;
+    @include themify(){
+      color: has(clr-text);
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+      @include themify(){
+        background-color: has(clr-bg-inverse);
+      }
+    }
+  }
+}
+.arrow {
+  height: 5rem;
+  width: 13rem;      
+  margin-left: 1rem;
 }

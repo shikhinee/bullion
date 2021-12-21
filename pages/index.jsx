@@ -8,7 +8,7 @@ import Why from "@/views/Landing/Why";
 import Features from "@/views/Landing/Features";
 import Hyfi from "@/views/Landing/Hyfi";
 import Team from "@/views/Landing/Team";
-import Contact from "@/views/Landing/Contact";
+// import Contact from "@/views/Landing/Contact";
 // import ComingSoon from "@/views/Landing/ComingSoon";
 import styles from "./Root.module.scss";
 
@@ -29,7 +29,7 @@ const RootPage = (props) => {
       <Features/>
       <Hyfi/>
       <Team />
-      <Contact />
+      {/* <Contact /> */}
     </motion.main>
   )
 };
