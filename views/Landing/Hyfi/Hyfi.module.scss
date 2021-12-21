@@ -1,0 +1,18 @@
+@import 'global';
+
+.container {
+    width: 90%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrow {
+    height: 5rem;
+    width: 13rem;
+}

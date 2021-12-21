@@ -19,10 +19,6 @@
 
 .nav {
   width: 90%;
-  // max-width: 102.4rem;
-  max-width: map-get($map: $breakpoints, $key: lg);
-  // max-width: 90em;
-
   display: flex;
   align-items: center;
   justify-content: space-between;

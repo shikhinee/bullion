@@ -1,29 +1,76 @@
-@import 'global';
+@import "global";
 
-.container { 
+.container {
     display: flex;
     height: 100vh;
-    width: 100%;
+    width: 90%;
     @include themify() {
         background-color: has(clr-bg);
-      }
+    }
+    justify-content: center;
+    flex-direction: column;
+}
+.team {
+    width: 100%;
+    display: flex;
     justify-content: center;
 }
-.content {
-    max-width: map-get($map: $breakpoints, $key: lg);
-    width: 90%;
+.left {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    p {
-        @include themify(){
-            color: has(clr-bg-inverse);
-        }
-        font-weight: 300;
+    align-items: flex-start;
+}
+.right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.heading {
+    display: flex;
+    height: 4.5rem;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    margin-bottom: 1em;
+    span {
+        margin: 0 1em;
     }
-    h1 {
-        @include themify(){
-            color: has(clr-text)
-        }
+    .blogo {
+        height: 4rem;
+        width: 4rem;
     }
+}
+.tabsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.tabs {
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    opacity: 0.5;
+    margin: 0.5em 0;
+    text-align: left;
+}
+.activeTabs {
+    opacity: 1;
+}
+.content {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.activeContent {
+    display: block;
+}
+.image {
+    width: 20rem;
+    height: 20rem;
+}
+.header {
+    margin: 3em 0;
 }

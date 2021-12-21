@@ -1,114 +1,41 @@
 //Next, React (core node_modules) imports must be placed here
-import { useContext, useEffect } from "react";
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import Image from "next/image"
 //import STORE from '@/store'
-import ActiveAnchorContext from "@/store/ActiveAnchor";
+
 //import COMPOSITES from '@/composites'
 
 //import COMPONENT from '@/components'
 
-import styles from "./Features.module.scss";
+import styles from './Features.module.scss'
 
 const Features = (props) => {
-  const { activeAnchor, setActiveAnchor, isClicked } =
-    useContext(ActiveAnchorContext);
-
-  const { ref, inView } = useInView({
-    /* Optional options */
-    threshold: 0.6,
-    triggerOnce: false,
-  });
-
-  const animation = useAnimation();
-
-  useEffect(() => {
-    if (isClicked && activeAnchor !== "#features") {
-      animation.start("hidden");
-      return;
-    }
-
-    if (isClicked) {
-      animation.start("visible");
-    } else if (inView) {
-      setActiveAnchor("#features");
-      animation.start("visible");
-    } else {
-      animation.start("hidden");
-    }
-  }, [inView]);
-
-  const variants = {
-    visible: { scale: 1, transition: { duration: 0.5 } },
-    hidden: {
-      scale: 0.8,
-    },
-  };
-
-  return (
-    <div className={styles.container} id="features" ref={ref}>
-      <div className={styles.content}>
-        <div className={styles.panel}>
-          <h1>This is Features Page</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
-            doloremque nostrum non vitae repellat ipsum voluptas explicabo
-            laborum modi mollitia molestias tempore debitis veritatis,
-            perspiciatis, blanditiis cupiditate saepe quasi quod?
-          </p>
-        </div>
-        <motion.div
-          className={styles.cards}
-          initial="hidden"
-          animate={animation}
-          variants={variants}
-        >
-          <div className={styles.card}>
-            <h3>Feature Headline</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quia
-              fuga numquam, cupiditate.
-            </p>
-          </div>
-          <div className={styles.card}>
-            <h3>Feature Headline</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quia
-              fuga numquam, cupiditate.
-            </p>
-          </div>
-          <div className={styles.card}>
-            <h3>Feature Headline</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quia
-              fuga numquam, cupiditate.
-            </p>
-          </div>
-          <div className={styles.card}>
-            <h3>Feature Headline</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quia
-              fuga numquam, cupiditate.
-            </p>
-          </div>
-          <div className={styles.card}>
-            <h3>Feature Headline</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quia
-              fuga numquam, cupiditate.
-            </p>
-          </div>
-          <div className={styles.card}>
-            <h3>Feature Headline</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quia
-              fuga numquam, cupiditate.
-            </p>
-          </div>
-        </motion.div>
-      </div>
-    </div>
-  );
+	 return (
+		 <div className={styles.container}>
+			 <div className={styles.features}>
+			<h3>BULLION Features</h3>
+			<div className={styles.image}>
+				<Image src="/blogo.png" width={150} height={150} layout="responsive"></Image>
+				</div>
+			<div className={styles.feature}>
+				<div className={styles.content}>
+					<h2>Interest Payment & Loan Obligations</h2>
+					<p>TROY, is the platform native utility token on BULLION, featuring a wide array of DeFi features (staking, payments, loans, collateralization, etc.) used to reward Creditors of the protocol for interest incurred as a result of the loan agreement.</p>
+				</div>
+			</div>
+			</div>
+			<div className={styles.features}>
+			<div className={styles.image}>
+				<Image src="/ilogo.png" width={100} height={100} layout="responsive"></Image>
+				</div>
+			<div className={styles.feature}>
+				<div className={styles.content}>
+					<h2>Lender & Borrower Matching</h2>
+					<p>C-TROY is minted to represent a loan agreement between the Debtor and Creditor, and the certificate of deposits received from a recognized bank or vault verifies the existence of the gold. </p>
+				</div>
+			</div>
+			</div>
+		</div>
+	)
 };
 
 export default Features;

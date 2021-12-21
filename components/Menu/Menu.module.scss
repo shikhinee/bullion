@@ -19,21 +19,21 @@
     }
   }
 
-  @include respondMax(md) {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    transform: translate(0, 0);
-    @include themify() {
-      background-color: rgba($color: has(clr-bg), $alpha: 1);
-    }
-    z-index: -1;
-  }
+  // @include respondMax(md) {
+  //   display: none;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100vw;
+  //   height: 100vh;
+  //   justify-content: center;
+  //   align-items: center;
+  //   transform: translate(0, 0);
+  //   @include themify() {
+  //     background-color: rgba($color: has(clr-bg), $alpha: 1);
+  //   }
+  //   z-index: -1;
+  // }
 }
 
 .ctaItem {
