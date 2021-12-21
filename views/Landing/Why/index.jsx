@@ -1,5 +1,4 @@
 //Next, React (core node_modules) imports must be placed here
-import dynamic from "next/dynamic";
 import { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -63,14 +62,6 @@ const Why = (props) => {
   const animation = useAnimation();
   const animation2 = useAnimation();
   const animation3 = useAnimation();
-
-  useEffect(() => {
-    const scrollSnapPolyfill = dynamic(() =>
-      import("css-scroll-snap-polyfill")
-    );
-
-    console.log(scrollSnapPolyfill);
-  }, []);
 
   useEffect(() => {
     if (inView) {
