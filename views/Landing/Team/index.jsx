@@ -111,7 +111,7 @@ const Team = (props) => {
               }
               onClick={() => toggleTab(5)}
             >
-              <h2>Ranadip</h2>
+              <h2>Ranadip Saha</h2>
               <p>CTO</p>
             </div>
             <div
@@ -228,7 +228,7 @@ const Team = (props) => {
             }
           >
             <div className={styles.image}>
-              <Image width={"100%"} height={"100%"} src="/davidgong.png" layout="responsive" objectFit="contain" alt="team" />
+              <Image width={"100%"} height={"100%"} src="/burte.jpeg" layout="responsive" objectFit="contain" alt="team" />
             </div>
             <div className={styles.header}>
               <h2>Burte Ujin</h2>
@@ -265,10 +265,10 @@ const Team = (props) => {
             }
           >
             <div className={styles.image}>
-              <Image width={"100%"} height={"100%"} src="/davidgong.png" layout="responsive" objectFit="contain" alt="team" />
+              <Image width={"100%"} height={"100%"} src="/saha.jpeg" layout="responsive" objectFit="contain" alt="team" />
             </div>
             <div className={styles.header}>
-              <h2>Ranadip</h2>
+              <h2>Ranadip Saha</h2>
               <p>CTO</p>
             </div>
             <p>
@@ -301,7 +301,7 @@ const Team = (props) => {
             }
           >
             <div className={styles.image}>
-              <Image width={"100%"} height={"100%"} src="/davidgong.png" layout="responsive" objectFit="contain" alt="team" />
+              <Image width={"100%"} height={"100%"} src="/michael.jpg" layout="responsive" objectFit="contain" alt="team" />
             </div>
             <div className={styles.header}>
               <h2>Michael Johnson</h2>
@@ -319,7 +319,7 @@ const Team = (props) => {
             }
           >
             <div className={styles.image}>
-              <Image width={"100%"} height={"100%"} src="/davidgong.png" layout="responsive" objectFit="contain" alt="team" />
+              <Image width={"100%"} height={"100%"} src="/lee.png" layout="responsive" objectFit="contain" alt="team" />
             </div>
             <div className={styles.header}>
               <h2>Joseph Lee</h2>
@@ -337,7 +337,7 @@ const Team = (props) => {
             }
           >
             <div className={styles.image}>
-              <Image width={"100%"} height={"100%"} src="/davidgong.png" layout="responsive" objectFit="contain" alt="team" />
+              <Image width={"100%"} height={"100%"} src="/anar.jpg" layout="responsive" objectFit="contain" alt="team" />
             </div>
             <div className={styles.header}>
               <h2>Anar Amarjargal</h2>

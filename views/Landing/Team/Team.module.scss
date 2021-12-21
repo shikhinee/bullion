@@ -32,14 +32,6 @@
     @include respondMax(md){
         display: none;
     }
-    @include respondMax(sm){
-        position: absolute;
-        display: flex;
-        top: 0;
-        @include themify(){
-            background-color: has(clr-bg);
-        }
-    }
 }
 .heading {
     display: flex;
