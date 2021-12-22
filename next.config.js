@@ -7,3 +7,9 @@ module.exports = {
     includePaths: [path.join(__dirname, "sass")],
   },
 };
+module.exports = {
+  images: {
+    loader: 'imgix',
+    path: '/',
+  },
+}

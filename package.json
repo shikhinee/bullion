@@ -9,7 +9,8 @@
     "ws": "bin/workspace/ws.sh",
     "bews": "bin/workspace/bews.sh",
     "fews": "bin/workspace/fews.sh",
-    "generate": "bin/generate.sh"
+    "generate": "bin/generate.sh",
+    "export": "next export"
   },
   "dependencies": {
     "@react-three/drei": "^7.22.6",
