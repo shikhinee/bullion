@@ -1,61 +1,65 @@
-@import 'global';
+@import "global";
 
 .container {
-    width: 90%;
-    height: 100vh;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  width: 90%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+  }
 }
 .cta {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5em;
-    cursor: pointer;
-    &:hover {
-      .hoverUnderline:after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-      }
-      .arrow {
-        animation: slide1 1s ease-in-out infinite;
-      }
-      @keyframes slide1 {
-        0%,
-        100% {
-          transform: translate(0, 0);
-        }
-      
-        50% {
-          transform: translate(10px, 0);
-        }
-      }
+  display: flex;
+  align-items: center;
+  margin-bottom: 5em;
+  cursor: pointer;
+  &:hover {
+    .hoverUnderline:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
     }
-    .hoverUnderline {
-      display: inline-block;
-      position: relative;
-      padding: 0.2em 0;
-      @include themify(){
-        color: has(clr-text);
+    .arrow {
+      animation: slide1 1s ease-in-out infinite;
+    }
+    @keyframes slide1 {
+      0%,
+      100% {
+        transform: translate(0, 0);
       }
-      &:after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        transform: scaleX(0);
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        transform-origin: bottom right;
-        transition: transform 0.25s ease-out;
-        @include themify(){
-          background-color: has(clr-bg-inverse);
-        }
+
+      50% {
+        transform: translate(10px, 0);
       }
     }
   }
+  .hoverUnderline {
+    display: inline-block;
+    position: relative;
+    padding: 0.2em 0;
+    @include themify() {
+      color: has(clr-text);
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+      @include themify() {
+        background-color: has(clr-bg-inverse);
+      }
+    }
+  }
+}
 .arrow {
-    height: 5rem;
-    width: 13rem;
-    margin-left: 1rem;
+  height: 5rem;
+  width: 13rem;
+  margin-left: 1rem;
 }
