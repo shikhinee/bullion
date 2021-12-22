@@ -6,10 +6,8 @@ module.exports = {
     // Making it easier to import variables & mixins via _global.scss;
     includePaths: [path.join(__dirname, "sass")],
   },
-};
-module.exports = {
   images: {
-    loader: 'imgix',
-    path: '/',
+    loader: "imgix",
+    path: "https://bullion.codes/",
   },
-}
+};
