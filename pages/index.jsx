@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { motion } from "framer-motion";
 
 import LandingLayout from "@/layouts/Landing";
@@ -21,6 +22,42 @@ const RootPage = (props) => {
       transition={{ duration: 1 }}
       className={styles.container}
     >
+      <Head>
+        {/* GENERAL */}
+        <title>Bullion</title>
+        <meta name="title" content="Bullion" />
+        <meta
+          name="description"
+          content="Decentralized Gold-Backed Liquidity Market Protocol"
+        />
+
+        {/* FACEBOOK */}
+        <meta property="og:url" content="https://bullion.codes" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Bullion" />
+        <meta
+          property="og:description"
+          content="Decentralized Gold-Backed Liquidity Market Protocol"
+        />
+        <meta
+          property="og:image"
+          content="/_next/image?url=%2Fbullion-meta.png&w=1200&h=628&q=100"
+        />
+
+        {/* TWITTER */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="bullion.codes" />
+        <meta property="twitter:url" content="https://bullion.codes/" />
+        <meta name="twitter:title" content="Bullion" />
+        <meta
+          name="twitter:description"
+          content="Decentralized Gold-Backed Liquidity Market Protocol"
+        />
+        <meta
+          name="twitter:image"
+          content="/_next/image?url=%2Fbullion-meta.png&w=1200&h=628&q=100"
+        />
+      </Head>
       {/* <ComingSoon /> */}
       <Home />
       <About />
