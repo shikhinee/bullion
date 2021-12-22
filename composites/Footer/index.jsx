@@ -65,7 +65,6 @@ const Footer = (props) => {
             <div className={styles.legalLeft}>
               <p>2021 Bullion Project</p>
             </div>
-            <div className={styles.legalRight}>&lt;/&gt; Solid Frameworks</div>
           </div>
         </div>
       </div>
