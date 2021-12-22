@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { motion } from "framer-motion";
 
 import LandingLayout from "@/layouts/Landing";
@@ -21,6 +22,17 @@ const RootPage = (props) => {
       transition={{ duration: 1 }}
       className={styles.container}
     >
+      <Head>
+        <title>Bullion</title>
+        <meta property="og:url" content="https://bullion.codes" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Bullion" />
+        <meta
+          property="og:description"
+          content="Decentralized Gold-Backed Liquidity Market Protocol"
+        />
+        <meta property="og:image" content="/bulliondark.png" />
+      </Head>
       {/* <ComingSoon /> */}
       <Home />
       <About />
