@@ -41,7 +41,7 @@ const RootPage = (props) => {
         />
         <meta
           property="og:image"
-          content="/_next/image?url=%2Fbullion-meta.png&w=1200&h=628&q=100"
+          content="https://bullion.codes/bullion-meta.png?auto=format&fit=max&w=1920"
         />
 
         {/* TWITTER */}
@@ -55,7 +55,7 @@ const RootPage = (props) => {
         />
         <meta
           name="twitter:image"
-          content="/_next/image?url=%2Fbullion-meta.png&w=1200&h=628&q=100"
+          content="https://bullion.codes/bullion-meta.png?auto=format&fit=max&w=1920"
         />
       </Head>
       {/* <ComingSoon /> */}
