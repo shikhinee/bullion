@@ -3,10 +3,14 @@
 .container {
   width: 90%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @include respondMax(sm) {
+    flex-direction: column;
+  }
 }
+
 .features {
   width: 100%;
   height: 90vh;
@@ -14,6 +18,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  &:not(:last-of-type) {
+    margin-right: 1em;
+  }
+
   h3 {
     margin-bottom: 2em;
   }
@@ -32,6 +41,7 @@
   max-width: 80rem;
   justify-content: center;
   align-items: flex-start;
+  height: 24rem;
 }
 .image {
   box-sizing: border-box;
@@ -43,8 +53,9 @@
 .content {
   width: 100%;
   max-width: 60rem;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
 }

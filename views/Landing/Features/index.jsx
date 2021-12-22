@@ -93,7 +93,7 @@ const Features = (props) => {
         initial="hidden"
         animate={animation}
       >
-        <motion.h3 variants={textAnimationFadeIn}>BULLION Features</motion.h3>
+        {/* <motion.h3 variants={textAnimationFadeIn}>BULLION Features</motion.h3> */}
         <div className={styles.clearFix}>
           <motion.div
             animate={{ opacity: [1, 0], rotateY: [0, 90] }}

@@ -72,7 +72,7 @@ const WhitepaperPage = (props) => {
           <section id="bullion">
             <h1>Bullion</h1>
             <p>Joseph Lee, David Gong, Ranadip</p>
-            <p>November 19, 2021</p>
+            <p>December 22, 2021</p>
             <h2>Abstract</h2>
             <p>
               This paper introduces BULLION, a gold-backed DeFi lending platform

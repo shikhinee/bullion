@@ -11,19 +11,19 @@ import MenuIcon from "@/components/MenuIcon";
 import styles from "./SideNav.module.scss";
 
 const StyledTelegram = styled(Telegram)`
-  width: 24px;
+  width: 3.2rem;
   color: #f5f5f5;
   margin-right: 2rem;
   cursor: pointer;
 `;
 const StyledMedium = styled(Medium)`
-  width: 24px;
+  width: 3.2rem;
   color: #f5f5f5;
   margin-right: 2rem;
   cursor: pointer;
 `;
 const StyledTwitter = styled(Twitter)`
-  width: 24px;
+  width: 3.2rem;
   color: #f5f5f5;
   margin-right: 2rem;
   cursor: pointer;
@@ -120,7 +120,6 @@ const SideNav = ({ menuIsOpen, menuHandler, ...props }) => {
             <StyledMedium />
           </Link>
         </div>
-        <span className={styles.email}>pr@bullion.codes</span>
       </div>
     </aside>
   );

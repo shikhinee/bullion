@@ -69,30 +69,9 @@
 
 .socialLinks {
   box-sizing: border-box;
-  padding: 0 1em;
-  width: 100%;
   position: absolute;
   bottom: 1em;
+  right: 0;
   display: flex;
   justify-content: space-between;
-}
-
-.email {
-  font-size: 1.6rem;
-  cursor: pointer;
-
-  &::after {
-    content: "";
-    will-change: width;
-    transition: width 0.2s ease-in-out;
-    display: block;
-    width: 0;
-    height: 0.2rem;
-    background-color: $clr-primary;
-    margin: 0.5em 0;
-  }
-
-  &:hover::after {
-    width: 100%;
-  }
 }

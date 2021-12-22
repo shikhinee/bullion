@@ -24,8 +24,8 @@ const WhitePaperRoutes = {
       {
         title: "Financial Exclusion",
         route: `${rootPath}/#financial-exclusion`,
-      }
-    ]
+      },
+    ],
   },
 
   solution: {
@@ -88,7 +88,7 @@ const Panel = ({ children, ...props }) => {
     <div className={styles.container}>
       <div className={styles.tabsContainer}>
         <div className={styles.tab}>
-          <span>WHITEPAPER 0.2</span>
+          <span>WHITEPAPER</span>
         </div>
       </div>
 
