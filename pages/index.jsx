@@ -24,6 +24,11 @@ const RootPage = (props) => {
     >
       <Head>
         <title>Bullion</title>
+        <meta name="title" content="Bullion" />
+        <meta
+          name="description"
+          content="Decentralized Gold-Backed Liquidity Market Protocol"
+        />
         <meta property="og:url" content="https://bullion.codes" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Bullion" />
@@ -31,7 +36,10 @@ const RootPage = (props) => {
           property="og:description"
           content="Decentralized Gold-Backed Liquidity Market Protocol"
         />
-        <meta property="og:image" content="/bulliondark.png" />
+        <meta
+          property="og:image"
+          content="/_next/image?url=%bullion-meta.png&w=1200&h=628&q=100"
+        />
       </Head>
       {/* <ComingSoon /> */}
       <Home />

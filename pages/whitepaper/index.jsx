@@ -30,6 +30,22 @@ const WhitepaperPage = (props) => {
     >
       <Head>
         <title>Whitepaper | Bullion</title>
+        <meta name="title" content="Whitepaper | Bullion" />
+        <meta
+          name="description"
+          content="This paper introduces BULLION, a gold-backed DeFi lending platform applying recent innovations in distributed ledger technology, specifically decentralized finance (DeFi), to proffer access to more equitable, efficient, peer-to-peer loans."
+        />
+        <meta property="og:url" content="https://bullion.codes/whitepaper" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Bullion" />
+        <meta
+          property="og:description"
+          content="This paper introduces BULLION, a gold-backed DeFi lending platform applying recent innovations in distributed ledger technology, specifically decentralized finance (DeFi), to proffer access to more equitable, efficient, peer-to-peer loans."
+        />
+        <meta
+          property="og:image"
+          content="/_next/image?url=%Whitepaper.png&w=1200&h=628&q=100"
+        />
       </Head>
       <Panel>
         <div className={styles.content}>
