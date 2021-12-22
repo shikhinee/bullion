@@ -44,7 +44,7 @@ const WhitepaperPage = (props) => {
         />
         <meta
           property="og:image"
-          content="/_next/image?url=%Whitepaper.png&w=1200&h=628&q=100"
+          content="/_next/image?url=%2FWhitepaper.png&w=1200&h=628&q=100"
         />
       </Head>
       <Panel>

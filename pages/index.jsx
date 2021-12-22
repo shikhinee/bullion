@@ -38,7 +38,7 @@ const RootPage = (props) => {
         />
         <meta
           property="og:image"
-          content="/_next/image?url=%bullion-meta.png&w=1200&h=628&q=100"
+          content="/_next/image?url=%2Fbullion-meta.png&w=1200&h=628&q=100"
         />
       </Head>
       {/* <ComingSoon /> */}
