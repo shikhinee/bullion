@@ -14,9 +14,6 @@
 
   h2 {
     margin: 1em 0;
-    @include themify() {
-      color: has(clr-text);
-    }
   }
 }
 
@@ -93,6 +90,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  h2 {
+      color: $clr-primary;
+  }
 }
 
 .overlay {
