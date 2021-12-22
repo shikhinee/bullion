@@ -23,12 +23,15 @@ const RootPage = (props) => {
       className={styles.container}
     >
       <Head>
+        {/* GENERAL */}
         <title>Bullion</title>
         <meta name="title" content="Bullion" />
         <meta
           name="description"
           content="Decentralized Gold-Backed Liquidity Market Protocol"
         />
+
+        {/* FACEBOOK */}
         <meta property="og:url" content="https://bullion.codes" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Bullion" />
@@ -38,6 +41,20 @@ const RootPage = (props) => {
         />
         <meta
           property="og:image"
+          content="/_next/image?url=%2Fbullion-meta.png&w=1200&h=628&q=100"
+        />
+
+        {/* TWITTER */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="bullion.codes" />
+        <meta property="twitter:url" content="https://bullion.codes/" />
+        <meta name="twitter:title" content="Bullion" />
+        <meta
+          name="twitter:description"
+          content="Decentralized Gold-Backed Liquidity Market Protocol"
+        />
+        <meta
+          name="twitter:image"
           content="/_next/image?url=%2Fbullion-meta.png&w=1200&h=628&q=100"
         />
       </Head>
