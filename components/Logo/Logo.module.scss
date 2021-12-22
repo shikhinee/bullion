@@ -1,10 +1,23 @@
 @import "global";
 
 .container {
+  display: flex;
+  align-items: center;
   position: relative;
+  width: 18rem;
+  height: $navbarHeight;
+  overflow: hidden;
+
+  @include respondMax(sm) {
+    width: 15rem;
+  }
 
   img {
     object-fit: contain;
+    transform: scale(1.4);
+    @include respondMax(sm) {
+      transform: scale(1.2);
+    }
     // image-rendering: crisp-edges;
   }
 }

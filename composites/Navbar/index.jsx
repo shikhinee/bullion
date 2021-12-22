@@ -1,10 +1,8 @@
 //Next, React (core node_modules) imports must be placed here
-import Link from "next/link";
 
-import { useContext, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 //import STORE from '@/store'
-import ActiveAnchorContext from "@/store/ActiveAnchor";
 
 //import COMPONENT from '@/components'
 import Menu from "@/components/Menu";
@@ -39,11 +37,7 @@ const Navbar = ({ menuIsOpen, menuHandler, ...props }) => {
       }
     >
       <nav className={styles.nav}>
-        <Link href="/">
-          <a>
-            <Logo />
-          </a>
-        </Link>
+        <Logo />
 
         <Menu onClick={props.onClick} isOpen={menuIsOpen} />
 

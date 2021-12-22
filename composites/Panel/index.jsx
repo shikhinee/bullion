@@ -7,10 +7,10 @@ import styles from "./Panel.module.scss";
 const rootPath = "/whitepaper";
 
 const WhitePaperRoutes = {
-  bullion: {
-    title: "Bullion",
-    route: `${rootPath}/#bullion`,
-  },
+  // bullion: {
+  //   title: "Bullion",
+  //   route: `${rootPath}/#bullion`,
+  // },
 
   introduction: {
     title: "Introduction",
