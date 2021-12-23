@@ -16,6 +16,8 @@
     "@typescript-eslint/parser": "^4.33.0",
     "axios": "^0.22.0",
     "cors": "^2.8.5",
+    "embla-carousel-autoplay": "^6.0.2",
+    "embla-carousel-react": "^6.0.2",
     "firebase": "^9.6.1",
     "framer-motion": "^4.1.17",
     "mongodb": "^4.1.3",

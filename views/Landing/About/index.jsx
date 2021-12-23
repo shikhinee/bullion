@@ -1,8 +1,8 @@
 //Next, React (core node_modules) imports must be placed here
-import Image from "next/image";
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Carousel from "@/components/Carousel"
 
 //import STORE from '@/store'
 
@@ -31,7 +31,7 @@ const About = (props) => {
   return (
     <div className={styles.container} ref={ref}>
       <div className={styles.content}>
-        <Image layout="fill" src="/mineimage.png" objectFit="cover" alt="mine"></Image>
+        <Carousel/>
       </div>
     </div>
   );
