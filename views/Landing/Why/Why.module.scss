@@ -21,9 +21,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  max-width: 72rem;
-  min-width: 32rem;
+  width: clamp(20vh, 100%, 70vh);
   height: 100%;
   z-index: -1;
 
@@ -37,11 +35,12 @@
 .gifInner {
   width: 100%;
   position: sticky;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   height: 100vh;
 
-  @media screen and (min-aspect-ratio: 2/1) {
-    width: 66%;
+  @include respondMax(md){
+    height: 80vh;
   }
 }
 
@@ -91,7 +90,7 @@
   flex-direction: column;
   justify-content: center;
   h2 {
-      color: $clr-primary;
+    color: $clr-primary;
   }
 }
 

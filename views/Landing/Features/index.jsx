@@ -119,7 +119,7 @@ const Features = (props) => {
               Interest Payment & Loan Obligations
             </motion.h2>
             <motion.p variants={textAnimationFadeIn}>
-              TROY, is the platform native utility token on BULLION, featuring a
+              TROY is the platform native utility token on BULLION, featuring a
               wide array of DeFi features (staking, payments, loans,
               collateralization, etc.) used to reward Creditors of the protocol
               for interest incurred as a result of the loan agreement.

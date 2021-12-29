@@ -80,15 +80,15 @@ const WhitepaperPage = (props) => {
               specifically decentralized finance (DeFi), to proffer access to
               more equitable, efficient, peer-to-peer loans.
             </p>
-            <h2>Version 1.0</h2>
+            <h2>Disclaimers</h2>
             <p>
-              Disclaimers: Information contained herein is subject to change.
-              BULLION is not an investment product. BULLION is not intended in
-              its design or distribution to be utilized as a form of investment,
-              speculation, or as a financial product. No information herein
-              constitutes financial advice. PLEASE do your OWN research before
-              participating in BULLION. Neither the BULLION team nor any of its
-              representative affiliates will ever solicit investment advice.
+              Information contained herein is subject to change. BULLION is not
+              an investment product. BULLION is not intended in its design or
+              distribution to be utilized as a form of investment, speculation,
+              or as a financial product. No information herein constitutes
+              financial advice. PLEASE do your OWN research before participating
+              in BULLION. Neither the BULLION team nor any of its representative
+              affiliates will ever solicit investment advice.
             </p>
           </section>
           <section id="introduction">
@@ -453,10 +453,7 @@ const WhitepaperPage = (props) => {
           </section>
           <section id="token">
             <h1>4. Bullion Token Economy</h1>
-            <h2 id="token-ecosystem">
-              4.1 Token Ecosystem- Bringing it all Together
-            </h2>
-            <h2 id="token-allocation">4.2 Token Allocation</h2>
+            <h2 id="token-allocation">4.1 Token Allocation</h2>
             <div className={styles.tableContainer}>
               <table>
                 <thead>
@@ -547,7 +544,7 @@ const WhitepaperPage = (props) => {
                     <td>TOTAL SUPPLY</td>
                     <td>60,000,000,000</td>
                     <td>100%</td>
-                    <td>18,480,000,000 TROY Initial Circulating Supply</td>
+                    <td>1,500,000,000 TROY Initial Circulating Supply</td>
                   </tr>
                 </tbody>
               </table>

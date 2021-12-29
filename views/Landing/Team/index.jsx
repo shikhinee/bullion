@@ -33,7 +33,7 @@ const teamMembers = [
     state: 3,
     fullName: "Ireedui Zorigt",
     position:
-      "Director: Community development, Social media Marketing & Gold Processing Engineer",
+      "Director: Gold Processing Engineer",
     imagePath: "",
     description:
       "He has worked for Khamtiin Ekh Bulag LLC for over 10 years since its establishment. His main area of expertise is gold processing which is the most interesting and critical part of the whole process. In recent years, he is also well known for his achievements as an athlete in heavy powerlifting. He is one of the main personnel in Khamtiin Ekh Bulag LLC who has the greatest discipline and a good example to other staff.",

@@ -44,10 +44,6 @@ const WhitePaperRoutes = {
     route: `${rootPath}/#token`,
     subRoutes: [
       {
-        title: "Token Ecosystem",
-        route: `${rootPath}/#token-ecosystem`,
-      },
-      {
         title: "Token Allocation",
         route: `${rootPath}/#token-allocation`,
       },
